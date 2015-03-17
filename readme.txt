@@ -7,7 +7,7 @@ License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Stable tag: trunk
 
-The plugin allows to use "Font Awesome" icons into WordPress theme and also has some useful features for work with "Font Awesome" icons
+Allows to use "Font Awesome" icons into WordPress theme and also has some useful features for work with "Font Awesome" icons
 
 == Description ==
 
