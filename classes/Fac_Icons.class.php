@@ -3,7 +3,9 @@
 class Fac_Icons {
     
     public function __construct() {
-        include_once(Fac()->getBaseDir() . '/includes/spyc/Spyc.php');        
+        if (!class_exists('Spyc')) {
+            include_once(Fac()->getBaseDir() . '/includes/spyc/Spyc.php');            
+        }
     }
     
     public function getData () {    
