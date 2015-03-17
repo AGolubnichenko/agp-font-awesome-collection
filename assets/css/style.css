@@ -1,0 +1,64 @@
+/* CSS Document */
+.fac-version-template { 
+    border: 2px solid #a1a1a1; 
+    background: #dddddd; 
+    font-weight: bold;
+    border-radius: 6px; 
+    text-align: center; 
+    width: 350px;
+}
+.fac-version-template span { 
+    font-style: italic; 
+}
+
+.fac-dropdown-template {
+    border: 2px solid #a1a1a1; 
+    background: #dddddd url("http://i62.tinypic.com/15xvbd5.png") no-repeat scroll 319px center;
+    border-radius: 6px; 
+    text-align: center;     
+    overflow: hidden;
+    width: 350px;
+}
+
+.fac-dropdown-template select {
+    font-family: FontAwesome, Arial;
+    border: 0;
+    background: transparent;
+    padding: 2px 10px;
+    text-align: left;    
+    width: 378px;
+    *width: 350px;
+    *background: #dddddd;
+    -webkit-appearance: none;
+    max-width: 120%;
+}
+
+.fac-dropdown-template select optgroup {
+    padding: 5px;
+}
+.fac-dropdown-template select option {
+    font-family:FontAwesome, Arial;   
+}
+
+
+.fac-button-template .fac-button {
+	background-color: #dddddd;
+	border-radius:6px;
+	border: 2px solid #a1a1a1; 
+	display:inline-block;
+	cursor:pointer;
+	color:#000000;
+	padding:2px 2px;
+    text-align: center; 
+    width: 26px;
+    height: 26px;
+}
+.fac-button-template .fac-button:hover {
+	background-color:#C0C0C0;
+}
+.fac-button-template .fac-button:active {
+	position:relative;
+	top:1px;
+}
+
+
