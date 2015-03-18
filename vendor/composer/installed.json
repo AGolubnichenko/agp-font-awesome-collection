@@ -1,0 +1,27 @@
+[
+    {
+        "name": "agpfontawesome/components",
+        "version": "1.0",
+        "version_normalized": "1.0.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/components/font-awesome",
+            "reference": "master"
+        },
+        "type": "library",
+        "installation-source": "source"
+    },
+    {
+        "name": "agpfontawesome/icons",
+        "version": "1.0",
+        "version_normalized": "1.0.0.0",
+        "dist": {
+            "type": "file",
+            "url": "https://github.com/FortAwesome/Font-Awesome/raw/master/src/icons.yml",
+            "reference": "master",
+            "shasum": null
+        },
+        "type": "library",
+        "installation-source": "dist"
+    }
+]
