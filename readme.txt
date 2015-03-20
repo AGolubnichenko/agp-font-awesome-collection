@@ -25,11 +25,12 @@ See the [screenshots](https://wordpress.org/plugins/agp-font-awesome-collection/
 
 = How can I change the Shortcode content? =
 
-The plugin includes templates "templates/[shortcode].php". 
-You can copy templates in your active theme and customize for your needs. 
-Path to the templates inside the active theme:
+The plugin includes some templates for each shortcode in "templates/" folder. 
+You can copy any template in your active theme and customize it for your needs. 
+Path to the templates folder inside the active theme:
 
-[ActiveTheme]/templates/agp-font-awesome-collection/[shortcode].php
+[ActiveTheme]/templates/agp-font-awesome-collection/
+
 
 = How can I style the Shortcode content? =
 
