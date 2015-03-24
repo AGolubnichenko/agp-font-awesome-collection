@@ -5,7 +5,7 @@ Requires at least: 3.5.0
 Tested up to: 4.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Stable tag: trunk
+Stable tag: 1.0.0
 
 Allows to use "Font Awesome" icons into WordPress theme and also has some useful features for work with "Font Awesome" icons
 
@@ -42,7 +42,7 @@ Path to the styles inside the active theme:
 
 == Screenshots ==
 
-1. Shortcodes
+1. Features
 
 == Changelog ==
 
