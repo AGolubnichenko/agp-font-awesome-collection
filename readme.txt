@@ -5,7 +5,7 @@ Requires at least: 3.5.0
 Tested up to: 4.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Stable tag: 1.0.0
+Stable tag: 1.0.1
 
 Full set of Font Awesome Icons in one plugin for Your website
 
@@ -62,8 +62,14 @@ Path to the styles inside the active theme:
 == Screenshots ==
 
 1. Features
+2. Button for adding Font Awesome Icons in TinyMCE editor
 
 == Changelog ==
+
+= 1.0.1 =
+
+* Button for adding Font Awesome Icons in TinyMCE editor
+* Minor changes
 
 = 1.0.0 =
 

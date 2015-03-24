@@ -54,11 +54,34 @@ class Fac extends Agp_Module {
         add_shortcode( 'fac_icon', array($this, 'doIconShortcode') );                 
         add_shortcode( 'fac_dropdown', array($this, 'doDropdownShortcode') );                 
         add_shortcode( 'fac_button', array($this, 'doButtonShortcode') );                         
+        
+        add_action( 'init', array($this, 'facTinyMCEButtons' ) );        
     }
     
     public function init () {
         $this->iconRepository->refreshRepository();
     }
+    
+    public function facTinyMCEButtons () {
+        if ( ! current_user_can('edit_posts') && ! current_user_can('edit_pages') ) {
+           return;
+        }
+
+        if ( get_user_option('rich_editing') == 'true' ) {
+           add_filter( 'mce_external_plugins', array($this, 'facTinyMCEAddPlugin') );
+           add_filter( 'mce_buttons', array($this, 'facTinyMCERegisterButtons'));
+        }        
+    }
+
+    public function facTinyMCERegisterButtons( $buttons ) {
+       array_push( $buttons, "|", "fac_icon" );
+       return $buttons;
+    }    
+    
+    public function facTinyMCEAddPlugin( $plugin_array ) {
+        $plugin_array['fac_icon'] = $this->getAssetUrl() . '/js/fac-icon.js';
+        return $plugin_array;        
+    }        
     
     public function enqueueScripts () {
         wp_enqueue_style( 'fac-fa', $this->getBaseUrl() .'/vendor/agpfontawesome/components/css/font-awesome.min.css' );
