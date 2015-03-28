@@ -1,23 +1,114 @@
 /* CSS Document */
+
+/*-----Font Awesome Icon Default Styling-----*/
+
+.fac.fac-icontext-template {
+    display: inline-block;
+}
+
+.fac.fac-icontext-template .fac-shape { 
+	background: #263238;
+    color: #fff;
+    display: inline-block;
+	border: 2px solid transparent;  
+    min-height: 30px;   
+    min-width: 30px;
+    text-align: center;
+    text-decoration: none;
+    padding: 2px; 
+    font-weight: bold;  
+    margin: 2px;
+    font-size: 14px; 
+    box-sizing: border-box;
+}               
+
+.fac.fac-icontext-template .fac-shape.fac-square { 
+	background: #263238;
+    color: #fff;
+}   
+
+.fac.fac-icontext-template .fac-shape.fac-rounded { 
+	background: #263238;
+    color: #fff;
+    border-radius: 6px;
+}  
+
+.fac.fac-icontext-template .fac-shape.fac-round { 
+	background: #263238;
+    color: #fff;
+    border-radius: 31px;
+}   
+             
+/*-----Font Awesome Button Default Styling-----*/
+
+.fac.fac-button-template { 
+    display: inline-block;
+}
+
+.fac.fac-button-template .fac-button {
+	background: #263238;
+    color: #fff;
+	border-radius: 6px;
+    display: inline-block;
+	border: 2px solid transparent;  
+    min-height: 30px;   
+    min-width: 30px;
+	cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    padding: 2px; 
+    font-weight: bold;  
+    margin: 2px;
+    font-size: 14px; 
+    box-sizing: border-box;
+}
+
+.fac.fac-button-template .fac-button i {
+    padding: 0;
+}
+
+.fac.fac-button-template .fac-button.fac-text {
+    padding: 2px 10px;
+}
+
+.fac.fac-button-template .fac-button.fac-text span {
+    padding: 0 0 0 3px;    
+}
+
+.fac.fac-button-template .fac-button:hover, .fac.fac-button-template .fac-button:active, .fac.fac-button-template .fac-button:visited {
+	background: #263238;
+}
+
+/*-----Font Awesome Version Default Styling-----*/
+
 .fac-version-template { 
-    border: 2px solid #a1a1a1; 
-    background: #dddddd; 
+    background: #263238;
+    color: #fff;
     font-weight: bold;
     border-radius: 6px; 
     text-align: center; 
-    width: 350px;
+    width: 200px;
+    max-width: 250px;
+    padding: 15px; 
+    font-size: 16px;
+    margin: 0 auto;
 }
 .fac-version-template span { 
-    font-style: italic; 
+    display: block;
+    font-size: 30px;
+    color: #03a9f4;
 }
 
+/*-----Font Awesome Dropdown Default Styling-----*/
+
 .fac-dropdown-template {
-    border: 2px solid #a1a1a1; 
-    background: #dddddd url("http://i62.tinypic.com/15xvbd5.png") no-repeat scroll 319px center;
+    border: 1px solid #263238; 
+    background: #fff url("http://i62.tinypic.com/15xvbd5.png") no-repeat scroll 319px center;
     border-radius: 6px; 
     text-align: center;     
     overflow: hidden;
     width: 350px;
+    height: 34px;
 }
 
 .fac-dropdown-template select {
@@ -31,34 +122,13 @@
     *background: #dddddd;
     -webkit-appearance: none;
     max-width: 120%;
+    height: 34px;
+    outline: none;
 }
 
 .fac-dropdown-template select optgroup {
     padding: 5px;
 }
 .fac-dropdown-template select option {
-    font-family:FontAwesome, Arial;   
+    font-family: FontAwesome, Arial;   
 }
-
-
-.fac-button-template .fac-button {
-	background-color: #dddddd;
-	border-radius:6px;
-	border: 2px solid #a1a1a1; 
-	display:inline-block;
-	cursor:pointer;
-	color:#000000;
-	padding:2px 2px;
-    text-align: center; 
-    width: 26px;
-    height: 26px;
-}
-.fac-button-template .fac-button:hover {
-	background-color:#C0C0C0;
-}
-.fac-button-template .fac-button:active {
-	position:relative;
-	top:1px;
-}
-
-

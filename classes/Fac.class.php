@@ -52,6 +52,7 @@ class Fac extends Agp_Module {
 
         add_shortcode( 'fac_version', array($this, 'doVersionShortcode') );         
         add_shortcode( 'fac_icon', array($this, 'doIconShortcode') );                 
+        add_shortcode( 'fac_icontext', array($this, 'doIconTextShortcode') );                         
         add_shortcode( 'fac_dropdown', array($this, 'doDropdownShortcode') );                 
         add_shortcode( 'fac_button', array($this, 'doButtonShortcode') );                         
         
@@ -123,9 +124,24 @@ class Fac extends Agp_Module {
         $atts = shortcode_atts( array(
             'icon' => '',
             'template' => 'icon',
+            'color' => NULL,
+            'font_size' => NULL,
         ), $atts );        
         return $this->doShortcode($atts);
     }    
+    
+    public function doIconTextShortcode ($atts) {
+        $atts = shortcode_atts( array(
+            'icon' => '',
+            'template' => 'icontext',
+            'text' => NULL,
+            'shape_type' => NULL,
+            'shape_bg' => NULL,
+            'icon_color' => NULL, 
+            'text_color' => NULL,
+        ), $atts );        
+        return $this->doShortcode($atts);
+    }        
 
     public function doDropdownShortcode ($atts) {
         $uniqueId = 'fac-dropdown-' . uniqid();
@@ -138,12 +154,18 @@ class Fac extends Agp_Module {
     }    
     
     public function doButtonShortcode ($atts) {
-        $uniqueId = 'fac-button-' . uniqid();
         $atts = shortcode_atts( array(
-            'name' => $uniqueId,
+            'template' => 'button',            
+            'name' => NULL,
             'title' => '',
             'icon' => '',
-            'template' => 'button',
+            'link' => '',
+            'background' => NULL,
+            'border_radius' => NULL,
+            'border_width' => NULL,
+            'border_color' => NULL,
+            'text' => NULL,
+            'color' => NULL,
         ), $atts );        
         return $this->doShortcode($atts);
     }    
