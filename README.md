@@ -1,6 +1,6 @@
 # agp-font-awesome-collection
 
-The plugin allows to use "Font Awesome" icons into WordPress theme and also has some useful features for work with "Font Awesome" icons
+Full set of Font Awesome Icons with Extra Tools in one plugin for Your website
 
 # Installation
 
