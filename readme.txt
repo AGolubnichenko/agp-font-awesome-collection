@@ -180,6 +180,9 @@ Path to the styles inside the active theme:
 
 == Changelog ==
 
+= 1.1.1 =
+* Minor bugfixing.
+
 = 1.1.0 =
 * Changes and cleanup of default elements styling
 * Changes and cleanup of default elements templates
