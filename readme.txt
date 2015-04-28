@@ -2,7 +2,7 @@
 Contributors: agolubnichenko
 Tags: agp, font-awesome, font awesome, icon font, icons, button, buttons, developer, developer tools, tools, shortcode
 Requires at least: 3.5.0
-Tested up to: 4.1
+Tested up to: 4.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Stable tag: trunk
@@ -179,6 +179,9 @@ Path to the styles inside the active theme:
 4. Font Awesome Icons in TinyMCE editor
 
 == Changelog ==
+
+= 1.1.2 =
+* Minor changes of the plugin core
 
 = 1.1.1 =
 * Minor bugfixing.

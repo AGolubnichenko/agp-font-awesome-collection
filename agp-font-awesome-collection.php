@@ -3,7 +3,7 @@
  * Plugin Name: AGP Font Awesome Collection
  * Plugin URI: https://wordpress.org/plugins/agp-font-awesome-collection/
  * Description: Full set of Font Awesome Icons with Extra Tools in one plugin for Your website
- * Version: 1.1.1
+ * Version: 1.1.2
  * Author: Alexey Golubnichenko
  * Author URI: https://github.com/AGolubnichenko
  * License: GPL2
@@ -68,7 +68,7 @@ function fac_activate_plugin() {
     if (class_exists('Agp_Autoloader') && !function_exists('Fac')) {
         $autoloader = Agp_Autoloader::instance();
         $autoloader->setClassMap(array(
-            __DIR__ => array('classes')
+            __DIR__ => array('classes', 'agp-core'),
         ));
 
         function Fac() {
