@@ -3,6 +3,20 @@
 class Fac extends Agp_Module {
     
     /**
+     * Settings
+     * 
+     * @var Fac_Settings
+     */
+    private $settings;
+    
+    /**
+     * Shortcode Conctructor
+     * 
+     * @var Fac_Constructor
+     */
+    private $constructor;
+    
+    /**
      * Icon Repository
      * 
      * @var Fac_IconRepository
@@ -45,18 +59,26 @@ class Fac extends Agp_Module {
         parent::__construct(dirname(dirname(__FILE__)));
 
         $this->iconRepository = new Fac_IconRepository();
+        $this->settings = Fac_Settings::instance( $this );
+        $this->constructor = Fac_Constructor::instance( $this );
         
         add_action( 'init', array($this, 'init' ), 999 );        
         add_action( 'wp_enqueue_scripts', array($this, 'enqueueScripts' ));                
-        add_action( 'admin_enqueue_scripts', array($this, 'enqueueScripts' ));                
+        add_action( 'admin_enqueue_scripts', array($this, 'enqueueAdminScripts' ));                
 
-        add_shortcode( 'fac_version', array($this, 'doVersionShortcode') );         
-        add_shortcode( 'fac_icon', array($this, 'doIconShortcode') );                 
-        add_shortcode( 'fac_icontext', array($this, 'doIconTextShortcode') );                         
-        add_shortcode( 'fac_dropdown', array($this, 'doDropdownShortcode') );                 
-        add_shortcode( 'fac_button', array($this, 'doButtonShortcode') );                         
-        
+        $this->registerShortcodes();        
+
         add_action( 'init', array($this, 'facTinyMCEButtons' ) );        
+    }
+    
+    public function registerShortcodes() {
+        $shortcodes = $this->settings->getSortcodes();
+
+        if(!empty($shortcodes)) {
+            foreach ($shortcodes as $key => $obj) {
+                add_shortcode( $key, array( $this, 'doShortcode' ) );                     
+            }
+        }
     }
     
     public function init () {
@@ -89,6 +111,18 @@ class Fac extends Agp_Module {
         wp_enqueue_script( 'fac', $this->getAssetUrl('js/main.js'), array('jquery') );                                                         
         wp_enqueue_style( 'fac-css', $this->getAssetUrl('css/style.css') );  
     }        
+    
+    public function enqueueAdminScripts () {
+        wp_enqueue_style( 'wp-color-picker' );        
+        wp_enqueue_script( 'wp-color-picker' );        
+        wp_enqueue_script( 'iris', $this->getAssetUrl('libs/iris/iris.min.js'), array( 'jquery-ui-draggable', 'jquery-ui-slider', 'jquery-touch-punch' ), false, 1 );                
+        wp_enqueue_script('colorbox-js', $this->getAssetUrl() . '/libs/colorbox/jquery.colorbox-min.js',array('jquery'));
+        wp_enqueue_style('colorbox-css', $this->getAssetUrl() . '/libs/colorbox/colorbox.css');        
+        wp_enqueue_style( 'fac-fa', $this->getBaseUrl() .'/vendor/agpfontawesome/components/css/font-awesome.min.css' );
+        wp_enqueue_script( 'fac', $this->getAssetUrl('js/admin.js'), array('jquery') );                                                         
+        wp_enqueue_style( 'fac-css', $this->getAssetUrl('css/admin.css') );  
+    }            
+    
 
     public function getIconRepository() {
         return $this->iconRepository;
@@ -99,75 +133,27 @@ class Fac extends Agp_Module {
         return $this;
     }
     
-    public function doShortcode ($atts) {
-        $default = array(
-            'template' => 'default',
-        );
+    public function doShortcode ($atts, $content, $tag) {
+        $shortcodes = $this->settings->getSortcodes();
         
-        if (empty($atts) || !is_array($atts)) {
-            $atts = array();
+        if (!empty($shortcodes[$tag])) {
+            $obj = $shortcodes[$tag];
+            $default = $this->settings->getShortcodeDefaults($tag);            
+            if (empty($atts) || !is_array($atts)) {
+                $atts = array();
+            }
+            $atts = array_merge($default, $atts );        
+            
+            return $this->getTemplate($obj->template, $atts);                             
         }
 
-        $atts = array_merge($default, $atts );        
-
-        return $this->getTemplate($atts['template'], $atts);                    
     }    
     
-    public function doVersionShortcode ($atts) {
-        $atts = shortcode_atts( array(
-            'template' => 'version',
-        ), $atts );        
-        return $this->doShortcode($atts);
+    public function getSettings() {
+        return $this->settings;
     }
-    
-    public function doIconShortcode ($atts) {
-        $atts = shortcode_atts( array(
-            'icon' => '',
-            'template' => 'icon',
-            'color' => NULL,
-            'font_size' => NULL,
-        ), $atts );        
-        return $this->doShortcode($atts);
-    }    
-    
-    public function doIconTextShortcode ($atts) {
-        $atts = shortcode_atts( array(
-            'icon' => '',
-            'template' => 'icontext',
-            'text' => NULL,
-            'shape_type' => NULL,
-            'shape_bg' => NULL,
-            'icon_color' => NULL, 
-            'text_color' => NULL,
-        ), $atts );        
-        return $this->doShortcode($atts);
-    }        
-
-    public function doDropdownShortcode ($atts) {
-        $uniqueId = 'fac-dropdown-' . uniqid();
-        $atts = shortcode_atts( array(
-            'name' => $uniqueId,
-            'icon' => '',
-            'template' => 'dropdown',
-        ), $atts );        
-        return $this->doShortcode($atts);
-    }    
-    
-    public function doButtonShortcode ($atts) {
-        $atts = shortcode_atts( array(
-            'template' => 'button',            
-            'name' => NULL,
-            'title' => '',
-            'icon' => '',
-            'link' => '',
-            'background' => NULL,
-            'border_radius' => NULL,
-            'border_width' => NULL,
-            'border_color' => NULL,
-            'text' => NULL,
-            'color' => NULL,
-        ), $atts );        
-        return $this->doShortcode($atts);
-    }    
-    
+ 
+    public function getConstructor() {
+        return $this->constructor;
+    }
 }

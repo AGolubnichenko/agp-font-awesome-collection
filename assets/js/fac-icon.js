@@ -6,12 +6,16 @@
                title : 'FontAwesome Icon',
                image : url+'/ico.png',
                onclick : function() {
-                  var icon = prompt("Icon Name", "");
-                  if (icon != null && icon != ''){
-                    ed.execCommand('mceInsertContent', false, '[fac_icon icon="'+icon+'"]');
-                  }
+                    jQuery('.fac-constructor-apply').unbind('click');
+                    jQuery('.fac-constructor-apply').bind('click', function(event) {
+                        var data = '[todo]';
+                        ed.execCommand('mceInsertContent', false, data);
+                        jQuery.colorbox.close();
+                    });
+                    jQuery("#fac-constructor-box").colorbox({inline:true, width:"50%"});  
+                    jQuery("#fac-constructor-box").click();
                }
-            });
+            }); 
         },
         createControl : function(n, cm) {
             return null;
