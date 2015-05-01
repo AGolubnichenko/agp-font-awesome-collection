@@ -2,6 +2,14 @@
 
 class Fac extends Agp_Module {
     
+    
+    /**
+     * Ajax
+     * 
+     * @var Fac_Ajax
+     */
+    private $ajax;
+    
     /**
      * Settings
      * 
@@ -61,6 +69,7 @@ class Fac extends Agp_Module {
         $this->iconRepository = new Fac_IconRepository();
         $this->settings = Fac_Settings::instance( $this );
         $this->constructor = Fac_Constructor::instance( $this );
+        $this->ajax = Fac_Ajax::instance();
         
         add_action( 'init', array($this, 'init' ), 999 );        
         add_action( 'wp_enqueue_scripts', array($this, 'enqueueScripts' ));                
@@ -115,14 +124,19 @@ class Fac extends Agp_Module {
     public function enqueueAdminScripts () {
         wp_enqueue_style( 'wp-color-picker' );        
         wp_enqueue_script( 'wp-color-picker' );        
-        //wp_enqueue_script( 'iris', $this->getAssetUrl('libs/iris/iris.min.js'), array( 'jquery-ui-draggable', 'jquery-ui-slider', 'jquery-touch-punch' ), false, 1 );                
         wp_enqueue_script('colorbox-js', $this->getAssetUrl() . '/libs/colorbox/jquery.colorbox-min.js',array('jquery'));
         wp_enqueue_style('colorbox-css', $this->getAssetUrl() . '/libs/colorbox/colorbox.css');        
         wp_enqueue_style( 'fac-fa', $this->getBaseUrl() .'/vendor/agpfontawesome/components/css/font-awesome.min.css' );
-        wp_enqueue_script( 'fac', $this->getAssetUrl('js/admin.js'), array('jquery') );                                                         
+        wp_enqueue_script( 'fac', $this->getAssetUrl('js/admin.js'), array('jquery', 'wp-color-picker') );                                                         
         wp_enqueue_style( 'fac-css', $this->getAssetUrl('css/admin.css') );  
+        wp_enqueue_style( 'fac-css-front', $this->getAssetUrl('css/style.css') );          
+
+        wp_localize_script( 'fac', 'ajax_fac', array( 
+            'base_url' => site_url(),         
+            'ajax_url' => admin_url( 'admin-ajax.php' ), 
+            'ajax_nonce' => wp_create_nonce('ajax_atf_nonce'),        
+        ));          
     }            
-    
 
     public function getIconRepository() {
         return $this->iconRepository;
@@ -155,5 +169,9 @@ class Fac extends Agp_Module {
  
     public function getConstructor() {
         return $this->constructor;
+    }
+    
+    public function getAjax() {
+        return $this->ajax;
     }
 }

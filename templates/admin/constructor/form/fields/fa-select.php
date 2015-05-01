@@ -5,12 +5,12 @@
     $class = !empty($args->fields[$args->field]['class']) ? $args->fields[$args->field]['class'] : ''; 
     $note = !empty($args->fields[$args->field]['note']) ? $args->fields[$args->field]['note'] : '';    
     
-    $name = "{$args->key}[{$args->field}]";
+    $name = "params[{$args->field}]";
     $selected = !empty($args->fields[$args->field]['default']) ? $args->fields[$args->field]['default'] : '';
     $categories = Fac()->getIconRepository()->getAllCategories();
 ?>
 
-    <label for="<?php echo "{$args->key}[{$args->field}]"; ?>"><?php echo $label;?></label>    
+    <label for="<?php echo "params[{$args->field}]"; ?>"><?php echo $label;?></label>    
     <select style="font-family:FontAwesome, Arial;"<?php echo !empty($class) ? ' class="'.$class.'"': '';?> name="<?php echo $name; ?>" id="<?php echo $name; ?>">
         <option value=""></option>                
         <?php 

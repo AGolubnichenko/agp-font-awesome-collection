@@ -47,9 +47,7 @@ class Fac_Constructor {
      * @param Agp_Module $parentModule
      */
     public function __construct() {
-        add_action( 'admin_footer', array( $this, 'createForm' ) );       
-        //  add_action( 'admin_footer-post.php', array( $this, 'createForm' ) );               
-        //
+        add_action( 'admin_footer-post.php', array( $this, 'createForm' ) );       
     }
     
     public static function getParentModule() {

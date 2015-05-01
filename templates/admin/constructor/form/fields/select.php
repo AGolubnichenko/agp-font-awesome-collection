@@ -6,8 +6,8 @@
     
     $list = $args->fieldSet[$args->fields[$args->field]['fieldSet']];
 ?>
-<label for="<?php echo "{$args->key}[{$args->field}]"; ?>"><?php echo $label;?></label>
-<select<?php echo !empty($class) ? ' class="'.$class.'"': '';?> id="<?php echo "{$args->key}[{$args->field}]"; ?>" name="<?php echo "{$args->key}[{$args->field}]"; ?>" >
+<label for="<?php echo "params[{$args->field}]"; ?>"><?php echo $label;?></label>
+<select<?php echo !empty($class) ? ' class="'.$class.'"': '';?> id="<?php echo "params[{$args->field}]"; ?>" name="<?php echo "params[{$args->field}]"; ?>" >
     <?php 
         foreach( $list as $k => $v ):
             $selected = !empty($args->data[$args->field]) && $args->data[$args->field] == $k;

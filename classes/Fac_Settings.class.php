@@ -84,6 +84,19 @@ class Fac_Settings extends Agp_SettingsAbstract {
         return $result;
     }
     
+    public function getElementList () {
+        $result = array();
+        $shortcodes = $this->objectToArray($this->getConfig()->shortcodes);
+        if (!empty($shortcodes)) {
+            foreach( $shortcodes as $key => $item ) {
+                if (empty($item['developerOnly'])) {
+                    $result[$key] = $item['displayName'];
+                }
+            }
+        }
+        return $result;
+    }
+    
     /**
      * Convert an array into a stdClass()
      * 

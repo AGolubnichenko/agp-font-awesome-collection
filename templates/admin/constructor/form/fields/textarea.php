@@ -6,6 +6,6 @@
     
     $value = esc_attr($args->fields[$args->field]['default']);
 ?>
-<label for="<?php echo "{$args->key}[{$args->field}]"; ?>"><?php echo $label;?></label>
-<textarea rows="6" <?php echo !empty($class) ? ' class="'.$class.'"': '';?> id="<?php echo "{$args->key}[{$args->field}]"; ?>" name="<?php echo "{$args->key}[{$args->field}]"; ?>"><?php echo $value;?></textarea>        
+<label for="<?php echo "params[{$args->field}]"; ?>"><?php echo $label;?></label>
+<textarea rows="6" <?php echo !empty($class) ? ' class="'.$class.'"': '';?> id="<?php echo "params[{$args->field}]"; ?>" name="<?php echo "params[{$args->field}]"; ?>"><?php echo $value;?></textarea>        
 <?php if (!empty($note)): ?><p class="wp-open-weather-description"><?php echo $note;?></p><?php endif;?>        

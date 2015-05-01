@@ -8,11 +8,30 @@
                onclick : function() {
                     jQuery('.fac-constructor-apply').unbind('click');
                     jQuery('.fac-constructor-apply').bind('click', function(event) {
-                        var data = '[todo]';
-                        ed.execCommand('mceInsertContent', false, data);
-                        jQuery.colorbox.close();
+                        var data = 'action=getShortcode&nonce=' + ajax_fac.ajax_nonce;
+                        data = data + "&" + jQuery('#fac-constructor-params').serialize();
+                        
+                        jQuery('.fac-constructor-spinner').show();
+                        jQuery.colorbox.resize();
+                        jQuery.ajax({
+                            url: ajax_fac.ajax_url,
+                            type: 'POST' ,
+                            data: data,
+                            dataType: 'json',
+                            cache: false,
+                            success: function(data) {
+                                if (data['shortcode']) {
+                                    ed.execCommand('mceInsertContent', false, data['shortcode']);
+                                }
+                                jQuery('.fac-constructor-spinner').hide();
+                                jQuery.colorbox.resize();
+                                jQuery.colorbox.close();                                
+                            },
+                            error: function (request, status, error) {
+                               jQuery('.fac-constructor-spinner').hide();
+                            }
+                        });                               
                     });
-                    jQuery("#fac-constructor-box").colorbox({inline:true, width:"50%"});  
                     jQuery("#fac-constructor-box").click();
                }
             }); 
@@ -30,4 +49,6 @@
         }
     });
     tinymce.PluginManager.add('fac_icon', tinymce.plugins.fac_icon);
+    
+
 })();
