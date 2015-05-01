@@ -11,7 +11,7 @@
 ?>
 
     <label for="<?php echo "{$args->key}[{$args->field}]"; ?>"><?php echo $label;?></label>    
-    <select<?php echo !empty($class) ? ' class="'.$class.'"': '';?> name="<?php echo $name; ?>" id="<?php echo $name; ?>">
+    <select style="font-family:FontAwesome, Arial;"<?php echo !empty($class) ? ' class="'.$class.'"': '';?> name="<?php echo $name; ?>" id="<?php echo $name; ?>">
         <option value=""></option>                
         <?php 
             foreach ($categories as $category) : 
@@ -21,8 +21,8 @@
                 $icons = Fac()->getIconRepository()->getAllByCategory($category);
                 foreach ($icons as $icon) : 
         ?>
-            <option data-icon="fa-<?php echo $icon->getId(); ?>" value="<?php echo $icon->getId(); ?>"<?php selected($icon->getId(), $selected); ?>>
-                <i class="fa">&#x<?php echo $icon->getUnicode(); ?>;</i> <?php echo $icon->getName(); ?>
+            <option style="font-family:FontAwesome, Arial;" data-icon="fa-<?php echo $icon->getId(); ?>" value="<?php echo $icon->getId(); ?>"<?php selected($icon->getId(), $selected); ?>>
+                &#x<?php echo $icon->getUnicode(); ?>; <?php echo $icon->getName(); ?>
             </option>            
         <?php 
                 endforeach;
