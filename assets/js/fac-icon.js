@@ -3,7 +3,7 @@
     tinymce.create('tinymce.plugins.fac_icon', {
         init : function(ed, url) {
             ed.addButton('fac_icon', {
-               title : 'FontAwesome Icon',
+               title : 'FontAwesome Constructor',
                image : url+'/ico.png',
                onclick : function() {
                     jQuery('.fac-constructor-apply').unbind('click');
@@ -41,7 +41,7 @@
         },
         getInfo : function() {
             return {
-               longname : "FontAwesome Icon",
+               longname : "FontAwesome Constructor",
                author : 'Alexey Golubnichenko',
                authorurl : 'https://github.com/AGolubnichenko',
                version : "1.0"
