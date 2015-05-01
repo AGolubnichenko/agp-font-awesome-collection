@@ -10,9 +10,4 @@
             ?>
         </div>
     </div>
-    <script type="text/javascript">
-        jQuery(document).ready(function(){
-            jQuery("#fac-constructor-box").colorbox({inline:true, width:"50%"});
-        });
-    </script>    
 </div>

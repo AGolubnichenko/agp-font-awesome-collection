@@ -115,7 +115,7 @@ class Fac extends Agp_Module {
     public function enqueueAdminScripts () {
         wp_enqueue_style( 'wp-color-picker' );        
         wp_enqueue_script( 'wp-color-picker' );        
-        wp_enqueue_script( 'iris', $this->getAssetUrl('libs/iris/iris.min.js'), array( 'jquery-ui-draggable', 'jquery-ui-slider', 'jquery-touch-punch' ), false, 1 );                
+        //wp_enqueue_script( 'iris', $this->getAssetUrl('libs/iris/iris.min.js'), array( 'jquery-ui-draggable', 'jquery-ui-slider', 'jquery-touch-punch' ), false, 1 );                
         wp_enqueue_script('colorbox-js', $this->getAssetUrl() . '/libs/colorbox/jquery.colorbox-min.js',array('jquery'));
         wp_enqueue_style('colorbox-css', $this->getAssetUrl() . '/libs/colorbox/colorbox.css');        
         wp_enqueue_style( 'fac-fa', $this->getBaseUrl() .'/vendor/agpfontawesome/components/css/font-awesome.min.css' );
