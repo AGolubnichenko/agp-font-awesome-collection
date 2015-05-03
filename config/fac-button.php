@@ -2,6 +2,7 @@
 return array(
     'template' =>'button',
     'displayName' => 'Icon Button',
+    'group' => 'basic',
     'fields' => array(
         'icon' => array(
             'label' => 'Icon',            

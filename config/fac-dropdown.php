@@ -2,6 +2,7 @@
 return array(
     'template' =>'dropdown',
     'displayName' => 'Dropdown list',
+    'group' => 'basic',    
     'developerOnly' => TRUE,
     'fields' => array(
         'icon' => array(

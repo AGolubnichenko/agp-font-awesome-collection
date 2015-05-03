@@ -33,6 +33,14 @@ class Fac extends Agp_Module {
     
     
     /**
+     * Shortcodes
+     * 
+     * @var Fac_Shortcodes
+     */
+    private $shortcodes;
+    
+    
+    /**
      * The single instance of the class 
      * 
      * @var object 
@@ -65,10 +73,13 @@ class Fac extends Agp_Module {
     
     public function __construct() {
         parent::__construct(dirname(dirname(__FILE__)));
-
+        
+        include_once ( $this->getBaseDir() . '/types/shortcodes-post-type.php' );                
+        
         $this->iconRepository = new Fac_IconRepository();
         $this->settings = Fac_Settings::instance( $this );
-        $this->constructor = Fac_Constructor::instance( $this );
+        $this->constructor = Fac_Constructor::instance();
+        $this->shortcodes = Fac_Shortcodes::instance();
         $this->ajax = Fac_Ajax::instance();
         
         add_action( 'init', array($this, 'init' ), 999 );        

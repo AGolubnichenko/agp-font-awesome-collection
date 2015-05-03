@@ -1,6 +1,6 @@
 <?php
 
-class Fac_Constructor {
+class Fac_Shortcodes {
     
     /**
      * The single instance of the class 
@@ -39,12 +39,8 @@ class Fac_Constructor {
      * @param Agp_Module $parentModule
      */
     public function __construct() {
-        add_action( 'admin_footer-post.php', array( $this, 'createForm' ) );       
+        
     }
-    
-    public function createForm() {
-        echo Fac()->getTemplate('admin/constructor/constructor');
-    }
-    
+
 }
 

@@ -60,7 +60,7 @@ class Fac_Settings extends Agp_SettingsAbstract {
     public function getSortcodes() {
         $result = array();
 
-        $shortcodes = $this->objectToArray($this->getConfig()->shortcodes);
+        $shortcodes = $this->objectToArray($this->getConfig()->shortcodes->elements);
         if(!empty($shortcodes)) {
             foreach ($shortcodes as $key => $value) {
                $result[$key] = $this->arrayToObject($value);
@@ -72,7 +72,7 @@ class Fac_Settings extends Agp_SettingsAbstract {
     public function getShortcodeDefaults($name) {
         $result = array();
 
-        $shortcodes = $this->objectToArray($this->getConfig()->shortcodes);
+        $shortcodes = $this->objectToArray($this->getConfig()->shortcodes->elements);
         if (!empty($shortcodes[$name]['fields'])) {
             foreach( $shortcodes[$name]['fields'] as $key => $item ) {
                 if ($item['type'] != 'hidden') {
@@ -86,7 +86,7 @@ class Fac_Settings extends Agp_SettingsAbstract {
     
     public function getElementList () {
         $result = array();
-        $shortcodes = $this->objectToArray($this->getConfig()->shortcodes);
+        $shortcodes = $this->objectToArray($this->getConfig()->shortcodes->elements);
         if (!empty($shortcodes)) {
             foreach( $shortcodes as $key => $item ) {
                 if (empty($item['developerOnly'])) {
