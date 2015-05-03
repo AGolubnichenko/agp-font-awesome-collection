@@ -48,7 +48,7 @@
                             var el = $(this).parent().find('p.fac-note');
                             el.hide();
                         }
-                    );        
+                    );       
                 },
                 error: function (request, status, error) {
                     hideSpinner();

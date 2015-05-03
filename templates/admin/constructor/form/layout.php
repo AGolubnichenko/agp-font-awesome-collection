@@ -10,8 +10,8 @@
 <h1>Font Awesome Constructor</h1>
 <div class="fac-constructor-wrapper">
     <div class="faccw-column">
-<?php echo Fac()->getTemplate('admin/constructor/form/element-list', $args); ?>
-<?php echo Fac()->getTemplate('admin/constructor/form/element-params', $args); ?>     
+        <?php echo Fac()->getTemplate('admin/constructor/form/element-list', $args); ?>
+        <?php echo Fac()->getTemplate('admin/constructor/form/element-params', $args); ?>     
     </div>
     
     <div class="faccw-column faccw-preview">
