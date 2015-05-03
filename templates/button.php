@@ -15,7 +15,7 @@ if (!empty($params)):
     if (!empty($background)) {
         $styles[] = "background: $background"; 
     }
-    if (isset($border_radius)) {
+    if (!empty($border_radius)) {
         $styles[] = "border-radius: $border_radius"; 
     }    
     if (!empty($border_width)) {
