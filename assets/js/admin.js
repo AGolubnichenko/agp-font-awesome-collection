@@ -39,9 +39,14 @@
                     resizeBox();
                     
                     $('a.fac-hint').hover(function() {
-                        $(this).parent().find('p.fac-note').show();
+                            var el = $(this).parent().find('p.fac-note');
+                            el.show();
+                            var x = $(this).offset().left - el.outerWidth();
+                            var y = $(this).offset().top + $(this).outerHeight();
+                            el.offset({ top: y, left: x });                            
                         }, function() {
-                        $(this).parent().find('p.fac-note').hide();
+                            var el = $(this).parent().find('p.fac-note');
+                            el.hide();
                         }
                     );        
                 },

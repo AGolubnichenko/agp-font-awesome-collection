@@ -1,5 +1,5 @@
 <?php
-if (!empty($params)):
+if (!empty($params) && !empty($params['icon'])) :
     $name = !empty($params['name']) ? $params['name'] : '';
     $title = !empty($params['title']) ? $params['title'] : '';
     $icon = !empty($params['icon']) ? $params['icon'] : '';

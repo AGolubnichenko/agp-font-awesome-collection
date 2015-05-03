@@ -11,8 +11,7 @@
 
 a.fac-hint { width: 22px; height: 22px; font-size: 22px!important; line-height: 22px!important; padding: 0 0 0 5px; }
 a.fac-hint.fac-color-hint { line-height: 20px!important; padding: 0; }
-p.fac-note { display: none; position: absolute; z-index: 10000; background: #fff; width: 200px; }
-
+p.fac-note { display: none; position: absolute; z-index: 10000; background: #fff; width: 10%px; border: 1px solid #ddd; padding: 20px; }
 .fac-constructor-field label { display: block; padding: 5px 0; font-weight: bold; }
 .fac-constructor-field .fac-hint { display: inline-block; vertical-align: top; }
 

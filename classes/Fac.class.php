@@ -90,7 +90,7 @@ class Fac extends Agp_Module {
         add_action( 'wp_enqueue_scripts', array($this, 'enqueueScripts' ));                
         add_action( 'admin_enqueue_scripts', array($this, 'enqueueAdminScripts' ));                
 
-        add_action( 'init', array($this, 'facTinyMCEButtons' ) );        
+        add_action( 'admin_init', array($this, 'facTinyMCEButtons' ) );        
     }
     
     public function registerShortcodes() {

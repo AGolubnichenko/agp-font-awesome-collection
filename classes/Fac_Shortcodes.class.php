@@ -44,7 +44,7 @@ class Fac_Shortcodes {
     }
 
     public function addMetaboxes() {
-        add_meta_box('fac_shortcodes_name', 'Name', array( $this, 'viewNameMetabox' ), 'fac-shortcodes', 'normal', 'default');
+        add_meta_box('fac_shortcodes_name', 'Shortcode Name', array( $this, 'viewNameMetabox' ), 'fac-shortcodes', 'normal', 'default');
         add_meta_box('fac_shortcodes_preview', 'Preview', array( $this, 'viewPreviewMetabox' ), 'fac-shortcodes', 'side', 'default');        
     }
     
