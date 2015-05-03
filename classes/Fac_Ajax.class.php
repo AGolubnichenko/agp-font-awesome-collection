@@ -39,7 +39,7 @@ class Fac_Ajax extends Agp_AjaxAbstract {
         $result = array();
         if (isset($data['key'])) {
             $result['content'] = Fac()->getTemplate('admin/constructor/constructor', array('key' => $data['key']));    
-            $result['preview'] = Fac()->doShortcode(array(), '', $data['key']);
+            $result['preview'] = '<p>' . Fac()->doShortcode(array(), '', $data['key']) . '</p>';
         }
         return $result;                    
     }
@@ -48,7 +48,7 @@ class Fac_Ajax extends Agp_AjaxAbstract {
         $result = array();
         if (isset($data['key'])) {
             $atts = !empty($data['params']) ? $data['params'] : array();
-            $result['preview'] = Fac()->doShortcode($atts, '', $data['key']);
+            $result['preview'] = '<p>' . Fac()->doShortcode($atts, '', $data['key']) . '</p>';
         }
         return $result;                            
     }    
@@ -68,9 +68,7 @@ class Fac_Ajax extends Agp_AjaxAbstract {
                 }
             }
             
-            if (!empty($s)) {
-                $result['shortcode'] = '[' . $data['key'] . $s . ']';   
-            }
+            $result['shortcode'] = '[' . $data['key'] . $s . ']';   
         }
         return $result;                            
     }        

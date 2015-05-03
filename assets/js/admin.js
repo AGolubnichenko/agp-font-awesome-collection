@@ -35,8 +35,15 @@
                     
                     init();
                     hideSpinner();
-                    //$('.fac-constructor-preview-container').html(data['preview']);
+                    $('.fac-constructor-preview-container').html(data['preview']);
                     resizeBox();
+                    
+                    $('a.fac-hint').hover(function() {
+                        $(this).parent().find('p.fac-note').show();
+                        }, function() {
+                        $(this).parent().find('p.fac-note').hide();
+                        }
+                    );        
                 },
                 error: function (request, status, error) {
                     hideSpinner();

@@ -8,4 +8,4 @@
 ?>
 <label for="<?php echo "params[{$args->field}]"; ?>"><?php echo $label;?></label>
 <input<?php echo !empty($class) ? ' class="'.$class.'"': '';?> type="text" id="<?php echo "params[{$args->field}]"; ?>" name="<?php echo "params[{$args->field}]"; ?>" value="<?php echo $value;?>">                
-<?php if (!empty($note)): ?><p class="wp-open-weather-description"><?php echo $note;?></p><?php endif;?>
+<?php if (!empty($note)): ?><a href="#" class="fac-hint"><i class="fa fa-question-circle"></i></a><p class="fac-note"><?php echo $note;?></p><?php endif;?>

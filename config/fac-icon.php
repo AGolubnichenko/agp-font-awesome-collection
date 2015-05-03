@@ -2,7 +2,6 @@
 return array(
     'template' =>'icon',
     'displayName' => 'Simpe Icon',
-    'group' => 'basic',    
     'fields' => array(
         'icon' => array(
             'label' => 'Icon',            

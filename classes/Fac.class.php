@@ -40,6 +40,9 @@ class Fac extends Agp_Module {
     private $shortcodes;
     
     
+    
+    private $customElements;
+    
     /**
      * The single instance of the class 
      * 
@@ -81,21 +84,26 @@ class Fac extends Agp_Module {
         $this->constructor = Fac_Constructor::instance();
         $this->shortcodes = Fac_Shortcodes::instance();
         $this->ajax = Fac_Ajax::instance();
-        
+
+        add_action( 'init', array($this, 'registerShortcodes' ), 998 );                
         add_action( 'init', array($this, 'init' ), 999 );        
         add_action( 'wp_enqueue_scripts', array($this, 'enqueueScripts' ));                
         add_action( 'admin_enqueue_scripts', array($this, 'enqueueAdminScripts' ));                
-
-        $this->registerShortcodes();        
 
         add_action( 'init', array($this, 'facTinyMCEButtons' ) );        
     }
     
     public function registerShortcodes() {
         $shortcodes = $this->settings->getSortcodes();
-
-        if(!empty($shortcodes)) {
+        if (!empty($shortcodes)) {
             foreach ($shortcodes as $key => $obj) {
+                add_shortcode( $key, array( $this, 'doShortcode' ) );                     
+            }
+        }
+        
+        $this->customElements = $this->settings->getCustomElementList();        
+        if (!empty($this->customElements)) {
+            foreach ($this->customElements as $key => $title) {
                 add_shortcode( $key, array( $this, 'doShortcode' ) );                     
             }
         }
@@ -160,6 +168,7 @@ class Fac extends Agp_Module {
     
     public function doShortcode ($atts, $content, $tag) {
         $shortcodes = $this->settings->getSortcodes();
+        $customShortcodes = $this->customElements;
         
         if (!empty($shortcodes[$tag])) {
             $obj = $shortcodes[$tag];
@@ -170,8 +179,46 @@ class Fac extends Agp_Module {
             $atts = array_merge($default, $atts );        
             
             return $this->getTemplate($obj->template, $atts);                             
+        } elseif (!empty($customShortcodes[$tag])) {
+            return $this->doCustomShortcode($atts, $content, $tag);
         }
+    }    
+    
+    public function doCustomShortcode ($atts, $content, $tag) {
+        global $post;
+        $content = '';
+        $wpautop = has_filter( 'the_content', 'wpautop');
+        
+        $args = array(
+            'post_type' => 'fac-shortcodes',
+            'posts_per_page' => -1,
+            'meta_query' => array(
+                array(
+                    'key'     => '_name',
+                    'value'   => array( $tag ),
+                    'compare' => 'IN',
+                ),
+            ),            
+        );
 
+        $query = new WP_Query($args);
+        
+        
+        if ($wpautop) {
+            remove_filter ('the_content', 'wpautop');    
+        }
+        
+        while ( $query->have_posts() ) : $query->the_post();
+            $content .= apply_filters('the_content', get_the_content());
+        endwhile;        
+        
+        if ($wpautop) {
+            add_filter('the_content', 'wpautop');
+        }
+        
+        wp_reset_query();
+        
+        return $content;        
     }    
     
     public function getSettings() {
@@ -185,4 +232,13 @@ class Fac extends Agp_Module {
     public function getAjax() {
         return $this->ajax;
     }
+    
+    public function getShortcodes() {
+        return $this->shortcodes;
+    }
+
+    public function getCustomElements() {
+        return $this->customElements;
+    }
+
 }

@@ -2,7 +2,6 @@
 return array(
     'template' =>'icontext',
     'displayName' => 'Simpe Icon with text and shape',
-    'group' => 'basic',    
     'fields' => array(
         'icon' => array(
             'label' => 'Icon',            

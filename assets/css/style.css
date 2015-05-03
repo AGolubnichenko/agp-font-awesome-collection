@@ -3,7 +3,7 @@
 /*-----Font Awesome Icon Default Styling-----*/
 
 .fac.fac-icontext-template {
-    display: inline-block;
+    display: inline-block; line-height: 20px;
 }
 
 .fac.fac-icontext-template .fac-shape { 
@@ -11,15 +11,18 @@
     color: #fff;
     display: inline-block;
 	border: 2px solid transparent;  
-    min-height: 30px;   
-    min-width: 30px;
+    width: 22px;
+    height: 22px;
     text-align: center;
     text-decoration: none;
-    padding: 2px; 
+    padding: 5px; 
     font-weight: bold;  
     margin: 2px;
-    font-size: 14px; 
-    box-sizing: border-box;
+    font-size: 14px!important;  
+    line-height: 22px;
+    box-sizing: content-box;
+    overflow: hidden;
+    vertical-align: middle;
 }               
 
 .fac.fac-icontext-template .fac-shape.fac-square { 
@@ -36,8 +39,18 @@
 .fac.fac-icontext-template .fac-shape.fac-round { 
 	background: #263238;
     color: #fff;
-    border-radius: 31px;
+    border-radius: 34px;
 }   
+
+.fac.fac-icontext-template i { 
+    padding: 0;
+    font-size: 16px!important;
+    vertical-align: middle;
+}
+
+.fac.fac-icontext-template .fac-text { 
+    vertical-align: middle; 
+}
              
 /*-----Font Awesome Button Default Styling-----*/
 
@@ -51,32 +64,38 @@
 	border-radius: 6px;
     display: inline-block;
 	border: 2px solid transparent;  
-    min-height: 30px;   
-    min-width: 30px;
+    width: 22px;
+    height: 22px;
 	cursor: pointer;
     text-align: center;
     text-decoration: none;
-    padding: 2px; 
+    padding: 5px; 
     font-weight: bold;  
     margin: 2px;
-    font-size: 14px; 
-    box-sizing: border-box;
+    font-size: 14px!important; 
+    line-height: 22px;
+    box-sizing: content-box;
+    overflow: hidden;
+    vertical-align: middle; 
+        
 }
 
 .fac.fac-button-template .fac-button i {
     padding: 0;
+    font-size: 16px!important;
 }
 
 .fac.fac-button-template .fac-button.fac-text {
-    padding: 2px 10px;
+    padding: 5px 10px;
+    width: auto;
 }
 
 .fac.fac-button-template .fac-button.fac-text span {
     padding: 0 0 0 3px;    
 }
 
-.fac.fac-button-template .fac-button:hover, .fac.fac-button-template .fac-button:active, .fac.fac-button-template .fac-button:visited {
-	background: #263238;
+.fac.fac-button-template .fac-button:hover {
+	opacity: 0.9;
 }
 
 /*-----Font Awesome Version Default Styling-----*/
