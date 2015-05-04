@@ -17,4 +17,4 @@
         endforeach; 
     ?>
 </select>
-<?php if (!empty($note)): ?><a href="#" class="fac-hint"><i class="fa fa-question-circle"></i></a><p class="fac-note"><?php echo $note;?></p><?php endif;?>
+<?php if (!empty($note)): ?><a href="javascript:void(0);" class="fac-hint"><i class="fa fa-question-circle"></i></a><p class="fac-note"><?php echo $note;?></p><?php endif;?>

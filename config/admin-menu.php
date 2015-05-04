@@ -2,8 +2,8 @@
 
 return array(
     'fac' => array(
-        'page_title' => 'Font Awesome', 
-        'menu_title' => 'Font Awesome', 
+        'page_title' => 'AGP Icons', 
+        'menu_title' => 'AGP Icons', 
         'capability' => 'manage_options',
         'function' => '',
         'icon_url' => '', 

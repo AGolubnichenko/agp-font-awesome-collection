@@ -3,7 +3,8 @@
 /*-----Font Awesome Icon Default Styling-----*/
 
 .fac.fac-icontext-template {
-    display: inline-block; line-height: 20px;
+    display: inline-block; 
+    line-height: 20px;
 }
 
 .fac.fac-icontext-template .fac-shape { 
@@ -18,8 +19,7 @@
     padding: 5px; 
     font-weight: bold;  
     margin: 2px;
-    font-size: 14px!important;  
-    line-height: 22px;
+    font-size: 16px!important;  
     box-sizing: content-box;
     overflow: hidden;
     vertical-align: middle;
@@ -45,7 +45,15 @@
 .fac.fac-icontext-template i { 
     padding: 0;
     font-size: 16px!important;
+    line-height: 22px!important;
     vertical-align: middle;
+    text-align: center;
+    width: 22px;
+    height: 22px;
+    overflow: hidden;
+    display: block;
+    float: left;
+    font-weight: normal;
 }
 
 .fac.fac-icontext-template .fac-text { 
@@ -83,15 +91,24 @@
 .fac.fac-button-template .fac-button i {
     padding: 0;
     font-size: 16px!important;
+    line-height: 22px!important;
+    vertical-align: middle;
+    text-align: center;
+    width: 22px;
+    height: 22px;
+    overflow: hidden;
+    display: block;
+    float: left;
+    font-weight: normal;
 }
 
 .fac.fac-button-template .fac-button.fac-text {
-    padding: 5px 10px;
+    padding: 5px 12px 5px 7px;
     width: auto;
 }
 
 .fac.fac-button-template .fac-button.fac-text span {
-    padding: 0 0 0 3px;    
+   padding: 0 0 0 3px;
 }
 
 .fac.fac-button-template .fac-button:hover {

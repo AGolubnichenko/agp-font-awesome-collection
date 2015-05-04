@@ -114,11 +114,13 @@ class Fac extends Agp_Module {
     }
     
     public function facTinyMCEButtons () {
+        global $pagenow;
+        
         if ( ! current_user_can('edit_posts') && ! current_user_can('edit_pages') ) {
            return;
         }
 
-        if ( get_user_option('rich_editing') == 'true' ) {
+        if ( get_user_option('rich_editing') == 'true' && $pagenow != 'post-new.php' ) {
            add_filter( 'mce_external_plugins', array($this, 'facTinyMCEAddPlugin') );
            add_filter( 'mce_buttons', array($this, 'facTinyMCERegisterButtons'));
         }        

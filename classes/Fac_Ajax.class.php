@@ -41,7 +41,14 @@ class Fac_Ajax extends Agp_AjaxAbstract {
             $result['content'] = Fac()->getTemplate('admin/constructor/constructor', array('key' => $data['key']));    
             $result['preview'] = '<p>' . Fac()->doShortcode(array(), '', $data['key']) . '</p>';
         }
-        return $result;                    
+        
+        $return = json_encode($result);
+        header('Content-Length: '.strlen($return)); 
+        header('Content-type: application/json');            
+        echo $return;                    
+        die();
+        
+        //return $result;                    
     }
     
     public function getPreview($data) {
@@ -50,7 +57,14 @@ class Fac_Ajax extends Agp_AjaxAbstract {
             $atts = !empty($data['params']) ? $data['params'] : array();
             $result['preview'] = '<p>' . Fac()->doShortcode($atts, '', $data['key']) . '</p>';
         }
-        return $result;                            
+        
+        $return = json_encode($result);
+        header('Content-Length: '.strlen($return)); 
+        header('Content-type: application/json');            
+        echo $return;                    
+        die();
+        
+        //return $result;                    
     }    
 
     public function getShortcode($data) {
@@ -70,7 +84,14 @@ class Fac_Ajax extends Agp_AjaxAbstract {
             
             $result['shortcode'] = '[' . $data['key'] . $s . ']';   
         }
-        return $result;                            
+        
+        $return = json_encode($result);
+        header('Content-Length: '.strlen($return)); 
+        header('Content-type: application/json');            
+        echo $return;                    
+        die();
+        
+        //return $result;                    
     }        
     
 }
