@@ -17,6 +17,7 @@ WordPress Developers also can find with this plugin some useful features for usa
 
 = Features =
 
+* Install and activate the plugin. That's all you need to start using Font Awesome Font on Your site.
 * No need to have specific skills to add beautiful icon or button on a page or a post. Just follow shortcode attributes references for easy customization.
 * You can add any of the Font Awesome icons and use it as simple icon, icon with text, icon button, icon button with text and easy customize it for your needs.
 * For buttons can be added URL attribute that can lead to a page, an external site or a social networks profile. You can use this feature for a personal promotion, downloads link, donation etc.
@@ -24,6 +25,16 @@ WordPress Developers also can find with this plugin some useful features for usa
 * As developer, you can add dropdown with the Font Awesome icons list and use it for your purpose.
 * For developers are available some object and classes that implement convenient and flexible methods for access to Font Awesome Icons properties.
 * All shortcodes can be used via Administrator Panel in WISIWING areas and directly in code.
+* **NEW!** Now you can add icons and buttons just in few clicks with the new visual shortcodes constructor.
+* **NEW!** You can create you own shortcodes and use it within visual constructor for different pages or posts as many times as needed.
+
+= How to use visual constructor =
+
+[youtube http://www.youtube.com/watch?v=TJ3QqH4BsYY]
+
+= How to create own shortcode  =
+
+[youtube http://www.youtube.com/watch?v=BT02i79Vmts]
 
 = Simpe Icon =
 
@@ -39,8 +50,6 @@ Shortcode with additional attributes:
 
 * **font_size** – allow to set icon size, positive digital value with "px"
 * **color** – allow to set icon color with HEX color value
-
-Also you are able to add simple icon right from the TinyMCE WISIWING editor via "FA" button at the action bar.
 
 More info you can find on the [screenshots](https://wordpress.org/plugins/agp-font-awesome-collection/screenshots/) and [FAQ](https://wordpress.org/plugins/agp-font-awesome-collection/faq/) tabs.
 
@@ -162,7 +171,6 @@ Path to the templates folder inside the active theme:
 
 [ActiveTheme]/templates/agp-font-awesome-collection/
 
-
 = How can I style the Shortcode content? =
 
 The plugin includes CSS file "assets/css/style.css". 
@@ -171,22 +179,33 @@ Path to the styles inside the active theme:
 
 [ActiveTheme]/templates/agp-font-awesome-collection/assets/css/style.css
 
-= How to use visual constructor? (coming soon...) =
-
-[youtube http://www.youtube.com/watch?v=TJ3QqH4BsYY]
-
-= How to create own shortcode?  (coming soon...)  =
-
-[youtube http://www.youtube.com/watch?v=BT02i79Vmts]
-
 == Screenshots ==
 
-1. Icons and Buttons
-2. Dropdown List of Icons
-3. Current Version
-4. Font Awesome Icons in TinyMCE editor
+1. Icons and buttons samples
+2. Visual Constructor :: Button
+3. Visual Constructor :: Simple Icon
+4. Visual Constructor :: Shaper Icon with Text
+5. Visual Constructor :: Flat Button
+6. Visual Constructor :: Social Network Profile Link with Text
+7. Visual Constructor :: Social Network Profile Link
+8. Visual Constructor :: Social Network Profile Link - Round
+9. Visual Constructor :: Social Network Profile Link - Square
+10. Shortcodes List
+11. Custom Shortcode
+12. Visual Constructor :: Custom Shordcodes List
+13. Visual Constructor :: Selected Custom Shortcode
+14. Added Custom Shortcode
+15. Custom Shortcode Result
+16. Font Awesome dropdown (developers only)
+17. Curent Font Avesome Version
 
 == Changelog ==
+
+= 2.0.0 =
+* Added Visual Constructor for elements (icons/buttons)
+* Added possibility to create preset custom shordcodes for elements (icons/buttons)
+* Changes and cleanup of default elements styling
+* Code refactoring
 
 = 1.1.2 =
 * Minor changes of the plugin core
