@@ -171,6 +171,14 @@ Path to the styles inside the active theme:
 
 [ActiveTheme]/templates/agp-font-awesome-collection/assets/css/style.css
 
+= How to use visual constructor? (coming soon...) =
+
+[youtube http://www.youtube.com/watch?v=TJ3QqH4BsYY]
+
+= How to create own shortcode?  (coming soon...)  =
+
+[youtube http://www.youtube.com/watch?v=BT02i79Vmts]
+
 == Screenshots ==
 
 1. Icons and Buttons
