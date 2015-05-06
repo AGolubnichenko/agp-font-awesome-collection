@@ -1,13 +1,13 @@
 === AGP Font Awesome Collection ===
 Contributors: agolubnichenko
-Tags: agp, fontawesome, font-awesome, font awesome, Font Awesome, fa, fa-icon, fa icons, icon font, icons, font, button, buttons, developer, developer tools, tools, shortcode, social icons, social links, social buttons, ui
+Tags: agp, fontawesome, font-awesome, font awesome, Font Awesome, fa, fa-icon, fa icons, icon font, icons, font, button, buttons, developer, developer tools, tools, shortcode, social icons, social links, social buttons, ui, tinymce, visualizer
 Requires at least: 3.5.0
 Tested up to: 4.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Stable tag: trunk
 
-Full set of Font Awesome Icons with Extra Tools in one plugin for Your website
+Full set of Font Awesome Icons with perfect dynamic visualizer for TinyMCE editor
 
 == Description ==
 
