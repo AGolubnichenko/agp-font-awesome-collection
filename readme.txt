@@ -18,6 +18,8 @@ WordPress Developers also can find with this plugin some useful features for usa
 = Features =
 
 * Install and activate the plugin. That's all you need to start using Font Awesome Font on Your site.
+* As general references you can use Font Awesome official examples:  http://fortawesome.github.io/Font-Awesome/examples/ .
+* As for Font Awesome icon names references you can check following link: http://fortawesome.github.io/Font-Awesome/cheatsheet/ .
 * No need to have specific skills to add beautiful icon or button on a page or a post. Just follow shortcode attributes references for easy customization.
 * You can add any of the Font Awesome icons and use it as simple icon, icon with text, icon button, icon button with text and easy customize it for your needs.
 * For buttons can be added URL attribute that can lead to a page, an external site or a social networks profile. You can use this feature for a personal promotion, downloads link, donation etc.
@@ -70,10 +72,6 @@ Shortcode with additional attributes:
 * **shape_bg** – allows to set shape background color with HEX color value
 * **icon_color** – allows to set icon color with HEX color value
 * **text_color** – allows to set text color with HEX color value
-
-As general references you can use Font Awesome official examples:  http://fortawesome.github.io/Font-Awesome/examples/ .
-
-As for Font Awesome icon names references you can check following link: http://fortawesome.github.io/Font-Awesome/cheatsheet/ .
 
 More info you can find on the [screenshots](https://wordpress.org/plugins/agp-font-awesome-collection/screenshots/) and [FAQ](https://wordpress.org/plugins/agp-font-awesome-collection/faq/) tabs.
 
