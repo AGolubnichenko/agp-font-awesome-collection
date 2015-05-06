@@ -7,7 +7,7 @@ License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Stable tag: trunk
 
-Full set of Font Awesome Icons with perfect dynamic visualizer for TinyMCE editor
+Full set of newest Font Awesome Icons with perfect dynamic visualizer for TinyMCE editor
 
 == Description ==
 

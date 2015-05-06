@@ -2,7 +2,7 @@
 /**
  * Plugin Name: AGP Font Awesome Collection
  * Plugin URI: https://wordpress.org/plugins/agp-font-awesome-collection/
- * Description: Full set of Font Awesome Icons with perfect dynamic visualizer for TinyMCE editor
+ * Description: Full set of newest Font Awesome Icons with perfect dynamic visualizer for TinyMCE editor
  * Version: 2.0.0
  * Author: Alexey Golubnichenko
  * Author URI: https://github.com/AGolubnichenko
