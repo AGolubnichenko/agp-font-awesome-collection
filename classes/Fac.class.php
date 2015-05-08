@@ -89,7 +89,8 @@ class Fac extends Agp_Module {
         add_action( 'init', array($this, 'init' ), 999 );        
         add_action( 'wp_enqueue_scripts', array($this, 'enqueueScripts' ));                
         add_action( 'admin_enqueue_scripts', array($this, 'enqueueAdminScripts' ));                
-
+        add_action( 'widgets_init', array($this, 'initWidgets' ) );
+        
         add_action( 'admin_init', array($this, 'facTinyMCEButtons' ) );        
     }
     
@@ -221,6 +222,10 @@ class Fac extends Agp_Module {
         wp_reset_query();
         
         return $content;        
+    }    
+    
+    public function initWidgets() {
+        register_widget('Fac_Promotion');
     }    
     
     public function getSettings() {
