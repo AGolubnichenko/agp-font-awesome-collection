@@ -168,3 +168,40 @@
 .fac-dropdown-template select option {
     font-family: FontAwesome, Arial;   
 }
+
+
+/*-----Font Awesome Widget-----*/
+
+.fac-promotion-main-section {
+	text-align: center;
+	background: #263238;
+}
+
+.fac-promotion-main-section h3.fac-headline, .fac-promotion-main-section p.fac-description {
+	margin: 0;
+	padding: 0;
+}
+    
+.fac-promotion-main-section h3.fac-headline {
+	padding: 10px 0 0;
+}
+
+.fac-promotion-main-section i.fa {
+	font-size: 5em;
+}
+
+.fac-promotion-preview, .fac-promotion-content {
+	padding: 35px 25px;
+}
+
+.fac-promotion-content h3.fac-headline {
+	padding: 0 0 10px;
+}
+
+.fac-promotion-main-section .fpp-inner {
+	display: table-cell;
+	vertical-align: middle;
+	width: 100%;
+	opacity: 1.0!important;
+}
+

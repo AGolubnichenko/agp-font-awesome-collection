@@ -2,6 +2,9 @@
     $(document).ready(function() { 
         init();
 
+        $('.widgets-sortables .fac-promotion-text-color').wpColorPicker();
+        $('.widgets-sortables .fac-promotion-background-color').wpColorPicker();
+
         $(".fac-constructor-type-select").val(0);
         $("#fac-constructor-box").colorbox({inline:true, width:"50%"});
         

@@ -2,14 +2,21 @@
     $(document).ready(function() { 
 
         $('.fac-promotion-main-section').each(function() {
+            var height;            
             var content = $(this).find('.fac-promotion-content');
             var preview = $(this).find('.fac-promotion-preview');
+            var inner = $(this).find('.fpp-inner');
             
             if ($(content).height() > $(preview).height() ) {
-                $(preview).height($(content).height());
+                height = $(content).height();
+                $(preview).height(height);
             } else {
-                $(content).height($(preview).height());
+                height = $(preview).height();
+                $(content).height(height);
             }
+            
+            $(inner).height(height);
+            $(inner).width($(inner).parent().width());
         });
 
         $('.fac-promotion-main-section').hover(

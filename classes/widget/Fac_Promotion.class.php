@@ -7,7 +7,7 @@ class Fac_Promotion extends WP_Widget {
 	 */
 	public function __construct() {
 		$widget_ops = array( 'description' => __( "Adds promotion block to sidebar") );
-		parent::__construct('fac_promotion', __('AGP Promotion'), $widget_ops);
+		parent::__construct('fac_promotion', __('AGP Font Awesome Promotion'), $widget_ops);
 	}
     
 	/**
@@ -36,7 +36,13 @@ class Fac_Promotion extends WP_Widget {
         if (!empty($instance['link'])) {
             $atts['link'] = $instance['link'];
         }                
-
+        if (!empty($instance['text_color'])) {
+            $atts['text_color'] = $instance['text_color'];
+        }                
+        if (!empty($instance['background_color'])) {
+            $atts['background_color'] = $instance['background_color'];
+        }                
+        
         echo Fac()->getTemplate('widget/promotion', $atts);
         
         echo $args['after_widget'];
@@ -52,13 +58,17 @@ class Fac_Promotion extends WP_Widget {
 		$headline = !empty($instance['headline']) ? $instance['headline'] : '';        
 		$description = !empty($instance['description']) ? $instance['description'] : '';        
 		$icon = !empty($instance['icon']) ? $instance['icon'] : '';                
-        $link = !empty($instance['link']) ? $instance['link'] : '';                        
+        $link = !empty($instance['link']) ? $instance['link'] : '';       
+        $text_color = !empty($instance['text_color']) ? $instance['text_color'] : '';        
+        $background_color = !empty($instance['background_color']) ? $instance['background_color'] : '';                
     ?>
         <p><?php $this->renderTitleField($title); ?></p>
         <p><?php $this->renderHeadlineField($headline); ?></p>        
         <p><?php $this->renderDescriptionField($description); ?></p>        
         <p><?php $this->renderIconField($icon); ?></p>                        
         <p><?php $this->renderLinkField($link); ?></p>                                
+        <p><?php $this->renderTextColorField($text_color); ?></p>                                        
+        <p><?php $this->renderBackgroundColorField($background_color); ?></p>                                        
     <?php    
 	}
     
@@ -76,6 +86,8 @@ class Fac_Promotion extends WP_Widget {
         $instance['description'] = (!empty($new_instance['description'])) ? strip_tags( $new_instance['description'] ) : '';
         $instance['icon'] = (!empty($new_instance['icon'])) ? strip_tags( $new_instance['icon'] ) : '';
         $instance['link'] = (!empty($new_instance['link'])) ? strip_tags( $new_instance['link'] ) : '';        
+        $instance['text_color'] = (!empty($new_instance['text_color'])) ? strip_tags( $new_instance['text_color'] ) : '';                
+        $instance['background_color'] = (!empty($new_instance['background_color'])) ? strip_tags( $new_instance['background_color'] ) : '';        
         
 		return $instance;
 	}    
@@ -137,6 +149,26 @@ class Fac_Promotion extends WP_Widget {
     <?php    
     }        
     
+    public function renderTextColorField ($text_color) {
+    ?>
+        <script type='text/javascript'>
+            jQuery('.widgets-sortables .fac-promotion-text-color').wpColorPicker();                                        
+        </script>
+        <label for="<?php echo esc_attr( $this->get_field_id( 'text_color' ) ); ?>" style="display:block;"><?php _e( 'Text Color:' ); ?></label> 
+        <input class="widefat fac-promotion-text-color" id="<?php echo esc_attr( $this->get_field_id( 'text_color' ) ); ?>" name="<?php echo $this->get_field_name( 'text_color' ); ?>" type="text" value="<?php echo esc_attr( $text_color ); ?>" />        
+    <?php 
+    }        
+    
+    public function renderBackgroundColorField ($background_color) {
+    ?>
+        <script type='text/javascript'>
+            jQuery('.widgets-sortables .fac-promotion-background-color').wpColorPicker();                                        
+        </script>
+        <label for="<?php echo esc_attr( $this->get_field_id( 'background_color' ) ); ?>" style="display:block;"><?php _e( 'Background Color:' ); ?></label> 
+        <input class="widefat fac-promotion-background-color" id="<?php echo esc_attr( $this->get_field_id( 'background_color' ) ); ?>" name="<?php echo $this->get_field_name( 'background_color' ); ?>" type="text" value="<?php echo esc_attr( $background_color ); ?>" />        
+    <?php 
+    }            
+
 }
 
     
