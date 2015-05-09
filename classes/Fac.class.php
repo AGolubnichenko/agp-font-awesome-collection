@@ -138,8 +138,9 @@ class Fac extends Agp_Module {
     }        
     
     public function enqueueScripts () {
+        wp_enqueue_script( 'fac-mobile', $this->getAssetUrl('js/jquery.mobile-1.4.0.min.js'), array('jquery') );
         wp_enqueue_style( 'fac-fa', $this->getBaseUrl() .'/vendor/agpfontawesome/components/css/font-awesome.min.css' );
-        wp_enqueue_script( 'fac', $this->getAssetUrl('js/main.js'), array('jquery') );                                                         
+        wp_enqueue_script( 'fac', $this->getAssetUrl('js/main.js'), array('jquery', 'fac-mobile') );                                                         
         wp_enqueue_style( 'fac-css', $this->getAssetUrl('css/style.css') );  
     }        
     
