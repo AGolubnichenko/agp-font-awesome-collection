@@ -1,6 +1,6 @@
 # agp-font-awesome-collection
 
-Full set of the newest Font Awesome Icons with perfect dynamic visualizer for TinyMCE editor
+Full set of the latest Font Awesome icons with perfect dynamic visualizer for TinyMCE editor, flexible promotion widget and many other features in the one plugin
 
 # Installation
 
