@@ -7,7 +7,7 @@ License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Stable tag: trunk
 
-Full set of the latest Font Awesome icons with perfect dynamic visualizer for TinyMCE editor, flexible promotion widget and many other features in the one plugin
+Latest Font Awesome icons with HTML and shortcodes usage, dynamic visualizer for TinyMCE editor, promotion widget and other features in the one plugin
 
 == Description ==
 
@@ -28,7 +28,7 @@ WordPress Developers also can find with this plugin some useful features for usa
 * All shortcodes can be used via Administrator Panel in WISIWING areas and directly in code.
 * Now you can add icons and buttons just in few clicks with the new visual shortcodes constructor.
 * You can create you own shortcodes and use it within visual constructor for different pages or posts as many times as needed.
-* **NEW!** With AGP Font Awesome Promotion widget, You can create and show in sidebar small information block, that contains Font Awesome icon, headline, description, link to URL. Also You can setup colors for text and background of the widget content.
+* **NEW!** With AGP Font Awesome Promotion widget You can create and show in sidebar small information block, that contains Font Awesome icon, headline, description, link to URL. Also You can setup colors for text and background of the widget content.
 
 = How to use visual constructor =
 
@@ -199,7 +199,7 @@ Also you can send any questions in plugin [support](https://wordpress.org/suppor
 
 = 2.1.0 =
 * Added AGP Font Awesome Promotion widget
-* User guide moved from Description tab in FAQ tab
+* User guide moved from Description tab to FAQ tab
 * Minor changes
 
 = 2.0.0 =
