@@ -7,7 +7,7 @@ License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Stable tag: trunk
 
-Latest Font Awesome icons with HTML and shortcodes usage, dynamic visualizer for TinyMCE editor, promotion widget and other features in the one plugin
+The latest Font Awesome icons with HTML and shortcodes usage, dynamic visualizer for TinyMCE, promotion widget and other features in the one plugin
 
 == Description ==
 
@@ -28,7 +28,7 @@ WordPress Developers also can find with this plugin some useful features for usa
 * All shortcodes can be used via Administrator Panel in WISIWING areas and directly in code.
 * Now you can add icons and buttons just in few clicks with the new visual shortcodes constructor.
 * You can create you own shortcodes and use it within visual constructor for different pages or posts as many times as needed.
-* **NEW!** With AGP Font Awesome Promotion widget You can create and show in sidebar small information block, that contains Font Awesome icon, headline, description, link to URL. Also You can setup colors for text and background of the widget content.
+* **NEW!** With AGP Font Awesome Promotion widget You can create and show small animated information block in sidebar, that contains Font Awesome icon, headline, description and link to URL. Also You can setup colors for text and background of the widget content. **The widget is supported for the mobile devices!**
 
 = How to use visual constructor =
 
@@ -50,7 +50,7 @@ More info you can find on the [screenshots](https://wordpress.org/plugins/agp-fo
 
 == Frequently Asked Questions ==
 
-= How can I change the Shortcode content? =
+= How to change the Shortcode content =
 
 The plugin includes some templates for each shortcode in "templates/" folder. 
 You can copy any template in your active theme and customize it for your needs. 
@@ -58,7 +58,7 @@ Path to the templates folder inside the active theme:
 
 [ActiveTheme]/templates/agp-font-awesome-collection/
 
-= How can I style the Shortcode content? =
+= How to style the Shortcode content =
 
 The plugin includes CSS file "assets/css/style.css". 
 You can copy this file in your active theme and customize it for your needs. 
