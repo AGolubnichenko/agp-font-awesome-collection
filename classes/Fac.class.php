@@ -112,8 +112,6 @@ class Fac extends Agp_Module {
     
     public function init () {
         $this->iconRepository->refreshRepository();
-        Fac::debug($this->iconRepository->getCount());
-        
     }
     
     public function facTinyMCEButtons () {

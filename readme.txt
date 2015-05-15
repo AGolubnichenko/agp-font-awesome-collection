@@ -17,7 +17,7 @@ WordPress Developers also can find with this plugin some useful features for usa
 
 = Features =
 
-* Install and activate the plugin. That's all you need to start using 519 Font Awesome icons on Your site.
+* Install and activate the plugin. That's all you need to start using **519 latest Font Awesome 4.3.0 icons** on Your site.
 * Font Awesome icons can be used as simple [HTML code](http://fortawesome.github.io/Font-Awesome/examples/) or shortcodes.
 * No need to have specific skills to add beautiful icon or button on a page or a post. Just follow shortcode attributes references for easy customization.
 * You can add any of the Font Awesome icons and use it as simple icon, icon with text, icon button, icon button with text and easy customize it for your needs.
