@@ -46,7 +46,7 @@ More info you can find on the [screenshots](https://wordpress.org/plugins/agp-fo
 
 1. Download a copy of the plugin
 2. Unzip and Upload 'AGP Font Awesome Collection' to a sub directory in '/wp-content/plugins/'.
-3. Activate the plugins through the 'Plugins' menu in WordPress.
+3. Activate the plugin through the 'Plugins' menu in WordPress.
 
 == Frequently Asked Questions ==
 
