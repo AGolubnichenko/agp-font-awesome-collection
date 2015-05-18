@@ -13,6 +13,12 @@ return array(
             'fac_version' => include (__DIR__ . '/fac-version.php'),            
         ),
     ),
+    'repeaters' => array(
+        'fac-slider' => array(
+            
+        ),
+        
+    )
 );
 
 

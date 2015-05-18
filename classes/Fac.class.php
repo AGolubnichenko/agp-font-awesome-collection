@@ -39,6 +39,12 @@ class Fac extends Agp_Module {
      */
     private $shortcodes;
     
+    /**
+     * Slider
+     * 
+     * @var Fac_Slider 
+     */
+    private $slider;
     
     
     private $customElements;
@@ -78,12 +84,14 @@ class Fac extends Agp_Module {
         parent::__construct(dirname(dirname(__FILE__)));
         
         include_once ( $this->getBaseDir() . '/types/shortcodes-post-type.php' );                
+        include_once ( $this->getBaseDir() . '/types/sliders-post-type.php' );                
         
         $this->iconRepository = new Fac_IconRepository();
         $this->settings = Fac_Settings::instance( $this );
         $this->constructor = Fac_Constructor::instance();
         $this->shortcodes = Fac_Shortcodes::instance();
         $this->ajax = Fac_Ajax::instance();
+        $this->slider = Fac_Slider::instance();
 
         add_action( 'init', array($this, 'registerShortcodes' ), 998 );                
         add_action( 'init', array($this, 'init' ), 999 );        
@@ -248,5 +256,8 @@ class Fac extends Agp_Module {
     public function getCustomElements() {
         return $this->customElements;
     }
-
+    
+    public function getSlider() {
+        return $this->slider;
+    }
 }
