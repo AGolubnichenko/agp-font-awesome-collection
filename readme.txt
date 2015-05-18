@@ -30,6 +30,10 @@ WordPress Developers also can find with this plugin some useful features for usa
 * You can create you own shortcodes and use it within visual constructor for different pages or posts as many times as needed.
 * **NEW!** With AGP Font Awesome Promotion widget You can create and show small animated information block in sidebar, that contains Font Awesome icon, headline, description and link to URL. Also You can setup colors for text and background of the widget content. **The widget is supported for the mobile devices!**
 
+= Looking for more info? =
+
+More info you can find on the [screenshots](https://wordpress.org/plugins/agp-font-awesome-collection/screenshots/) and [FAQ](https://wordpress.org/plugins/agp-font-awesome-collection/faq/) tabs.
+
 = How to use visual constructor =
 
 [youtube http://www.youtube.com/watch?v=TJ3QqH4BsYY]
@@ -37,10 +41,6 @@ WordPress Developers also can find with this plugin some useful features for usa
 = How to create own shortcode =
 
 [youtube http://www.youtube.com/watch?v=BT02i79Vmts]
-
-= Looking for more info? =
-
-More info you can find on the [screenshots](https://wordpress.org/plugins/agp-font-awesome-collection/screenshots/) and [FAQ](https://wordpress.org/plugins/agp-font-awesome-collection/faq/) tabs.
 
 == Installation ==
 
