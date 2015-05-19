@@ -126,6 +126,14 @@
             $(".fac-constructor-field .iris-picker").css("position", "absolute");
             $("#colorbox, #cboxOverlay, #cboxWrapper").css("overflow", "visible");
         }
+        
+        $(".fac-slider.fac-slider-default > .container > ul").responsiveSlides({
+                auto: true,
+                pager: false,
+                nav: false,
+                speed: 1000,
+                maxwidth: "940"
+        });                
     });
 })(jQuery);
 

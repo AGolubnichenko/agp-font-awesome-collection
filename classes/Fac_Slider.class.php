@@ -17,7 +17,7 @@ class Fac_Slider extends Agp_RepeaterAbstract {
 	public static function instance() {
 		if ( is_null( self::$_instance ) ) {
 			self::$_instance = new self(dirname(dirname(__FILE__)));
-            self::$_instance->init('fac_sliders', 'Options', 'fac-sliders', 'normal');
+            self::$_instance->init('fac_sliders', 'Slider Content', 'fac-sliders', 'normal');
             self::$_instance->setHeaderTemplateAdminName('admin/slider/header');
             self::$_instance->setLayoutTemplateAdminName('admin/slider/layout');
             self::$_instance->setRowTemplateAdminName('admin/slider/row');
