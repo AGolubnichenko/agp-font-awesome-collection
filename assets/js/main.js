@@ -84,7 +84,7 @@
 
         $(".fac-slider.fac-slider-default > .container > ul").responsiveSlides({
                 auto: true,
-                pager: true,
+                pager: false,
                 nav: false,
                 speed: 1000,
                 maxwidth: "940"
