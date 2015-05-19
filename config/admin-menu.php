@@ -2,8 +2,8 @@
 
 return array(
     'fac' => array(
-        'page_title' => 'AGP Icons', 
-        'menu_title' => 'AGP Icons', 
+        'page_title' => 'AGP Collection', 
+        'menu_title' => 'AGP Collection', 
         'capability' => 'manage_options',
         'function' => '',
         'icon_url' => '', 

@@ -19,15 +19,15 @@ function fac_shortcodes_init() {
 
   $args = array(
     'labels'             => $labels, 
-    'public'             => true,
+    'public'             => false,
     'publicly_queryable' => true,
     'show_ui'            => true,
     'show_in_menu'       => 'fac',
-    'show_in_nav_menus'  => true,
+    'show_in_nav_menus'  => false,
     'query_var'          => true,
     'rewrite'            => array( 'slug' =>  _x( 'fac-shortcodes', 'URL slug'),  'with_front' => false ),
     'capability_type'    => 'post',
-    'has_archive'        => true,
+    'has_archive'        => false,
     'hierarchical'       => false,
     'menu_position'      => 2,
     'supports'           => array( 
