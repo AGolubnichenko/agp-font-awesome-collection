@@ -2,6 +2,7 @@
     $args = $params;
     $elementList =  Fac()->getSettings()->getElementList();
     $customElementList =  Fac()->getCustomElements();
+    $sliderElementList =  Fac()->getSliderElements();
 ?>
 <div class="fac-constructor-type">
     <h2>Elements</h2>
@@ -30,5 +31,18 @@
         ?>            
         </optgroup>            
         <?php endif;?>
+        
+        <?php if (!empty($sliderElementList)) : ?>        
+        <optgroup label="Sliders">            
+        <?php 
+            foreach( $sliderElementList as $k => $v ):
+                $selected = $args->key == $k || empty($args->key) && empty($k);
+        ?>
+                <option value="<?php echo $k;?>"<?php selected( $selected );?>><?php echo $v;?></option>
+        <?php 
+            endforeach; 
+        ?>            
+        </optgroup>            
+        <?php endif;?>        
     </select>    
 </div>

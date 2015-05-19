@@ -127,6 +127,37 @@ class Fac_Settings extends Agp_SettingsAbstract {
         return $result;
     }    
     
+    public function getSliderElementList () {
+        global $pagenow;
+        $result = array();
+
+
+        if ( $pagenow == 'post.php' && !empty($_REQUEST['post']) ) {
+            if (get_post_type ($_REQUEST['post']) == 'fac-sliders') {
+                return $result;
+            }            
+        }
+
+        $args = array(
+            'post_type' => 'fac-sliders',
+            'posts_per_page' => -1,
+        );
+                
+        $query = new WP_Query($args);
+        
+        while ( $query->have_posts() ) : $query->the_post();
+            $key = get_post_meta( get_the_ID(), '_name', true );
+            if (!empty($key)) {
+                $result[$key] = (get_the_title()) ? get_the_title() : $key;    
+            }
+        endwhile;        
+
+        wp_reset_query();
+        
+        return $result;
+    }    
+    
+    
     /**
      * Convert an array into a stdClass()
      * 

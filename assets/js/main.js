@@ -16,8 +16,6 @@
             }
             
             $(inner).height(height);
-            //$(inner).width($(inner).parent().width());
-            //$(inner).width($(inner).parent().outerWidth());
             $(inner).width($(this).outerWidth());
         });
     });    
@@ -39,8 +37,6 @@
             }
             
             $(inner).height(height);
-            //$(inner).width($(inner).parent().width());
-            //$(inner).width($(inner).parent().outerWidth());
             $(inner).width($(this).outerWidth());
         });
 
@@ -84,6 +80,16 @@
                 }                
             );            
         }
+        
+
+        $(".fac-slider.fac-slider-default > .container > ul").responsiveSlides({
+                auto: true,
+                pager: true,
+                nav: false,
+                speed: 1000,
+                maxwidth: "940"
+        });        
+        
     });
 })(jQuery);
 
