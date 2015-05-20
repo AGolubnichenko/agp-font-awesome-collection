@@ -10,11 +10,11 @@ abstract class Agp_RepeaterAbstract extends Agp_Module {
     
     private $context;
     
-    private $layoutTemplateAdminName = 'fields/repeater/admin/layout';
+    private $layoutTemplateAdminName = 'admin/fields/repeater/layout';
     
-    private $headerTemplateAdminName = 'fields/repeater/admin/header';
+    private $headerTemplateAdminName = 'admin/fields/repeater/header';
     
-    private $rowTemplateAdminName = 'fields/repeater/admin/row';
+    private $rowTemplateAdminName = 'admin/fields/repeater/row';
     
     public function __construct($baseDir) {
         parent::__construct($baseDir);
