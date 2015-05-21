@@ -176,9 +176,8 @@ class Fac extends Agp_Module {
         wp_enqueue_script( 'wp-color-picker' );        
         wp_enqueue_script('colorbox-js', $this->getAssetUrl() . '/libs/colorbox/jquery.colorbox-min.js',array('jquery'));
         wp_enqueue_style('colorbox-css', $this->getAssetUrl() . '/libs/colorbox/colorbox.css');        
-        wp_enqueue_script( 'fac-slider', $this->getAssetUrl('libs/responsiveslides.js'), array('jquery') );                
         wp_enqueue_style( 'fac-fa', $this->getBaseUrl() .'/vendor/agpfontawesome/components/css/font-awesome.min.css' );
-        wp_enqueue_script( 'fac', $this->getAssetUrl('js/admin.js'), array('jquery', 'wp-color-picker', 'fac-slider') );                                                         
+        wp_enqueue_script( 'fac', $this->getAssetUrl('js/admin.js'), array('jquery', 'wp-color-picker') );                                                         
         wp_enqueue_style( 'fac-css', $this->getAssetUrl('css/admin.css') );  
         wp_enqueue_style( 'fac-css-front', $this->getAssetUrl('css/style.css') );          
 
@@ -197,6 +196,27 @@ class Fac extends Agp_Module {
         $this->iconRepository = $iconRepository;
         return $this;
     }
+    
+    public function doPreview ($atts, $content, $tag) {
+        $shortcodes = $this->settings->getSortcodes();
+        $customShortcodes = $this->customElements;
+        $sliderShortcodes = $this->sliderElements;
+        
+        if (!empty($shortcodes[$tag])) {
+            $obj = $shortcodes[$tag];
+            $default = $this->settings->getShortcodeDefaults($tag);            
+            if (empty($atts) || !is_array($atts)) {
+                $atts = array();
+            }
+            $atts = array_merge($default, $atts );        
+            
+            return $this->getTemplate($obj->template, $atts);                             
+        } elseif (!empty($customShortcodes[$tag])) {
+            return $this->doCustomShortcode($atts, $content, $tag);
+        } elseif (!empty($sliderShortcodes[$tag])) {
+            //return $this->doSliderShortcode($atts, $content, $tag);
+        }
+    }        
     
     public function doShortcode ($atts, $content, $tag) {
         $shortcodes = $this->settings->getSortcodes();
@@ -217,7 +237,6 @@ class Fac extends Agp_Module {
         } elseif (!empty($sliderShortcodes[$tag])) {
             return $this->doSliderShortcode($atts, $content, $tag);
         }
-        
     }    
     
     public function doCustomShortcode ($atts, $content, $tag) {
@@ -276,7 +295,7 @@ class Fac extends Agp_Module {
         $query = new WP_Query($args);
         
         while ( $query->have_posts() ) : $query->the_post();
-            $template = 'sliders/default'; //TODO
+            $template = 'sliders/promotion'; //TODO
             $post_id = get_the_ID();
             $data = $this->slider->getData($post_id);
             $content .= $this->getTemplate($template, array('data' => $data, 'post_id' => $post_id ));
@@ -289,6 +308,7 @@ class Fac extends Agp_Module {
     
     public function initWidgets() {
         register_widget('Fac_Promotion');
+        register_widget('Fac_PromotionSlider');
     }    
     
     public function getSettings() {

@@ -80,14 +80,17 @@
                 }                
             );            
         }
-        
+  
+        $(".fac-slider.fac-slider-promotion .fac-promotion-slider").responsiveSlides({
+            auto: true,
+            pager: true,
+            nav: false,
+            pause: true,
+            speed: 0
+        });  
 
-        $(".fac-slider.fac-slider-default > .container > ul").responsiveSlides({
-                auto: true,
-                pager: false,
-                nav: false,
-                speed: 1000,
-                maxwidth: "940"
+        $(".fac-slider.fac-slider-promotion ul.rslides_tabs").each(function(){
+            $(this).wrapAll('<div class="container"></div>');
         });        
         
     });

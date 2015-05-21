@@ -38,8 +38,11 @@ class Fac_Ajax extends Agp_AjaxAbstract {
     public function getElementParameters($data) {
         $result = array();
         if (isset($data['key'])) {
+            $preview = Fac()->doPreview(array(), '', $data['key']);
             $result['content'] = Fac()->getTemplate('admin/constructor/constructor', array('key' => $data['key']));    
-            $result['preview'] = '<p>' . Fac()->doShortcode(array(), '', $data['key']) . '</p>';
+            if (!empty($preview)) {
+                $result['preview'] = '<p>' . $preview . '</p>';    
+            }
         }
         
         $return = json_encode($result);
@@ -55,7 +58,10 @@ class Fac_Ajax extends Agp_AjaxAbstract {
         $result = array();
         if (isset($data['key'])) {
             $atts = !empty($data['params']) ? $data['params'] : array();
-            $result['preview'] = '<p>' . Fac()->doShortcode($atts, '', $data['key']) . '</p>';
+            $preview = Fac()->doPreview($atts, '', $data['key']);
+            if (!empty($preview)) {
+                $result['preview'] = '<p>' . $preview . '</p>';    
+            }
         }
         
         $return = json_encode($result);

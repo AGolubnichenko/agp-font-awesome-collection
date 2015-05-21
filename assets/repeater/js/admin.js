@@ -9,6 +9,13 @@ var agp_repeater = {};
             }
         }); 
         
+        $('.fac-slider-background-color').each(function() {
+            var row = $(this).data('row');
+            if (row != '_0_') {
+                $(this).wpColorPicker();             
+            }
+        });         
+        
         $('.agp-del-row').click(function(e) {
            $(this).closest('.agp-row').remove();
         });
@@ -35,6 +42,13 @@ var agp_repeater = {};
                     $(this).wpColorPicker();             
                 }
             }); 
+            
+            $('.fac-slider-background-color').each(function() {
+                var row = $(this).data('row');
+                if (row != '_0_') {
+                    $(this).wpColorPicker();             
+                }
+            });             
         });
         
     });

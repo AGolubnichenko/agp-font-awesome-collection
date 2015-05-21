@@ -43,6 +43,9 @@
 <td>
     <input class="widefat fac-slider-text-color" type="text" value="<?php echo !empty($data['text_color']) ? $data['text_color'] : '' ;?>" id="<?php echo "{$id}_data_{$row}_text_color";?>" name="<?php echo "{$id}_data[{$row}][text_color]";?>" data-row="<?php echo "_{$row}_";?>" />    
 </td>
+<td>
+    <input class="widefat fac-slider-background-color" type="text" value="<?php echo !empty($data['background_color']) ? $data['background_color'] : '' ;?>" id="<?php echo "{$id}_data_{$row}_background_color";?>" name="<?php echo "{$id}_data[{$row}][background_color]";?>" data-row="<?php echo "_{$row}_";?>" />    
+</td>
 <td class="tbl-actions">
     <a class="button agp-del-row" href="javascript:void(0);">Delete</a>
 </td>                

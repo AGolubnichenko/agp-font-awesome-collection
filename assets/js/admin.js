@@ -119,21 +119,11 @@
         }        
         
         function resizeBox() {
-            //var container = $("#colorbox #cboxContent");
-            //$(container).find('#cboxLoadedContent').height($(container).find('#inline_content').outerHeight());
-            //$(container).height($(container).find('#cboxLoadedContent').outerHeight());            
             $.colorbox.resize();
             $(".fac-constructor-field .iris-picker").css("position", "absolute");
             $("#colorbox, #cboxOverlay, #cboxWrapper").css("overflow", "visible");
         }
-        
-        $(".fac-slider.fac-slider-default > .container > ul").responsiveSlides({
-                auto: true,
-                pager: false,
-                nav: false,
-                speed: 1000,
-                maxwidth: "940"
-        });                
+              
     });
 })(jQuery);
 

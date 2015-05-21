@@ -205,3 +205,16 @@
 	opacity: 1.0!important;
 }
 
+.fac-slider.fac-slider-promotion { width: 100%; overflow: hidden; position: relative; margin-bottom: 30px; }
+/*-----------------------------------Slider Navgation Styles-------------------------------------*/
+.fac-slider.fac-slider-promotion > .container > .container { position: absolute; z-index: 1000; bottom: 0; margin: 0 auto; right: 0; left: 0; }
+.fac-slider.fac-slider-promotion ul.rslides_tabs { width: auto; background: #fff; padding: 15px 40px; list-style-type: none; opacity: 0.5; margin: 0 0 0 0;}
+.fac-slider.fac-slider-promotion ul.rslides_tabs li { float: left; padding-left: 15px; }
+.fac-slider.fac-slider-promotion ul.rslides_tabs li:first-child { padding-left: 0; }
+.fac-slider.fac-slider-promotion ul.rslides_tabs li a { display: block; text-indent: -10000px; }
+/*-----------------------------------Custom Slider Navgation Styles-------------------------------*/
+.fac-slider.fac-slider-promotion ul.rslides_tabs { float: right; border-top-left-radius: 4px; -moz-border-top-left-radius: 4px; -webkit-border-top-left-radius: 4px; }
+.fac-slider.fac-slider-promotion ul.rslides_tabs li a { background: url(../images/slider-nav.png) no-repeat; width: 8px; height: 8px; }
+.fac-slider.fac-slider-promotion ul.rslides_tabs li a:hover, 
+.fac-slider.fac-slider-promotion ul.rslides_tabs li.rslides_here a { background-position: 0 -8px; }
+

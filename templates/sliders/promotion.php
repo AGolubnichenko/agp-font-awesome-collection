@@ -5,15 +5,15 @@ $post_id = !empty($params['post_id']) ? $params['post_id'] : NULL;
 
 if (!empty($data)) :
 ?>
-<div class="fac-slider fac-slider-default">
+<div class="fac-slider fac-slider-promotion">
     <div class="container">
-        <ul>
+        <div class="fac-promotion-slider">
             <?php foreach ($data as $item): ?>
-            <li>
-                <?php Fac::debug($item); ?>
-            </li>
+                <?php 
+                    echo Fac()->getTemplate('sliders/promotion-slide', $item); 
+                ?>
             <?php endforeach;?>
-        </ul>
+        </div>
     </div>    
 </div>
 <?php
