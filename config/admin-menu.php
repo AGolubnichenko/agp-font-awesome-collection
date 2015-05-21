@@ -7,7 +7,7 @@ return array(
         'capability' => 'manage_options',
         'function' => '',
         'icon_url' => '', 
-        'position' => '85', 
+        'position' => null, 
 //        'hideInSubMenu' => TRUE,
 //        'submenu' => array(
 //        ),
