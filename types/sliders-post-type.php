@@ -32,7 +32,7 @@ function fac_sliders_init() {
     'menu_position'      => 3,
     'supports'           => array( 
         'title', 
-        'thumbnail',
+        //'thumbnail',
     ),
   );
 
