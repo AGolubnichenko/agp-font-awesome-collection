@@ -16,6 +16,9 @@
     }                
     $styles = implode('; ', $styles);        
 ?>
+<?php 
+if (!empty($icon) || !empty($headline) || !empty($description) ): 
+?>
 <div id="<?php echo $id;?>" class="fac-promotion-main-section"<?php echo (!empty($styles)) ? ' style="' . $styles . '"' : '';?>>
     <?php if (!empty($link)) : ?>
     <a href="<?php echo $link; ?>" title="<?php echo $headline; ?>" target="_blank"<?php echo (!empty($styles)) ? ' style="' . $styles . '"' : '';?>>
@@ -51,4 +54,5 @@
     </a>
     <?php endif;?>
 </div>       
-
+<?php 
+endif;

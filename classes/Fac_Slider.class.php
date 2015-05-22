@@ -3,6 +3,13 @@
 class Fac_Slider extends Agp_RepeaterAbstract {
     
     /**
+     * Layout orientation
+     * 
+     * @var string
+     */
+    private $layoutOrientation = 'vertical'; // vertical or horizontal
+    
+    /**
      * The single instance of the class 
      * 
      * @var Fac_Slider 
@@ -17,10 +24,6 @@ class Fac_Slider extends Agp_RepeaterAbstract {
 	public static function instance() {
 		if ( is_null( self::$_instance ) ) {
 			self::$_instance = new self(dirname(dirname(__FILE__)));
-            self::$_instance->init('fac_sliders', 'Slider Content', 'fac-sliders', 'normal');
-            self::$_instance->setHeaderTemplateAdminName('admin/slider/header');
-            self::$_instance->setLayoutTemplateAdminName('admin/slider/layout');
-            self::$_instance->setRowTemplateAdminName('admin/slider/row');
 		}
 		return self::$_instance;
 	}    
@@ -41,7 +44,10 @@ class Fac_Slider extends Agp_RepeaterAbstract {
         parent::__construct($baseDir);
         
         add_action( 'add_meta_boxes', array( $this, 'addSliderMetaboxes' ) );        
-        add_action( 'save_post', array( $this, 'saveSliderMetaboxes' ), 1, 2);        
+        add_action( 'save_post', array( $this, 'saveSliderMetaboxes' ), 1, 2); 
+        
+        $this->init('fac_sliders', 'Slider Content', 'fac-sliders', 'normal');
+        $this->setLayoutOrientation($this->layoutOrientation);
     }
     
     public function addSliderMetaboxes() {
@@ -78,6 +84,22 @@ class Fac_Slider extends Agp_RepeaterAbstract {
         }
         echo '<input type="text" name="_name" value="' . $name  . '" class="widefat" />';
     }    
+    
+    public function getLayoutOrientation() {
+        return $this->layoutOrientation;
+    }
+
+    public function setLayoutOrientation($layoutOrientation) {
+        $this->layoutOrientation = $layoutOrientation;
+
+        $this->setHeaderTemplateAdminName("admin/slider/{$this->layoutOrientation}/header");
+        $this->setLayoutTemplateAdminName("admin/slider/{$this->layoutOrientation}/layout");
+        $this->setRowTemplateAdminName("admin/slider/{$this->layoutOrientation}/row");                
+        
+        return $this;
+    }
+
+
     
 }
 

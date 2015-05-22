@@ -109,12 +109,12 @@
         }
         
         function showSpinner() {
-            $('.fac-constructor-spinner').show();
+            $('.fac-constructor-spinner').css('visibility', 'visible');
             resizeBox();
         }
         
         function hideSpinner() {
-            $('.fac-constructor-spinner').hide();
+            $('.fac-constructor-spinner').css('visibility', 'hidden');
             resizeBox();
         }        
         

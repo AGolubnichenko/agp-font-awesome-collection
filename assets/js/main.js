@@ -18,6 +18,25 @@
             $(inner).height(height);
             $(inner).width($(this).outerWidth());
         });
+        
+//        $('.fac-slider-promotion').each(function() {
+//            var inner = $(this).find('.fpp-inner');
+//            $(inner).width($(this).outerWidth());
+//        });
+
+
+        $('.fac-slider-promotion').each(function() {
+            var height = 0;
+            $(this).find('.fac-promotion-main-section').each(function () {
+                if ( height < $(this).height() ) {
+                    height = $(this).height();
+                }
+            });
+            $(this).find('.fac-promotion-main-section .fac-promotion-content').height(height);
+            $(this).find('.fac-promotion-main-section .fac-promotion-preview').height(height);            
+            //$(this).find('.fac-promotion-main-section .fac-promotion-content .fpp-inner').height(height);
+            //$(this).find('.fac-promotion-main-section .fac-promotion-preview .fpp-inner').height(height);
+        });
     });    
     
     $(document).ready(function() { 
@@ -40,6 +59,18 @@
             $(inner).width($(this).outerWidth());
         });
 
+        $('.fac-slider-promotion').each(function() {
+            var height = 0;
+            $(this).find('.fac-promotion-main-section').each(function () {
+                if ( height < $(this).height() ) {
+                    height = $(this).height();
+                }
+            });
+            $(this).find('.fac-promotion-main-section .fac-promotion-content').height(height);
+            $(this).find('.fac-promotion-main-section .fac-promotion-preview').height(height);            
+            $(this).find('.fac-promotion-main-section .fac-promotion-content .fpp-inner').height(height);
+            $(this).find('.fac-promotion-main-section .fac-promotion-preview .fpp-inner').height(height);
+        });
 
         if( /Android|iPhone|iPad|iPod|webOS|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {   
             $('.fac-promotion-main-section a').on('click', function(e) {

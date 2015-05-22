@@ -24,7 +24,7 @@
 	padding: 20px 0 0;
 }
 .fac-constructor-spinner {
-	display: none;
+    visibility: hidden;
 	float: right;
 	padding: 15px 0 0;
 }
@@ -84,3 +84,15 @@ olor-hint {
 	width: 85%;
 }
 }
+
+/*----- Repeater Fields -----*/
+.agp-repeater .agp-repeater-label {
+    font-weight: bold;
+    padding-bottom: 5px;
+}
+
+/*----- Vertical Repeater Fields -----*/
+.agp-repeater-vertical .agp-del-row {
+    float: right;
+}
+
