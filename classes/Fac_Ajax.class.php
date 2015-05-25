@@ -1,4 +1,5 @@
 <?php
+use Agp\FontAwesomeCollection\Core\Agp_AjaxAbstract;
 
 class Fac_Ajax extends Agp_AjaxAbstract {
     /**

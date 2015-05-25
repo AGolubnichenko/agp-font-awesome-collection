@@ -1,4 +1,5 @@
 <?php
+use Agp\FontAwesomeCollection\Core\Agp_RepositoryAbstract;
 
 class Fac_IconRepository extends Agp_RepositoryAbstract {
     

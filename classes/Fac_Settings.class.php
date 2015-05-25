@@ -1,4 +1,5 @@
 <?php
+use Agp\FontAwesomeCollection\Core\Agp_SettingsAbstract;
 
 class Fac_Settings extends Agp_SettingsAbstract {
     

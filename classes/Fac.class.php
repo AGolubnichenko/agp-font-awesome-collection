@@ -1,4 +1,5 @@
 <?php
+use Agp\FontAwesomeCollection\Core\Agp_Module;
 
 class Fac extends Agp_Module {
     

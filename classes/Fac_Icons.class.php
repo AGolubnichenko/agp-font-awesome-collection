@@ -1,5 +1,4 @@
 <?php
-
 class Fac_Icons {
     
     public function __construct() {

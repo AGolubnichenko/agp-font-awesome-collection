@@ -1,4 +1,6 @@
 <?php
+namespace Agp\FontAwesomeCollection\Core;
+
 interface Agp_ExceptionInterface
 {
     /* Protected methods inherited from Exception class */

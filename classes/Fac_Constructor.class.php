@@ -1,5 +1,4 @@
 <?php
-
 class Fac_Constructor {
     
     /**

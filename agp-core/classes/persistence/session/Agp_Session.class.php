@@ -1,4 +1,5 @@
 <?php
+namespace Agp\FontAwesomeCollection\Core;
 
 class Agp_Session extends Agp_SessionAbstract {
     

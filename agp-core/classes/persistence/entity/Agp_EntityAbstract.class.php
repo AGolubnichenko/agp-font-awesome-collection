@@ -1,4 +1,5 @@
 <?php
+namespace Agp\FontAwesomeCollection\Core;
 
 abstract class Agp_EntityAbstract {
 

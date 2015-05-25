@@ -1,4 +1,5 @@
 <?php
+use Agp\FontAwesomeCollection\Core\Agp_Entity;
 
 class Fac_IconEntity extends Agp_Entity {
 

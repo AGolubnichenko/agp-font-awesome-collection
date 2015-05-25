@@ -1,4 +1,5 @@
 <?php
+namespace Agp\FontAwesomeCollection\Core;
 
 class Agp_PostEntity extends Agp_Entity {
     private $post_author;

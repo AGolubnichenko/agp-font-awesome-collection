@@ -14,6 +14,7 @@
     along with this program; if not, write to the Free Software
     Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 */
+use Agp\FontAwesomeCollection\Core\Agp_Autoloader;
 
 if (!defined('ABSPATH')) {
     exit;
@@ -22,7 +23,7 @@ if (!defined('ABSPATH')) {
 /**
  * Autoloader
  */
-if (!class_exists('Agp_Autoloader')) {
+if (!class_exists('Agp\FontAwesomeCollection\Core\Agp_Autoloader')) {
     require_once __DIR__ . '/classes/Agp_Autoloader.class.php';
     Agp_Autoloader::instance();    
 }

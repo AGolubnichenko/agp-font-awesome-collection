@@ -1,4 +1,5 @@
 <?php
+use Agp\FontAwesomeCollection\Core\Agp_RepeaterAbstract;
 
 class Fac_Slider extends Agp_RepeaterAbstract {
     
