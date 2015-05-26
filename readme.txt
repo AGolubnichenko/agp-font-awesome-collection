@@ -1,6 +1,6 @@
 === AGP Font Awesome Collection ===
 Contributors: agolubnichenko
-Tags: agp, fontawesome, font-awesome, font awesome, Font Awesome, fa, fa-icon, fa icons, icon font, icons, font, button, buttons, developer, developer tools, tools, shortcode, social icons, social links, social buttons, ui, tinymce, visualizer, promotion, ad promotion
+Tags: agp, fontawesome, font-awesome, font awesome, Font Awesome, fa, fa-icon, fa icons, icon font, icons, font, button, buttons, developer, developer tools, tools, shortcode, social icons, social links, social buttons, ui, tinymce, visualizer, promotion, ad promotion, slider, content slider, widget slider, responsive slider, responsive, rwd
 Requires at least: 3.5.0
 Tested up to: 4.2
 License: GPLv2 or later
@@ -28,7 +28,10 @@ WordPress Developers also can find with this plugin some useful features for usa
 * All shortcodes can be used via Administrator Panel in WISIWING areas and directly in code.
 * Now you can add icons and buttons just in few clicks with the new visual shortcodes constructor.
 * You can create you own shortcodes and use it within visual constructor for different pages or posts as many times as needed.
-* **NEW!** With AGP Font Awesome Promotion widget You can create and show small animated information block in sidebar, that contains Font Awesome icon, headline, description and link to URL. Also You can setup colors for text and background of the widget content. **The widget is supported for the mobile devices!**
+* With AGP Font Awesome Promotion widget You can create and show small animated information block in sidebar, that contains Font Awesome icon, headline, description and link to URL. Also You can setup colors for text and background of the widget content. **The widget is supported for the mobile devices!**
+* **NEW!** Now You can create and configure own sliders in the Administrator Panel on the "Sliders" page. Each slider is attached to a personal shortcode and can be used via Administrator Panel in WISIWING areas and directly in code.
+* **NEW!** With AGP Font Awesome Promotion Slider widget You can create and show small animated information block in sidebar, that contains a set of slides with Font Awesome icon, headline, description and link to URL. **The widget is supported for the mobile devices!**
+* **NB!** The core of the plugin has been changed and optimized for adding a new useful features. We forced to raise the requirements to PHP version on Your web server. **Minimum required PHP version - 5.3.0**.
 
 = Looking for more info? =
 
@@ -196,6 +199,12 @@ Also you can send any questions in plugin [support](https://wordpress.org/suppor
 18. Font Awesome Promotion widget
 
 == Changelog ==
+
+= 2.2.0 =
+* Changed: The plugin core has been changed and optimized for adding a new useful features
+* Changed: Minimum required PHP version - 5.3.0 
+* Added: "Sliders" page for creation and configuration different responsive sliders based on a Font Awesome Icons
+* Added: AGP Font Awesome Promotion Slider widget
 
 = 2.1.1 =
 * Global changes of the plugin core
