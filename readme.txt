@@ -197,6 +197,7 @@ Also you can send any questions in plugin [support](https://wordpress.org/suppor
 16. Font Awesome dropdown (developers only)
 17. Curent Font Avesome Version
 18. Font Awesome Promotion widget
+19. Slider configuration
 
 == Changelog ==
 
