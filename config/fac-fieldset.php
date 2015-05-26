@@ -5,4 +5,7 @@ return array(
         'round' => 'Round',
         'square' => 'Square',        
     ),
+    'slider_types' => array(
+        'default' => 'Default',
+    ),
 );

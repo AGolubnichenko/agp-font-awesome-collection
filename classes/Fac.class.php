@@ -296,8 +296,8 @@ class Fac extends Agp_Module {
         $query = new WP_Query($args);
         
         while ( $query->have_posts() ) : $query->the_post();
-            $template = 'sliders/promotion'; //TODO
             $post_id = get_the_ID();
+            $template = 'sliders/' . Fac()->getSlider()->getSliderType($post_id) . '/layout';
             $data = $this->slider->getData($post_id);
             $content .= $this->getTemplate($template, array('data' => $data, 'post_id' => $post_id ));
         endwhile;        

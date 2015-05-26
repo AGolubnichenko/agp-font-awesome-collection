@@ -52,7 +52,7 @@ class Fac_Slider extends Agp_RepeaterAbstract {
     }
     
     public function addSliderMetaboxes() {
-        add_meta_box('fac_shortcodes_name', 'Shortcode Name', array( $this, 'viewSliderMetabox' ), 'fac-sliders', 'normal', 'default');        
+        add_meta_box('fac_shortcodes_name', 'Slider Parameters', array( $this, 'viewSliderMetabox' ), 'fac-sliders', 'normal', 'default');        
     }    
     
     public function saveSliderMetaboxes( $post_id, $post ) {
@@ -63,6 +63,7 @@ class Fac_Slider extends Agp_RepeaterAbstract {
         }
 
         $shortcodes_meta['_name'] = $_POST['_name'];
+        $shortcodes_meta['_type'] = $_POST['_type'];
 
         foreach ($shortcodes_meta as $key => $value) {
             if( $post->post_type == 'revision' ) return;
@@ -78,12 +79,14 @@ class Fac_Slider extends Agp_RepeaterAbstract {
     
     public function viewSliderMetabox( $post ) {
         global $post;
-        echo '<input type="hidden" name="fac_shortcodes_noncename" id="fac_shortcodes_noncename" value="' . wp_create_nonce( basename(Fac()->getBaseDir()) ) . '" />';
-        $name = get_post_meta($post->ID, '_name', true);
-        if (empty($name)) {
-            $name='fac_slider_' . $post->ID;
-        }
-        echo '<input type="text" name="_name" value="' . $name  . '" class="widefat" />';
+        $atts = array(
+            'name' => get_post_meta($post->ID, '_name', true),
+            'type' => get_post_meta($post->ID, '_type', true),
+            'post' => $post,
+            'sliderTypes' => Fac()->getSettings()->objectToArray(Fac()->getSettings()->getConfig()->fieldSet->slider_types),
+        );
+        
+        echo Fac()->getTemplate('admin/slider/parameters', $atts);
     }    
     
     public function getLayoutOrientation() {
@@ -100,7 +103,14 @@ class Fac_Slider extends Agp_RepeaterAbstract {
         return $this;
     }
 
-
+    public function getSliderType ($post_id) {
+        $result = get_post_meta($post_id, '_type', true);
+        if (empty($result)) {
+            $result = 'default';
+        }
+        return $result;
+    }
+    
     
 }
 
