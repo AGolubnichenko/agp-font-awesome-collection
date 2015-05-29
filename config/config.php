@@ -6,6 +6,7 @@ return array(
     'fieldSet' => include (__DIR__ . '/fac-fieldset.php'),            
     'shortcodes' => array(
         'elements' => array(
+            'fac_blank' => include (__DIR__ . '/fac-blank.php'),  
             'fac_icon' => include (__DIR__ . '/fac-icon.php'),  
             'fac_icontext' => include (__DIR__ . '/fac-icontext.php'),
             'fac_dropdown' => include (__DIR__ . '/fac-dropdown.php'),

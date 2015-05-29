@@ -11,10 +11,12 @@
         <optgroup label="Basic">            
         <?php 
             foreach( $elementList as $k => $v ):
+                if ($k != 'fac_blank') :
                 $selected = $args->key == $k || empty($args->key) && empty($k);
         ?>
                 <option value="<?php echo $k;?>"<?php selected( $selected );?>><?php echo $v;?></option>
         <?php 
+                endif;
             endforeach; 
         ?>
         </optgroup>

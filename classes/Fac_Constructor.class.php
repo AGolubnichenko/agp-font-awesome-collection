@@ -42,7 +42,7 @@ class Fac_Constructor {
     }
     
     public function createForm() {
-        echo Fac()->getTemplate('admin/constructor/constructor');
+        echo Fac()->getTemplate('admin/constructor/constructor', array('key' => 'fac_blank'));
     }
     
 }

@@ -37,6 +37,7 @@ class Fac_Ajax extends Agp_AjaxAbstract {
      * Get constructor element parameters
      */
     public function getElementParameters($data) {
+        error_reporting(0);
         $result = array();
         if (isset($data['key'])) {
             $preview = Fac()->doPreview(array(), '', $data['key']);
@@ -45,17 +46,16 @@ class Fac_Ajax extends Agp_AjaxAbstract {
                 $result['preview'] = '<p>' . $preview . '</p>';    
             }
         }
-        
         $return = json_encode($result);
-        header('Content-Length: '.strlen($return)); 
-        header('Content-type: application/json');            
+//        header('Content-Length: '.strlen($return)); 
+//        header('Content-type: application/json');            
         echo $return;                    
         die();
-        
         //return $result;                    
     }
     
     public function getPreview($data) {
+        error_reporting(0);
         $result = array();
         if (isset($data['key'])) {
             $atts = !empty($data['params']) ? $data['params'] : array();
@@ -66,8 +66,8 @@ class Fac_Ajax extends Agp_AjaxAbstract {
         }
         
         $return = json_encode($result);
-        header('Content-Length: '.strlen($return)); 
-        header('Content-type: application/json');            
+        //header('Content-Length: '.strlen($return)); 
+       // header('Content-type: application/json');            
         echo $return;                    
         die();
         
@@ -75,6 +75,7 @@ class Fac_Ajax extends Agp_AjaxAbstract {
     }    
 
     public function getShortcode($data) {
+        error_reporting(0);
         $result = array();
         if (isset($data['key'])) {
             $atts = !empty($data['params']) ? $data['params'] : array();
@@ -93,8 +94,8 @@ class Fac_Ajax extends Agp_AjaxAbstract {
         }
         
         $return = json_encode($result);
-        header('Content-Length: '.strlen($return)); 
-        header('Content-type: application/json');            
+//        header('Content-Length: '.strlen($return)); 
+//        header('Content-type: application/json');            
         echo $return;                    
         die();
         
