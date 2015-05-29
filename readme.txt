@@ -201,6 +201,10 @@ Also you can send any questions in plugin [support](https://wordpress.org/suppor
 
 == Changelog ==
 
+= 2.2.1 =
+* Fixed issue "Fatal error when trying to activate plugin" for PHP 5.3
+* Fixed issue for AJAX request with enabled Zlib-compression
+
 = 2.2.0 =
 * Changed: The plugin core has been changed and optimized for adding a new useful features
 * Changed: Minimum required PHP version - 5.3.0 
