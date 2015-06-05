@@ -48,8 +48,7 @@ return array(
             . '"_self" - Opens the linked document in the same frame as it was clicked<br/>'
             . '"_blank" - Opens the linked document in a new window or tab<br/>'
             . '"_parent" - Opens the linked document in the parent frame<br/>'
-            . '"_blank" - Opens the linked document in the full body of the window<br/>',
-            
+            . '"_top" - Opens the linked document in the full body of the window',
         ),            
         'color' =>  array(
             'label' => 'Text and Icon Color',            
