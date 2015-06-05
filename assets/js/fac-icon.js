@@ -1,6 +1,6 @@
 (function() {
     
-    tinymce.create('tinymce.plugins.fac_icon', {
+    tinymce.create('tinymce.plugins.facIcon', {
         init : function(ed, url) {
             ed.addButton('fac_icon', {
                title : 'FontAwesome Constructor',
@@ -48,7 +48,5 @@
             };
         }
     });
-    tinymce.PluginManager.add('fac_icon', tinymce.plugins.fac_icon);
-    
-
+    tinymce.PluginManager.add('agp_fac_icon', tinymce.plugins.facIcon);
 })();

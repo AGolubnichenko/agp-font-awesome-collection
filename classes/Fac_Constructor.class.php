@@ -39,6 +39,7 @@ class Fac_Constructor {
      */
     public function __construct() {
         add_action( 'admin_footer-post.php', array( $this, 'createForm' ) );       
+        add_action( 'admin_footer-post-new.php', array( $this, 'createForm' ) );       
     }
     
     public function createForm() {

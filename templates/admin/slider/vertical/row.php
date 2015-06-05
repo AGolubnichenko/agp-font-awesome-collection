@@ -54,6 +54,8 @@
         <input class="widefat fac-slider-background-color" type="text" value="<?php echo !empty($data['background_color']) ? $data['background_color'] : '' ;?>" id="<?php echo "{$id}_data_{$row}_background_color";?>" name="<?php echo "{$id}_data[{$row}][background_color]";?>" data-row="<?php echo "_{$row}_";?>" />                
     </div>    
     <div class="inside tbl-actions">
+        <a class="button agp-down-row" href="javascript:void(0);">Down</a>            
+        <a class="button agp-up-row" href="javascript:void(0);">Up</a>
         <a class="button agp-del-row" href="javascript:void(0);">Delete</a>
     </div>        
 </td>

@@ -38,6 +38,19 @@ return array(
             'class' => 'widefat fac-element',
             'note' => 'Allows to set link URL',            
         ),           
+        'target' => array(
+            'label' => 'Target',            
+            'type' => 'select',     
+            'fieldSet' => 'link_target',
+            'default' => '_self',            
+            'class' => 'widefat regular-select fac-element',            
+            'note' => 'The target attribute specifies where to open the linked document.<br/>'
+            . '"_self" - Opens the linked document in the same frame as it was clicked<br/>'
+            . '"_blank" - Opens the linked document in a new window or tab<br/>'
+            . '"_parent" - Opens the linked document in the parent frame<br/>'
+            . '"_blank" - Opens the linked document in the full body of the window<br/>',
+            
+        ),            
         'color' =>  array(
             'label' => 'Text and Icon Color',            
             'type' => 'colorpicker',                        

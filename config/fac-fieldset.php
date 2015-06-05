@@ -8,4 +8,11 @@ return array(
     'slider_types' => array(
         'default' => 'Default',
     ),
+    'link_target' => array(
+        '_self' => '_self',
+        '_blank' => '_blank',
+        '_parent' => '_parent',
+        '_top' => '_top',        
+    ),    
+    
 );

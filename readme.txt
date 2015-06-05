@@ -29,9 +29,11 @@ WordPress Developers also can find with this plugin some useful features for usa
 * Now you can add icons and buttons just in few clicks with the new visual shortcodes constructor.
 * You can create you own shortcodes and use it within visual constructor for different pages or posts as many times as needed.
 * With AGP Font Awesome Promotion widget You can create and show small animated information block in sidebar, that contains Font Awesome icon, headline, description and link to URL. Also You can setup colors for text and background of the widget content. **The widget is supported for the mobile devices!**
-* **NEW!** Now You can create and configure own sliders in the Administrator Panel on the "Sliders" page. Each slider is attached to a personal shortcode and can be used via Administrator Panel in WISIWING areas and directly in code.
-* **NEW!** With AGP Font Awesome Promotion Slider widget You can create and show small animated information block in sidebar, that contains a set of slides with Font Awesome icon, headline, description and link to URL. **The widget is supported for the mobile devices!**
+* Now You can create and configure own sliders in the Administrator Panel on the "Sliders" page. Each slider is attached to a personal shortcode and can be used via Administrator Panel in WISIWING areas and directly in code.
+* With AGP Font Awesome Promotion Slider widget You can create and show small animated information block in sidebar, that contains a set of slides with Font Awesome icon, headline, description and link to URL. **The widget is supported for the mobile devices!**
 * **NB!** The core of the plugin has been changed and optimized for adding a new useful features. We forced to raise the requirements to PHP version on Your web server. **Minimum required PHP version - 5.3.0**.
+* **NEW!** Currently "FA" button is available in the TinyMCE without previously saving for a new post or page
+* **NEW!** Now You can reorder the slides on a slider settings page
 
 = Looking for more info? =
 
@@ -110,11 +112,12 @@ As for Font Awesome icon names references you can check following link: http://f
 
 Following shortcode can be used for adding of a simple icon button:
 
-`[fac_button icon="facebook" name="button_1" title="Find Us on Facebook" link="www.facebook.com"]`
+`[fac_button icon="facebook" name="button_1" title="Find Us on Facebook" link="www.facebook.com" target="_blank"]`
 
 * **icon** – Font Awesome  icon name without "fa-" prefix
 * **title** – allows to set text for button hover (link "title" attribute)
 * **link** – allows to set link URL
+* **target** – allows to set target attribute for the link URL
 * **name** – allows to set unique button name (link ID attribute); this parameter can be used for development purpose (e.g. JavaScript).
 
 Shortcode with additional attributes for icon button with text:
@@ -200,6 +203,13 @@ Also you can send any questions in plugin [support](https://wordpress.org/suppor
 19. Slider configuration
 
 == Changelog ==
+
+= 2.2.2 =
+* Added: Possibility of reordering slides on a slider settings page
+* Added: "Target" attribute for "Buttons" shortcode
+* Changed: Currently "FA" button is available in the TinyMCE without previously saving for a new post or page
+* Minor changes of default elements styling
+* Minor changes of the plugin core
 
 = 2.2.1 =
 * Fixed issue "Fatal error when trying to activate plugin" for PHP 5.3

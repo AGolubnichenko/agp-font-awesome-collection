@@ -92,7 +92,8 @@ olor-hint {
 }
 
 /*----- Vertical Repeater Fields -----*/
-.agp-repeater-vertical .agp-del-row {
+.agp-repeater-vertical .tbl-actions .button {
     float: right;
+    margin: 0 3px 0
 }
 

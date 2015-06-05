@@ -140,7 +140,7 @@ class Agp_Autoloader {
 
     public function setClassMap($classMap) {
         if (is_array($classMap)) {
-            $this->classMap = array_merge($this->classMap, $classMap);
+            $this->classMap = array_merge_recursive($this->classMap, $classMap);
         }
         
         return $this;

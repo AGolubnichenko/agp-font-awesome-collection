@@ -4,6 +4,7 @@ if (!empty($params) && !empty($params['icon'])) :
     $title = !empty($params['title']) ? $params['title'] : '';
     $icon = !empty($params['icon']) ? $params['icon'] : '';
     $link = !empty($params['link']) ? $params['link'] : '';    
+    $target = !empty($params['target']) ? $params['target'] : '';        
     $text = !empty($params['text']) ? $params['text'] : '';    
     $background = !empty($params['background']) ? $params['background'] : '';
     $border_radius = isset($params['border_radius']) ? $params['border_radius'] : '';
@@ -31,12 +32,13 @@ if (!empty($params) && !empty($params['icon'])) :
 ?>
 <div class="fac fac-button-template">
     <a href="<?php echo (!empty($link)) ? $link : '#';?>" 
-       class="fac-button<?php echo (!empty($text)) ? ' fac-text' : '';?>" 
-       <?php echo (!empty($name)) ? ' id="' . $name . '"'  : '';?>       
-       title="<?php echo $title;?>"
-       <?php echo (!empty($styles)) ? 'style="' . $styles . '"' : '';?>>
-            <i class="fa fa-<?php echo $icon;?>"></i>
-            <?php echo (!empty($text)) ? '<span>' . $text . '</span>' : '';?>
+        class="fac-button<?php echo (!empty($text)) ? ' fac-text' : '';?>" 
+        <?php echo (!empty($name)) ? ' id="' . $name . '"'  : '';?>       
+        <?php echo (!empty($target)) ? ' target="' . $target . '"'  : '';?>              
+        title="<?php echo $title;?>"
+        <?php echo (!empty($styles)) ? 'style="' . $styles . '"' : '';?>>
+             <i class="fa fa-<?php echo $icon;?>"></i>
+             <?php echo (!empty($text)) ? '<span>' . $text . '</span>' : '';?>
     </a>    
 </div>
 <?php

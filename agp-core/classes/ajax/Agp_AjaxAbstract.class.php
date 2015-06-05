@@ -23,6 +23,7 @@ abstract class Agp_AjaxAbstract {
             $data = $_POST;
             $action = $data['action'];
             if ( method_exists($this, $action) ) {
+                error_reporting(0);
                 $this->response($this->$action($data));
             }
         } else {

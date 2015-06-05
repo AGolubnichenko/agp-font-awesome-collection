@@ -142,15 +142,11 @@ class Fac extends Agp_Module {
     }
     
     public function facTinyMCEButtons () {
-        global $pagenow;
-        
-        if ( ! current_user_can('edit_posts') && ! current_user_can('edit_pages') ) {
-           return;
-        }
-
-        if ( get_user_option('rich_editing') == 'true' && $pagenow != 'post-new.php' ) {
-           add_filter( 'mce_external_plugins', array($this, 'facTinyMCEAddPlugin') );
-           add_filter( 'mce_buttons', array($this, 'facTinyMCERegisterButtons'));
+        if ( current_user_can('edit_posts') && current_user_can('edit_pages') ) {
+            if ( get_user_option('rich_editing') == 'true' ) {
+               add_filter( 'mce_buttons', array($this, 'facTinyMCERegisterButtons'));                
+               add_filter( 'mce_external_plugins', array($this, 'facTinyMCEAddPlugin') );
+            }        
         }        
     }
 
@@ -160,7 +156,7 @@ class Fac extends Agp_Module {
     }    
     
     public function facTinyMCEAddPlugin( $plugin_array ) {
-        $plugin_array['fac_icon'] = $this->getAssetUrl() . '/js/fac-icon.js';
+        $plugin_array['agp_fac_icon'] = $this->getAssetUrl() . '/js/fac-icon.js';
         return $plugin_array;        
     }        
     

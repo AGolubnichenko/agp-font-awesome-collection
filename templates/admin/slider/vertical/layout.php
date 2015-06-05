@@ -5,12 +5,8 @@ $post_id = !empty($params['post_id']) ? $params['post_id'] : NULL;
 if ( !empty($obj) && !empty($post_id) ) :
     $data = $obj->getData($post_id);
     $id = $obj->getId();
-    $index = $obj->getMaxRow($post_id);
+    $index = uniqid();
 ?>
-    <script type="text/javascript">
-        agp_repeater.rp_<?php echo $id;?>={};
-        agp_repeater.rp_<?php echo $id;?>.index=<?php echo $index; ?>;
-    </script>
     <div class="agp-repeater agp-repeater-vertical" id="agp-repeater-<?php echo $id?>" data-id="<?php echo $id?>">
         <table class="widefat striped" width="100%" cellspacing="0" cellpadding="0" border="0">
             <tbody>
