@@ -61,6 +61,14 @@ class Fac extends Agp_Module {
      */    
     private $sliderElements;
     
+    
+    /**
+     * Taxonomy icons
+     * 
+     * @var Fac_TaxonomyIcons
+     */
+    private $taxonomyIcons;
+    
     /**
      * The single instance of the class 
      * 
@@ -104,6 +112,7 @@ class Fac extends Agp_Module {
         $this->shortcodes = Fac_Shortcodes::instance();
         $this->ajax = Fac_Ajax::instance();
         $this->slider = Fac_Slider::instance();
+        $this->taxonomyIcons = Fac_TaxonomyIcons::instance();
         
         add_action( 'init', array($this, 'registerShortcodes' ), 998 );                
         add_action( 'init', array($this, 'init' ), 999 );        
