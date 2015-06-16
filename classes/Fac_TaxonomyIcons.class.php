@@ -42,63 +42,123 @@ class Fac_TaxonomyIcons {
      * Constructor
      */
     public function __construct() {
+        add_action( 'plugins_loaded' , array( $this, 'pluginsLoaded' )); 
+        add_action( 'init' , array( $this, 'init' ), 999); 
+    }
+    
+    public function init () {
         $this->taxonomies = get_taxonomies( array( 'public'   => true ), 'names', 'and' );
-        
+
         if (!empty($this->taxonomies) && is_array($this->taxonomies)) {
             foreach ($this->taxonomies as $key => $taxonomy) {
                 add_action( "{$taxonomy}_edit_form_fields", array( $this, 'viewTaxIconMetabox' ) );
                 add_action( "{$taxonomy}_add_form_fields", array( $this, 'viewTaxIconMetabox' ) );
                 add_action( "edited_{$taxonomy}", array( $this, 'saveTaxIconMetabox' ) );
                 add_action( "create_{$taxonomy}", array( $this, 'saveTaxIconMetabox' ) );
-                add_filter( "get_terms",  array( $this, 'getTerms' )); 
-                add_filter( "get_object_terms",  array( $this, 'getTerms' )); 
             }
+        }        
+    }
+    
+    public function pluginsLoaded () {
+        add_filter( "get_terms",  array( $this, 'getTerms' )); 
+        //add_filter( "get_term",  array( $this, 'getTerm' )); 
+        add_filter( "get_object_terms",  array( $this, 'getTerms' )); 
+        add_filter( 'wp_list_categories' , array( $this, 'hookViewTerms' ));
+        add_filter( 'the_category' , array( $this, 'hookViewTerms' ));
+        add_filter( 'the_tags' , array( $this, 'hookViewTerms' ));
+        add_filter( 'esc_html', array( $this, 'hookEscHtml' ), 10, 2 );
+    }    
+    
+    public function hookEscHtml($safe_text, $text) {
+        if (strpos($text, 'class="fac-fa-icon') !== FALSE/* && is_admin()*/) {
+            return html_entity_decode($safe_text);
         }
+        return $safe_text;
+    }    
+    
+    public function hookViewTerms($html) {
+        return html_entity_decode($html);
+    }    
+    
+    public function getTerm ($term) {
+        if (is_array($term) || is_object($term)) {
+            if (is_array($term)) {
+                $term_id = $term['term_id'];
+                $name = $term['name'];    
+            } else {
+                $term_id = $term->term_id;
+                $name = $term->name;        
+            }
+
+            if (!empty($term_id)) {
+                $data = $this->getTaxIcon($term_id);
+
+                if (!empty($data['icon'])) {
+                    $ic = '<i class="fac-fa-icon fa fa-' . $data['icon'] .'"></i>';
+                    if (!empty($data['position'])) {
+                        switch ($data['position']) {
+                            case 'left':
+                                $name = "$ic $name";
+                                break;
+                            case 'right':
+                                $name = "$name $ic";
+                                break;
+                            default:
+                                break;
+                        }
+                    }
+
+                    if (is_array($term)) {
+                        $term['name'] = esc_html($name);    
+                    } else {
+                        $term->name = esc_html($name);    
+                    }
+                }                    
+            }
+        }  
+        return $term;
     }
     
     public function getTerms ($terms) {
         if (!empty($terms) && is_array($terms)) {
             foreach ($terms as $key => $term) {        
-                
-                if (is_array($term)) {
-                    $term_id = $term['term_id'];
-                    $name = $term['name'];    
-                }
-                
-                if (is_object($term)) {
-                    $term_id = $term->term_id;
-                    $name = $term->name;    
-                }
-                
-                if (!empty($term_id)) {
-                    $data = $this->getTaxIcon($term_id);
+                if (is_array($term) || is_object($term)) {
+                    if (is_array($term)) {
+                        $term_id = $term['term_id'];
+                        $name = $term['name'];    
+                    } else {
+                        $term_id = $term->term_id;
+                        $name = $term->name;        
+                    }
 
-                    if (!empty($data['icon'])) {
-                        $ic = '<i class="fa fa-' . $data['icon'] .'"></i>';
-                        //$ic = "&#xf1d7;";
-                        //$ic = html_entity_decode('&#xf1d7;', 0, 'UTF-8');
-                        if (!empty($data['position'])) {
-                            switch ($data['position']) {
-                                case 'left':
-                                    $name = "$ic $name";
-                                    break;
-                                case 'right':
-                                    $name = "$name $ic";
-                                    break;
-                                default:
-                                    break;
+                    if (!empty($term_id)) {
+                        $data = $this->getTaxIcon($term_id);
+
+                        if (!empty($data['icon'])) {
+                            $ic = '<i class="fac-fa-icon fa fa-' . $data['icon'] .'"></i>';
+                            if (!empty($data['position'])) {
+                                switch ($data['position']) {
+                                    case 'left':
+                                        $name = "$ic $name";
+                                        break;
+                                    case 'right':
+                                        $name = "$name $ic";
+                                        break;
+                                    default:
+                                        break;
+                                }
                             }
-                        }
-                        
-                        if (is_array($term)) {
-                            $term['name'] = $name;    
-                        } else {
-                            $term->name = $name;    
-                        }
 
-                        $terms[$key] = $term;
-                    }                    
-                }
+                            if (is_array($term)) {
+                                $term['name'] = esc_html($name);    
+                            } else {
+                                $term->name = esc_html($name);    
+                            }
+
+                            $terms[$key] = $term;
+                        }                    
+                    }
+                }                
             }
         }
         
@@ -137,4 +197,3 @@ class Fac_TaxonomyIcons {
     }        
     
 }
-
