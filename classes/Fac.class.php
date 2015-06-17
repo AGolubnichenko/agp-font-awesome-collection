@@ -119,16 +119,9 @@ class Fac extends Agp_Module {
         add_action( 'wp_enqueue_scripts', array($this, 'enqueueScripts' ));                
         add_action( 'admin_enqueue_scripts', array($this, 'enqueueAdminScripts' ));                
         add_action( 'widgets_init', array($this, 'initWidgets' ) );
-        //add_action( 'wp_head', array($this, 'addMetaTags'));
-        //add_action( 'admin_head', array($this, 'addMetaTags'));
         add_action( 'admin_init', array($this, 'facTinyMCEButtons' ) );        
+        
         //add_filter( 'widget_text', 'do_shortcode' );
-    }
-    
-    function addMetaTags() {
-        //echo '<meta content="text/html;charset=utf-8" http-equiv="Content-Type">';
-        //echo '<meta content="utf-8" http-equiv="encoding">';
-        //echo '<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />';
     }
     
     public function registerShortcodes() {
