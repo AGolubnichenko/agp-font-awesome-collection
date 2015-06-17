@@ -204,7 +204,7 @@ Also you can send any questions in plugin [support](https://wordpress.org/suppor
 
 == Changelog ==
 
-= 2.3.2 =
+= 2.3.0 =
 ...
 * Added: **(For Developers)** Now Admin or Developer can adding Font Awesome Icon and position of this icon for each terms of any taxonomy or category.
 * Added: **(For Developers)** New feature that allows to developers get "Icon Name" and "Icon Position" parameters of a taxonomy term for using in a PHP-code
