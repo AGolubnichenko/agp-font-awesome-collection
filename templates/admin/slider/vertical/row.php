@@ -45,6 +45,30 @@
         <div class="agp-repeater-label"><label for="<?php echo "{$id}_data_{$row}_link";?>">Link URL:</label></div>
         <input class="widefat" type="text" value="<?php echo !empty($data['link']) ? $data['link'] : '' ;?>" id="<?php echo "{$id}_data_{$row}_link";?>" name=<?php echo "{$id}_data[{$row}][link]";?> />                
     </div>    
+
+
+    <div class="inside">
+        <div class="agp-repeater-label"><label for="<?php echo "{$id}_data_{$row}_target";?>">Link Target:</label></div>
+        <?php
+            $selected = !empty($data['target']) ? $data['target'] : '_blank';
+            $targets = array(
+                '_blank' => 'Blank',                
+                '_self' => 'Self',
+                '_parent' => 'Parent',
+                '_top' => 'Top',        
+            );
+        ?>
+        <select class="widefat" id="<?php echo "{$id}_data_{$row}_target";?>" name=<?php echo "{$id}_data[{$row}][target]";?>>
+            <?php
+                    foreach ($targets as $targetKey => $targetName) : 
+            ?>
+                <option value="<?php echo $targetKey; ?>"<?php selected($targetKey, $selected); ?>><?php echo $targetName; ?></option>            
+            <?php 
+                    endforeach;
+            ?>
+        </select>                        
+    </div>        
+    
     <div class="inside">
         <div class="agp-repeater-label"><label for="<?php echo "{$id}_data_{$row}_text_color";?>">Text Color:</label></div>
         <input class="widefat fac-slider-text-color" type="text" value="<?php echo !empty($data['text_color']) ? $data['text_color'] : '' ;?>" id="<?php echo "{$id}_data_{$row}_text_color";?>" name="<?php echo "{$id}_data[{$row}][text_color]";?>" data-row="<?php echo "_{$row}_";?>" />                

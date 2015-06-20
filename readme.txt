@@ -205,11 +205,15 @@ Also you can send any questions in plugin [support](https://wordpress.org/suppor
 == Changelog ==
 
 = 2.3.0 =
-...
-* Added: **(For Developers)** Now Admin or Developer can adding Font Awesome Icon and position of this icon for each terms of any taxonomy or category.
+* Added: "Target" attribute for promotion widget and for every single slide of sliders
+* Added: Settings page, where you can enable or disable plugin features
+* Added: New shortcode "fac_container" that can be used as a wrapper for a custom shortcode for alignment it on a page
+* Added: Short description of the selected element in visual constructor
+* Added: **(For Developers)** Now you can adding Font Awesome Icon and position of this icon for each terms of any taxonomy or category.
 * Added: **(For Developers)** New feature that allows to developers get "Icon Name" and "Icon Position" parameters of a taxonomy term for using in a PHP-code
 * Added: **(For Developers)** New feature that allows to developers get the display name of the taxonomy term with preset Font Awesome Icon for using in a HTML-code
-...
+* Minor changes of default elements styling
+* Minor changes of the plugin core
 
 = 2.2.2 =
 * Added: Possibility of reordering slides on a slider settings page

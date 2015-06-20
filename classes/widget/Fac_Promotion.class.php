@@ -36,6 +36,9 @@ class Fac_Promotion extends WP_Widget {
         if (!empty($instance['link'])) {
             $atts['link'] = $instance['link'];
         }                
+        if (!empty($instance['target'])) {
+            $atts['target'] = $instance['target'];
+        }                        
         if (!empty($instance['text_color'])) {
             $atts['text_color'] = $instance['text_color'];
         }                
@@ -59,6 +62,7 @@ class Fac_Promotion extends WP_Widget {
 		$description = !empty($instance['description']) ? $instance['description'] : '';        
 		$icon = !empty($instance['icon']) ? $instance['icon'] : '';                
         $link = !empty($instance['link']) ? $instance['link'] : '';       
+        $target = !empty($instance['target']) ? $instance['target'] : '';               
         $text_color = !empty($instance['text_color']) ? $instance['text_color'] : '';        
         $background_color = !empty($instance['background_color']) ? $instance['background_color'] : '';                
     ?>
@@ -67,6 +71,7 @@ class Fac_Promotion extends WP_Widget {
         <p><?php $this->renderDescriptionField($description); ?></p>        
         <p><?php $this->renderIconField($icon); ?></p>                        
         <p><?php $this->renderLinkField($link); ?></p>                                
+        <p><?php $this->renderTargetField($target); ?></p>                                        
         <p><?php $this->renderTextColorField($text_color); ?></p>                                        
         <p><?php $this->renderBackgroundColorField($background_color); ?></p>                                        
     <?php    
@@ -86,6 +91,7 @@ class Fac_Promotion extends WP_Widget {
         $instance['description'] = (!empty($new_instance['description'])) ? strip_tags( $new_instance['description'] ) : '';
         $instance['icon'] = (!empty($new_instance['icon'])) ? strip_tags( $new_instance['icon'] ) : '';
         $instance['link'] = (!empty($new_instance['link'])) ? strip_tags( $new_instance['link'] ) : '';        
+        $instance['target'] = (!empty($new_instance['target'])) ? strip_tags( $new_instance['target'] ) : '_blank';                
         $instance['text_color'] = (!empty($new_instance['text_color'])) ? strip_tags( $new_instance['text_color'] ) : '';                
         $instance['background_color'] = (!empty($new_instance['background_color'])) ? strip_tags( $new_instance['background_color'] ) : '';        
         
@@ -148,6 +154,28 @@ class Fac_Promotion extends WP_Widget {
 		<input class="widefat" id="<?php echo $this->get_field_id( 'link' ); ?>" name="<?php echo $this->get_field_name( 'link' ); ?>" type="text" value="<?php echo esc_attr( $link ); ?>">    
     <?php    
     }        
+    
+    public function renderTargetField ($target) {
+        $selected = !empty($target) ? $target : '_blank';
+        $targets = array(
+            '_blank' => 'Blank',            
+            '_self' => 'Self',
+            '_parent' => 'Parent',
+            '_top' => 'Top',        
+        );
+    ?>
+        <label for="<?php echo esc_attr( $this->get_field_id( 'target' ) ); ?>"><?php _e( 'Link Target:' ); ?></label> 
+        <select class="widefat" id="<?php echo $this->get_field_id( 'target' ); ?>" name="<?php echo $this->get_field_name( 'target' ); ?>">
+            <?php
+                    foreach ($targets as $targetKey => $targetName) : 
+            ?>
+                <option value="<?php echo $targetKey; ?>"<?php selected($targetKey, $selected); ?>><?php echo $targetName; ?></option>            
+            <?php 
+                    endforeach;
+            ?>
+        </select>                        
+    <?php    
+    }                
     
     public function renderTextColorField ($text_color) {
     ?>

@@ -9,8 +9,21 @@
     $title = !empty($args->settings->getConfig()->admin->options->title) ? $args->settings->getConfig()->admin->options->title : '';
 ?>
 <?php if (!empty($title)) :?>
-<h1><?php echo $title;?></h1>
-How to use this features you can find on the <a href="https://wordpress.org/plugins/agp-font-awesome-collection/" target="_blank">plugin page</a> in the FAQ and Screenshots sections
+<div style="width: 100%; padding: 20px 0 0;">
+    <table>
+        <tr style="vertical-align: middle;">
+            <td style="padding: 0 20px 0 0;">
+                <img src="<?php echo Fac()->getAssetUrl( 'images/icon-128x128.png' )?>" width="100" height="100" />    
+            </td>
+            <td>
+            <h1><?php echo $title;?></h1>
+            How to use this features you can find on the <a href="https://wordpress.org/plugins/agp-font-awesome-collection/" target="_blank">plugin page</a> in the FAQ and Screenshots sections    
+            </td>
+        </tr>
+    </table>
+</div>
+
+
 <?php endif;?>
 <div class="wrap">
     <?php 

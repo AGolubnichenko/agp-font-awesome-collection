@@ -4,6 +4,7 @@
     $description = !empty($params['description']) ? $params['description'] : '';
     $icon = !empty($params['icon']) ? $params['icon'] : '';
     $link = !empty($params['link']) ? $params['link'] : '';    
+    $target = !empty($params['target']) ? $params['target'] : '_blank';    
     $text_color = !empty($params['text_color']) ? $params['text_color'] : '#fff';    
     $background_color = !empty($params['background_color']) ? $params['background_color'] : '';        
     
@@ -21,7 +22,7 @@ if (!empty($icon) || !empty($headline) || !empty($description) ):
 ?>
 <div id="<?php echo $id;?>" class="fac-promotion-main-section"<?php echo (!empty($styles)) ? ' style="' . $styles . '"' : '';?>>
     <?php if (!empty($link)) : ?>
-    <a href="<?php echo $link; ?>" title="<?php echo $headline; ?>" target="_blank"<?php echo (!empty($styles)) ? ' style="' . $styles . '"' : '';?>>
+    <a href="<?php echo $link; ?>" title="<?php echo $headline; ?>" target="<?php echo $target;?>"<?php echo (!empty($styles)) ? ' style="' . $styles . '"' : '';?>>
     <?php endif;?>
     
     <?php if (!empty($icon) || !empty($headline)): ?>
