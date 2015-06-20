@@ -102,17 +102,35 @@ class Fac extends Agp_Module {
     
     public function __construct() {
         parent::__construct(dirname(dirname(__FILE__)));
-        
-        include_once ( $this->getBaseDir() . '/types/shortcodes-post-type.php' );                
-        include_once ( $this->getBaseDir() . '/types/sliders-post-type.php' );                
-        
+
         $this->iconRepository = new Fac_IconRepository();
-        $this->settings = Fac_Settings::instance( $this );
-        $this->constructor = Fac_Constructor::instance();
-        $this->shortcodes = Fac_Shortcodes::instance();
+        $this->settings = Fac_Settings::instance( $this );        
+        
+        if ( $this->isActiveModule('m_shortcodes') ) {
+            include_once ( $this->getBaseDir() . '/types/shortcodes-post-type.php' );                    
+        }
+        
+        if ( $this->isActiveModule('m_sliders') ) {
+            include_once ( $this->getBaseDir() . '/types/sliders-post-type.php' );                    
+        }
+        
+        if ( $this->isActiveModule('m_visual_constructor') ) {
+            $this->constructor = Fac_Constructor::instance();    
+        }
+        
+        if ( $this->isActiveModule('m_shortcodes') ) {
+            $this->shortcodes = Fac_Shortcodes::instance();    
+        }
+        
         $this->ajax = Fac_Ajax::instance();
-        $this->slider = Fac_Slider::instance();
-        $this->taxonomyIcons = Fac_TaxonomyIcons::instance();
+        
+        if ( $this->isActiveModule('m_sliders') ) {
+            $this->slider = Fac_Slider::instance();    
+        }
+        
+        if ( $this->isActiveModule('m_tax_icons') ) {
+            $this->taxonomyIcons = Fac_TaxonomyIcons::instance();    
+        }
         
         add_action( 'init', array($this, 'registerShortcodes' ), 998 );                
         add_action( 'init', array($this, 'init' ), 999 );        
@@ -132,19 +150,24 @@ class Fac extends Agp_Module {
             }
         }
         
-        $this->customElements = $this->settings->getCustomElementList();        
-        if (!empty($this->customElements)) {
-            foreach ($this->customElements as $key => $title) {
-                add_shortcode( $key, array( $this, 'doShortcode' ) );                     
-            }
+        if ( $this->isActiveModule('m_shortcodes') ) {
+            $this->customElements = $this->settings->getCustomElementList();        
+            if (!empty($this->customElements)) {
+                foreach ($this->customElements as $key => $title) {
+                    add_shortcode( $key, array( $this, 'doShortcode' ) );                     
+                }
+            }            
         }
-        
-        $this->sliderElements = $this->settings->getSliderElementList();        
-        if (!empty($this->sliderElements)) {
-            foreach ($this->sliderElements as $key => $title) {
-                add_shortcode( $key, array( $this, 'doShortcode' ) );                     
-            }
-        }        
+
+        if ( $this->isActiveModule('m_sliders') ) {
+            $this->sliderElements = $this->settings->getSliderElementList();        
+            if (!empty($this->sliderElements)) {
+                foreach ($this->sliderElements as $key => $title) {
+                    add_shortcode( $key, array( $this, 'doShortcode' ) );                     
+                }
+            }                    
+        }
+
     }
     
     public function init () {
@@ -152,7 +175,7 @@ class Fac extends Agp_Module {
     }
     
     public function facTinyMCEButtons () {
-        if ( current_user_can('edit_posts') && current_user_can('edit_pages') ) {
+        if ( current_user_can('edit_posts') && current_user_can('edit_pages') && $this->isActiveModule('m_visual_constructor')) {
             if ( get_user_option('rich_editing') == 'true' ) {
                add_filter( 'mce_buttons', array($this, 'facTinyMCERegisterButtons'));                
                add_filter( 'mce_external_plugins', array($this, 'facTinyMCEAddPlugin') );
@@ -314,9 +337,20 @@ class Fac extends Agp_Module {
     }      
     
     public function initWidgets() {
-        register_widget('Fac_Promotion');
-        register_widget('Fac_PromotionSlider');
+        if ( $this->isActiveModule('m_promotion_widget') ) {
+            register_widget('Fac_Promotion');    
+        }
+        
+        if ( $this->isActiveModule('m_promotion_slider_widget') ) {
+            register_widget('Fac_PromotionSlider');    
+        }
+        
     }    
+    
+    public function isActiveModule ( $module ) {
+        $settings = $this->settings->getGlobalSettings();
+        return !empty($settings[$module]);
+    }
     
     public function getSettings() {
         return $this->settings;

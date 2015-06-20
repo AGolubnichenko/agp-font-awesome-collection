@@ -6,7 +6,12 @@
         $('.widgets-sortables .fac-promotion-background-color').wpColorPicker();
 
         $(".fac-constructor-type-select").val(0);
-        $("#fac-constructor-box").colorbox({inline:true, width:"50%"});
+        
+        if( /Android|iPhone|iPad|iPod|webOS|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {   
+            $("#fac-constructor-box").colorbox({inline:true, width:"96%"});
+        } else {
+            $("#fac-constructor-box").colorbox({inline:true, width:"50%"});
+        }
         
         $(".fac-constructor-preview-button").click(function(event) {
             showPreview();

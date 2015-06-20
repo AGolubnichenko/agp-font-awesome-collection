@@ -2,6 +2,7 @@
 return array(
     'admin' => array(
         'menu' => include (__DIR__ . '/admin-menu.php'),
+        'options' => include (__DIR__ . '/admin-options.php'),
     ),    
     'fieldSet' => include (__DIR__ . '/fac-fieldset.php'),            
     'shortcodes' => array(
@@ -12,6 +13,7 @@ return array(
             'fac_dropdown' => include (__DIR__ . '/fac-dropdown.php'),
             'fac_button' => include (__DIR__ . '/fac-button.php'),
             'fac_version' => include (__DIR__ . '/fac-version.php'),            
+            'fac_container' => include (__DIR__ . '/fac-container.php'),            
         ),
     ),
 );

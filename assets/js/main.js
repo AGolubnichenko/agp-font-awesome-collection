@@ -52,11 +52,12 @@
             pager: true,
             nav: false,
             pause: true,
-            speed: 300
+            speed: 300,
+            timeout: 8000
         });  
 
         $(".fac-slider.fac-slider-default ul.rslides_tabs").each(function(){
-            $(this).wrapAll('<div class="container"></div>');
+            $(this).wrapAll('<div class="fac-container"></div>');
         });        
         
     });

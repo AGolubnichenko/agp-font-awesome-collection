@@ -213,7 +213,7 @@
     margin-bottom: 30px; 
 }
 
-.fac-slider-default > .container > .container { 
+.fac-slider-default > .fac-container > .fac-container { 
     position: absolute; 
     z-index: 3; 
     bottom: 0; 
@@ -224,16 +224,17 @@
 
 .fac-slider-default ul.rslides_tabs { 
     width: auto; 
-    background: #fff; 
+    background: rgba(255,255,255,0.3); 
     padding: 10px 15px; 
     list-style-type: none; 
-    opacity: 0.5; 
+    
     margin: 0 0 0 0;
 }
 
 .fac-slider-default ul.rslides_tabs li { 
     float: left; 
     padding-left: 15px; 
+    list-style: none;
 }
 
 .fac-slider-default ul.rslides_tabs li:first-child { 
@@ -253,14 +254,15 @@
 }
 
 .fac-slider-default ul.rslides_tabs li a { 
-    background: url(../images/slider-nav.png) no-repeat; 
     width: 8px; 
-    height: 8px; 
+    height: 8px;
+    border-radius: 8px;
+    background: rgba(255,255,255,0.5); 
 }
 
 .fac-slider-default ul.rslides_tabs li a:hover, 
 .fac-slider-default ul.rslides_tabs li.rslides_here a { 
-    background-position: 0 -8px; 
+     background: rgba(255,255,255,1); 
 }
 
 .fac-slider-default .fac-promotion-main-section {

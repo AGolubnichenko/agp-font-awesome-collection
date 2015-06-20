@@ -2,6 +2,7 @@
 return array(
     'template' =>'icon',
     'displayName' => 'Simpe Icon',
+    'note' => 'The element can be used for adding of a simple icon',
     'fields' => array(
         'icon' => array(
             'label' => 'Icon',            

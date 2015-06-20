@@ -13,7 +13,7 @@ class Fac_Settings extends Agp_SettingsAbstract {
     /**
      * Parent Module
      * 
-     * @var Agp_Module
+     * @var Fac
      */
     protected static $_parentModule;
     
@@ -49,13 +49,24 @@ class Fac_Settings extends Agp_SettingsAbstract {
      */
     public function __construct() {
         $config = include ($this->getParentModule()->getBaseDir() . '/config/config.php');        
-        
         parent::__construct($config);
     }
     
     public static function getParentModule() {
        
         return self::$_parentModule;
+    }
+    
+    public function getGlobalSettings () {
+        return $this->getSettings('fac-global-settings');
+    }    
+    
+    public static function renderSettingsPage() {
+        echo self::getParentModule()->getTemplate('admin/options/layout', self::instance());
+    }    
+    
+    public static function getCustomShortcodesFieldSet() {
+        return self::$_parentModule->getCustomElements();
     }
     
     public function getSortcodes() {
@@ -83,6 +94,13 @@ class Fac_Settings extends Agp_SettingsAbstract {
         }
 
         return $result;
+    }
+    
+    public function getElementNote ( $key ) {
+        $shortcodes = $this->objectToArray($this->getConfig()->shortcodes->elements);
+        if (!empty($shortcodes[$key]['note'])) {
+            return $shortcodes[$key]['note'];
+        }
     }
     
     public function getElementList () {
@@ -157,43 +175,6 @@ class Fac_Settings extends Agp_SettingsAbstract {
         
         return $result;
     }    
-    
-    
-    /**
-     * Convert an array into a stdClass()
-     * 
-     * @param   array   $array  The array we want to convert
-     * 
-     * @return  object
-     */
-    public function arrayToObject($array) {
-        
-        // First we convert the array to a json string
-        $json = json_encode($array);
 
-        // The we convert the json string to a stdClass()
-        $object = json_decode($json);
-
-        return $object;
-    }
-
-
-    /**
-     * Convert a object to an array
-     * 
-     * @param   object  $object The object we want to convert
-     * 
-     * @return  array
-     */
-    public function objectToArray($object) {
-        
-        // First we convert the object into a json string
-        $json = json_encode($object);
-
-        // Then we convert the json string to an array
-        $array = json_decode($json, true);
-
-        return $array;
-    }       
 }
 

@@ -4,7 +4,7 @@
     $args = new stdClass();
     $args->key = $key;
     $args->settings =$obj ;
-    $args->fieldSet = !empty($obj->getConfig()->fieldSet) ? $obj->objectToArray($obj->getConfig()->fieldSet) : NULL;
+    $args->fieldSet = Fac()->getSettings()->getRecursiveCallable( !empty($obj->getConfig()->fieldSet) ? $obj->objectToArray($obj->getConfig()->fieldSet) : NULL );
     $args->fields = !empty($args->settings->getConfig()->shortcodes->elements->$key->fields) ? $obj->objectToArray($args->settings->getConfig()->shortcodes->elements->$key->fields) : NULL;    
 ?>
 <h1>Font Awesome Constructor</h1>

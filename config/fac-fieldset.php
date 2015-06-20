@@ -14,5 +14,11 @@ return array(
         '_parent' => '_parent',
         '_top' => '_top',        
     ),    
+    'align' => array(
+        'center' => 'Center',        
+        'left' => 'Left',        
+        'right' => 'Right',        
+    ),
+    'shortcodes' => array( 'Fac_Settings', 'getCustomShortcodesFieldSet' ),
     
 );
