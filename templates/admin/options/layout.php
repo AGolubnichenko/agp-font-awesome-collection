@@ -22,8 +22,6 @@
         </tr>
     </table>
 </div>
-
-
 <?php endif;?>
 <div class="wrap">
     <?php 
