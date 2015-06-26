@@ -11,29 +11,59 @@ The latest Font Awesome icons with HTML and shortcodes usage, dynamic visualizer
 
 == Description ==
 
-The plugin allows simply integration and usage of the Font Awesome icons inside your WordPress theme. 
-With this plugin you can easy add various types of the Font Awesome based icons, buttons etc. and customize it for your needs with flexible parameters of shortcodes. 
+The plugin allows to integrate the Font Awesome icons to Your WordPress website.
+With this plugin you can use various types of the Font Awesome based icons, buttons etc. using simple shortcodes with flexible parameters or the Visual Constructor for a lazy.
 WordPress Developers also can find with this plugin some useful features for usage within the code.
 
-= Features =
+= Plugin Features =
 
-* Install and activate the plugin. That's all you need to start using **519 Font Awesome 4.3 icons** on Your site.
-* Font Awesome icons can be used as simple [HTML code](http://fortawesome.github.io/Font-Awesome/examples/) or [shortcodes](https://wordpress.org/plugins/agp-font-awesome-collection/faq/).
-* No need to have specific skills to add beautiful icon or button on a page or a post. Just follow shortcode attributes references for easy customization.
-* You can add any of the Font Awesome icons and use it as simple icon, icon with text, icon button, icon button with text and easy customize it for your needs.
-* For buttons can be added URL attribute that can lead to a page, an external site or a social networks profile. You can use this feature for a personal promotion, downloads link, donation etc.
+* Install and activate the plugin. That's all you need to start using **519 Font Awesome 4.3 icons** on Your site;
+* Font Awesome icons can be used as simple [HTML code](http://fortawesome.github.io/Font-Awesome/examples/) or [shortcodes](https://wordpress.org/plugins/agp-font-awesome-collection/faq/);
+* You can add any of the Font Awesome icons and use it as simple icon, icon with text, icon button, icon button with text and easy customize it for your needs;
+* All shortcodes can be used via Administrator Panel in TinyMCE editor area and directly in code;
+* For buttons can be added URL attribute that can lead to a page, an external site or a social networks profile. You can use this feature for a personal promotion, downloads link, donation etc.;
+* The plugin has some additional features for advertise and promotion on Your website.
+* **NB!** The core of the plugin has been changed and optimized for adding a new useful features. We forced to raise the requirements to PHP version on Your web server. **Minimum required PHP version is 5.3.0**.
+
+= Visual Constructor =
+
+You can add icons and buttons just in few clicks with the visual shortcodes constructor in TinyMCE editor. Just push small button with "FA" icon at the top panel of editor and select needed parameters in popup window.
+
+= Personal Shortcodes =
+
+You can create you own shortcodes in the Administrator Panel on the "Shortcodes" page and use it within Visual Constructor for different pages or posts as many times as needed.
+
+= Shortcode Container =
+
+Shortcode Container can be used as a wrapper for a custom shortcode for alignment it on a page. 
+Just create your own shortcode with any elements in the Administrator Panel on the "Shortcodes" page and select it in Visual Constructor as parameter for "Shortcode Container" element.
+
+= Sliders =
+
+**Slider** - is a set of small animated information blocks with Font Awesome icon, headline, description and link to URL.
+You can create and configure own sliders in the Administrator Panel on the "Sliders" page. 
+Each slider is attached to a personal shortcode and can be used via Administrator Panel in TinyMCE editor areas and directly in code.
+Also You can use Your slider in the "AGP Font Awesome Promotion" widget.
+**The slider is supported for mobile devices!**
+
+= Promotion Widget =
+
+You can use "AGP Font Awesome Promotion" widget for advertise and promotion.
+You can create and show small animated information block in sidebar, that contains Font Awesome icon, headline, description and link to URL. Also You can setup colors for text and background of the widget content.
+**The widget is supported for mobile devices!**
+
+= Promotion Slider Widget =
+
+You can use "AGP Font Awesome Promotion Slider" widget for advertise and promotion.
+You can create and show small animated information block in sidebar, that contains Your personal **slider** with Font Awesome icons, headlines, descriptions and links to URL.
+**The widget is supported for mobile devices!**
+
+= Features for Developers =
+
 * Specific Font Awesome Version shortcode allows to show current Font Awesome version, e.g. for your own plugin.
 * As developer, you can add dropdown with the Font Awesome icons list and use it for your purpose.
 * For developers are available some object and classes that implement convenient and flexible methods for access to Font Awesome icons properties.
-* All shortcodes can be used via Administrator Panel in WISIWING areas and directly in code.
-* Now you can add icons and buttons just in few clicks with the new visual shortcodes constructor.
-* You can create you own shortcodes and use it within visual constructor for different pages or posts as many times as needed.
-* With AGP Font Awesome Promotion widget You can create and show small animated information block in sidebar, that contains Font Awesome icon, headline, description and link to URL. Also You can setup colors for text and background of the widget content. **The widget is supported for the mobile devices!**
-* Now You can create and configure own sliders in the Administrator Panel on the "Sliders" page. Each slider is attached to a personal shortcode and can be used via Administrator Panel in WISIWING areas and directly in code.
-* With AGP Font Awesome Promotion Slider widget You can create and show small animated information block in sidebar, that contains a set of slides with Font Awesome icon, headline, description and link to URL. **The widget is supported for the mobile devices!**
-* **NB!** The core of the plugin has been changed and optimized for adding a new useful features. We forced to raise the requirements to PHP version on Your web server. **Minimum required PHP version - 5.3.0**.
-* **NEW!** Currently "FA" button is available in the TinyMCE without previously saving for a new post or page
-* **NEW!** Now You can reorder the slides on a slider settings page
+* You can add the Font Awesome Icon and position of this icon for each terms of any taxonomy or category and use this parameters in PHP and HTML code.
 
 = Looking for more info? =
 
@@ -136,7 +166,7 @@ Shortcode with additional attributes for icon button with text customization:
 * **border_color** – allows to set button border color with HEX color value
 * **border_radius** – allows to set button corner rounding; one positive digital value with "px"  allows to set equal corner rounding for all corners. Also can be used following values (for example): border_radius="10px 0" – corner rounding for left-top and right-bottom corners and vice versa border_radius="0 10px" - corner rounding for right-top and left-bottom corners; border_radius=" 10px 0 0" – corner rounding for left-top corner etc.  For more references check "border-radius" CSS property.
 
-= How to use "Dropdown list" shortcode =
+= (For Developers) How to add "Dropdown list" shortcode =
 
 Following shortcode can be used for adding of dropdown with Font Awesome icons list:
 
@@ -147,13 +177,13 @@ Following shortcode can be used for adding of dropdown with Font Awesome icons l
 
 Also this shortcode can be used directly in code.
 
-= How to use "Current Version" shortcode =
+= (For Developers) How to add "Current Version" shortcode =
 
 Following shortcode can be used for adding of info box with current Font Awesome version:
 
 `[fac_version]`
 
-= For Developers =
+= (For Developers) How to get access to icons collection?  =
 
 If you need to have access to object of collection you can use following code:
 
@@ -179,6 +209,22 @@ For example, if you need to get and show icon display name (e.g. "adn"), you nee
 As result, will be displayed: "App.net"
 For more references you can check realization for "Fac_IconRepository" and  "Fac_IconEntity" classes in plugin code.
 Also you can send any questions in plugin [support](https://wordpress.org/support/plugin/agp-font-awesome-collection) tab.
+
+= (For Developers) How to use taxonomy icons in the PHP code? =
+
+The first, You must enable "Category Icons" feature on the "Settings" page of plugin in the Admin Panel.
+After that You must setup icons and icons position on the terms of taxonomy.
+
+You can get the icon data for a specified term of taxonomy with the following code:
+
+`<?php $data = Fac()->getTaxonomyIcons()->getTaxIcon( $term_id ); ?>`
+
+where:
+
+* **$term_id** - term_id of the specified term of taxonomy;
+* **$data['icon']** - stored icon;
+* **$data['position']** - stored icon position.
+
 
 == Screenshots ==
 
@@ -209,12 +255,10 @@ Also you can send any questions in plugin [support](https://wordpress.org/suppor
 * Added: Settings page, where you can enable or disable plugin features
 * Added: New shortcode "fac_container" that can be used as a wrapper for a custom shortcode for alignment it on a page
 * Added: Short description of the selected element in visual constructor
-* Added: **(For Developers)** Now you can adding Font Awesome Icon and position of this icon for each terms of any taxonomy or category.
-* Added: **(For Developers)** New feature that allows to developers get "Icon Name" and "Icon Position" parameters of a taxonomy term for using in a PHP-code
-* Added: **(For Developers)** New feature that allows to developers get the display name of the taxonomy term with preset Font Awesome Icon for using in a HTML-code
 * Fixed: Issue with displaying promotion widgets and shortcodes with empty description or empty headline and icon
 * Minor changes of default elements styling
 * Minor changes of the plugin core
+* Added: **(For Developers)** Now You can adding Font Awesome Icon and position of this icon for each terms of any taxonomy or category and use this parameters in  PHP and HTML code
 
 = 2.2.2 =
 * Added: Possibility of reordering slides on a slider settings page

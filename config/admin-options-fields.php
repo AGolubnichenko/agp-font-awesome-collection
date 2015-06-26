@@ -3,13 +3,13 @@ return array(
     'fac-global-settings' => array(
         'sections' => array(
             'features' => array(
-                'label' => 'Public modules',
+                'label' => 'Public Section',
             ),            
             'promo_features' => array(
-                'label' => 'Promotion modules',
+                'label' => 'Promotion Section',
             ),                        
             'dev_features' => array(
-                'label' => 'Developer modules',
+                'label' => 'Developer Section',
             ),                        
         ),
         'fields' => array(
@@ -27,7 +27,7 @@ return array(
                 'default' => 1,
                 'section' => 'features',
                 'class' => '',
-                'note' => 'You can add icons and buttons just in few clicks with the visual shortcodes constructor in TinyMCE editor. Just push small button with "FA" icon at the top panel of editor and select needed parameters in popup window',
+                'note' => 'You can add icons and buttons just in few clicks with the visual shortcodes constructor in TinyMCE editor. Just push small button with "FA" icon at the top panel of editor and select needed parameters in the popup window',
             ),              
             'm_shortcodes' => array(
                 'type' => 'checkbox',
@@ -43,7 +43,7 @@ return array(
                 'default' => 1,
                 'section' => 'features',
                 'class' => '',
-                'note' => 'You can create and configure own sliders in the Administrator Panel on the "Sliders" page. Each slider is attached to a personal shortcode and can be used via Administrator Panel in WISIWING areas and directly in code',
+                'note' => 'You can create and configure own sliders in the Administrator Panel on the "Sliders" page. Each slider is attached to a personal shortcode and can be used via Administrator Panel in TinyMCE editor areas and directly in a code',
             ),       
             
             'm_promotion_widget' => array(
@@ -60,7 +60,7 @@ return array(
                 'default' => 1,
                 'section' => 'promo_features',
                 'class' => '',
-                'note' => 'You can create and show small animated information block in sidebar, that contains a set of slides with Font Awesome icon, headline, description and link to URL', 
+                'note' => 'You can create and show small animated information block in sidebar, that contains Your personal slider with Font Awesome icons, headlines, descriptions and links to URL', 
             ),                                                                          
             'm_tax_icons' => array(
                 'type' => 'checkbox',
@@ -68,7 +68,7 @@ return array(
                 'default' => 0,
                 'section' => 'dev_features',
                 'class' => '',
-                'note' => 'You can adding Font Awesome Icon and position of this icon for each terms of any taxonomy or category', 
+                'note' => 'You can add the Font Awesome Icon and position of this icon for each terms of any taxonomy or category and use this parameters in PHP and HTML code', 
             ),                                                  
             
         ),

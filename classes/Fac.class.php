@@ -380,5 +380,8 @@ class Fac extends Agp_Module {
         return $this->sliderElements;
     }
 
+    public function getTaxonomyIcons() {
+        return $this->taxonomyIcons;
+    }
 
 }
