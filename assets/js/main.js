@@ -35,6 +35,11 @@
                     var link = $(this).closest('.fac-promotion-main-section').find('a').attr('href');
                     if (typeof(link) !== "undefined" && link != '' ) {
                         window.location = link;
+                    } else {
+                        if ($(this).closest('.fac-promotion-main-section').find('.fac-promotion-preview').length > 0 ) {
+                            $(this).closest('.fac-promotion-main-section').find('.fac-promotion-content').hide();
+                            $(this).closest('.fac-promotion-main-section').find('.fac-promotion-preview').show();                                        
+                        }
                     }
                     return false;                
                 });                 
