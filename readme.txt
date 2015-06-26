@@ -23,7 +23,7 @@ WordPress Developers also can find with this plugin some useful features for usa
 * All shortcodes can be used via Administrator Panel in TinyMCE editor area and directly in code;
 * For buttons can be added URL attribute that can lead to a page, an external site or a social networks profile. You can use this feature for a personal promotion, downloads link, donation etc.;
 * The plugin has some additional features for advertise and promotion on Your website.
-* **NB!** The core of the plugin has been changed and optimized for adding a new useful features. We forced to raise the requirements to PHP version on Your web server. **Minimum required PHP version is 5.3.0**.
+* Minimum required PHP version is **5.3.0**.
 
 = Visual Constructor =
 
