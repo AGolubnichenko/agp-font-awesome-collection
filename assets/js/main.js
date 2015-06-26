@@ -7,44 +7,62 @@
     $( document ).ready(function() { 
         resize();
 
-        if( /Android|iPhone|iPad|iPod|webOS|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {   
-            $('.fac-promotion-main-section a').on('click', function(e) {
-                e.preventDefault();
-                return false;
-            });               
-            
-            $('.fac-promotion-main-section .fac-promotion-preview').on('click', function(e) { 
-                e.preventDefault();
-                $(this).closest('.fac-promotion-main-section').find('.fac-promotion-content').show();
-                $(this).closest('.fac-promotion-main-section').find('.fac-promotion-preview').hide();                
-                return false;
-            });             
-            
-            $('.fac-promotion-main-section .fac-promotion-content').on('tap', function(e) { 
-                e.preventDefault();                                    
-                var link = $(this).closest('.fac-promotion-main-section').find('a').attr('href');
-                if (typeof(link) !== "undefined" && link != '' ) {
-                    window.location = link;
-                }
-                return false;                
-            });                         
-            
-            $('.fac-promotion-main-section').mouseout(function(e){
-                $(this).find('.fac-promotion-content').hide();
-                $(this).find('.fac-promotion-preview').show();                                
-                return true;
-            });            
+        if( /Android|iPhone|iPad|iPod|webOS|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {  
+            $('.fac-promotion-main-section').each(function () {
+                $(this).find('a').on('click', function(e) {
+                    e.preventDefault();
+                    return false;
+                });               
+                
+                $(this).find('.fac-promotion-preview').on('click', function(e) { 
+                    if ( $(this).closest('.fac-promotion-main-section').find('.fac-promotion-content').length > 0 ) {
+                        e.preventDefault();
+                        $(this).closest('.fac-promotion-main-section').find('.fac-promotion-content').show();
+                        $(this).closest('.fac-promotion-main-section').find('.fac-promotion-preview').hide();                
+                        return false;                        
+                    } else {
+                        e.preventDefault();                                    
+                        var link = $(this).closest('.fac-promotion-main-section').find('a').attr('href');
+                        if (typeof(link) !== "undefined" && link != '' ) {
+                            window.location = link;
+                        }
+                        return false;                                        
+                    }
+                });           
+
+                $(this).find('.fac-promotion-content').on('tap', function(e) { 
+                    e.preventDefault();                                    
+                    var link = $(this).closest('.fac-promotion-main-section').find('a').attr('href');
+                    if (typeof(link) !== "undefined" && link != '' ) {
+                        window.location = link;
+                    }
+                    return false;                
+                });                 
+
+                
+                $(this).mouseout(function(e){
+                    if ( $(this).find('.fac-promotion-preview').length > 0 ) {
+                        $(this).find('.fac-promotion-content').hide();
+                        $(this).find('.fac-promotion-preview').show();            
+                    }
+                    return true;
+                });                            
+            });
         } else {
-            $('.fac-promotion-main-section').hover(
-                function() {
-                    $(this).find('.fac-promotion-content').show();
-                    $(this).find('.fac-promotion-preview').hide();
-                },
-                function() {
-                    $(this).find('.fac-promotion-content').hide();
-                    $(this).find('.fac-promotion-preview').show();
-                }                
-            );            
+            $('.fac-promotion-main-section').each(function () {
+                if ( $(this).find('.fac-promotion-content').length > 0 && $(this).find('.fac-promotion-preview').length > 0 ) {
+                    $(this).hover(
+                        function() {
+                            $(this).find('.fac-promotion-content').show();
+                            $(this).find('.fac-promotion-preview').hide();
+                        },
+                        function() {
+                            $(this).find('.fac-promotion-content').hide();
+                            $(this).find('.fac-promotion-preview').show();
+                        }                
+                    );                                                                
+                }   
+            });
         }
   
         $(".fac-slider.fac-slider-default .fac-promotion-slider").responsiveSlides({
@@ -61,8 +79,7 @@
         });        
         
     });
-    
-    
+
     function resize() {
         $('.widget_fac_promotion .fac-promotion-main-section').each(function() {
             var height;            

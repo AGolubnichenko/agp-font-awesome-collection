@@ -37,7 +37,7 @@
     <?php endif;?>
     
     <?php if (!empty($description)): ?>
-    <div class="fac-promotion-content" style="display: none;">    
+    <div class="fac-promotion-content"<?php if (!empty($icon) || !empty($headline)): ?> style="display: none;"<?php endif;?>>    
         <div class="fpp-inner">
             <?php if (!empty($headline)): ?>
                 <h3 class="fac-headline"<?php echo (!empty($styles)) ? ' style="' . $styles . '"' : '';?>><?php echo $headline; ?></h3>

@@ -212,6 +212,7 @@ Also you can send any questions in plugin [support](https://wordpress.org/suppor
 * Added: **(For Developers)** Now you can adding Font Awesome Icon and position of this icon for each terms of any taxonomy or category.
 * Added: **(For Developers)** New feature that allows to developers get "Icon Name" and "Icon Position" parameters of a taxonomy term for using in a PHP-code
 * Added: **(For Developers)** New feature that allows to developers get the display name of the taxonomy term with preset Font Awesome Icon for using in a HTML-code
+* Fixed: Issue with displaying promotion widgets and shortcodes with empty description or empty headline and icon
 * Minor changes of default elements styling
 * Minor changes of the plugin core
 
