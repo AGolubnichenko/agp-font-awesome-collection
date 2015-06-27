@@ -24,7 +24,6 @@
     </table>
 </div>
 <?php endif;?>
-
 <div class="wrap">
     <?php 
         screen_icon();

@@ -266,6 +266,7 @@ where:
 * Fixed: Issue with displaying promotion widgets and shortcodes with empty description or empty headline and icon
 * Minor changes of default elements styling
 * Minor changes of the plugin core
+* Minor bugfixing
 * Added: **(For Developers)** Now You can adding Font Awesome Icon and position of this icon for each terms of any taxonomy or category and use this parameters in  PHP and HTML code
 
 = 2.2.2 =

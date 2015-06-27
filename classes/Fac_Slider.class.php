@@ -46,7 +46,6 @@ class Fac_Slider extends Agp_RepeaterAbstract {
         
         add_action( 'add_meta_boxes', array( $this, 'addSliderMetaboxes' ) );        
         add_action( 'save_post', array( $this, 'saveSliderMetaboxes' ), 1, 2); 
-        
         $this->init('fac_sliders', 'Slider Content', 'fac-sliders', 'normal');
         $this->setLayoutOrientation($this->layoutOrientation);
     }
@@ -87,6 +86,32 @@ class Fac_Slider extends Agp_RepeaterAbstract {
         );
         
         echo Fac()->getTemplate('admin/slider/parameters', $atts);
+    }    
+    
+    
+    public function saveMetaboxes( $post_id, $post ) {
+        if ( empty( $_POST['fac_shortcodes_noncename'] ) 
+            || !wp_verify_nonce( $_POST['fac_shortcodes_noncename'],  basename(Fac()->getBaseDir()) )
+            || !current_user_can( 'edit_post', $post->ID ) ) {
+            return $post->ID;
+        }        
+
+        $data = $_POST[$this->getId() . '_data'];
+        if (isset($data[0])) {
+            unset($data[0]);
+        }
+        //$meta[$this->getId() . '_data'] = serialize($data);
+        $meta[$this->getId() . '_data'] = $data;
+        
+        foreach ($meta as $key => $value) {
+            if( $post->post_type == 'revision' ) return;
+
+            if ( !$value ) {
+                delete_post_meta($post->ID, $key); 
+            } else {
+                update_post_meta($post->ID, $key, $value);
+            }
+        }   
     }    
     
     public function getLayoutOrientation() {
