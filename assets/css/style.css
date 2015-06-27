@@ -192,7 +192,7 @@
 	font-size: 5em;
 }
 
-.widget_fac_promotion .fac-promotion-preview, .fac-promotion-content {
+.widget_fac_promotion .fac-promotion-preview, .widget_fac_promotion .fac-promotion-content {
 	padding: 10% 25px;
 }
 
@@ -205,6 +205,10 @@
 	vertical-align: middle;
 	width: 100%;
 	opacity: 1.0!important;
+}
+
+.widget_fac_promotion .fac-promotion-content h3.fac-headline {
+	padding: 0;
 }
 
 /*-----Default Promotion Slider-----*/
@@ -298,4 +302,8 @@
 	vertical-align: middle;
 	width: 100%;
 	opacity: 1.0!important;
+}
+
+.fac-slider-default .fac-promotion-content h3.fac-headline {
+	padding: 0;
 }

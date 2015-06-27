@@ -69,7 +69,7 @@ class Fac_Settings extends Agp_SettingsAbstract {
         return self::$_parentModule->getCustomElements();
     }
     
-    public function getSortcodes() {
+    public function getShortcodes() {
         $result = array();
 
         $shortcodes = $this->objectToArray($this->getConfig()->shortcodes->elements);
@@ -137,12 +137,12 @@ class Fac_Settings extends Agp_SettingsAbstract {
         while ( $query->have_posts() ) : $query->the_post();
             $key = get_post_meta( get_the_ID(), '_name', true );
             if (!empty($key)) {
-                $result[$key] = get_the_title();    
+                $result[$key] = (get_the_title()) ? get_the_title() : $key;    
             }
         endwhile;        
 
         wp_reset_query();
-        
+
         return $result;
     }    
     

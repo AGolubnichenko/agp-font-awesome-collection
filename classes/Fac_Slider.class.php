@@ -55,8 +55,8 @@ class Fac_Slider extends Agp_RepeaterAbstract {
     }    
     
     public function saveSliderMetaboxes( $post_id, $post ) {
-        if ( empty( $_POST['fac_shortcodes_noncename'] ) 
-            || !wp_verify_nonce( $_POST['fac_shortcodes_noncename'],  basename(Fac()->getBaseDir()) )
+        if ( empty( $_POST['fac_slider_noncename'] ) 
+            || !wp_verify_nonce( $_POST['fac_slider_noncename'],  basename(Fac()->getBaseDir()) )
             || !current_user_can( 'edit_post', $post->ID ) ) {
             return $post->ID;
         }
@@ -90,8 +90,8 @@ class Fac_Slider extends Agp_RepeaterAbstract {
     
     
     public function saveMetaboxes( $post_id, $post ) {
-        if ( empty( $_POST['fac_shortcodes_noncename'] ) 
-            || !wp_verify_nonce( $_POST['fac_shortcodes_noncename'],  basename(Fac()->getBaseDir()) )
+        if ( empty( $_POST['fac_slider_noncename'] ) 
+            || !wp_verify_nonce( $_POST['fac_slider_noncename'],  basename(Fac()->getBaseDir()) )
             || !current_user_can( 'edit_post', $post->ID ) ) {
             return $post->ID;
         }        

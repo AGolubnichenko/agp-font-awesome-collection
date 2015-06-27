@@ -143,7 +143,7 @@ class Fac extends Agp_Module {
     }
     
     public function registerShortcodes() {
-        $shortcodes = $this->settings->getSortcodes();
+        $shortcodes = $this->settings->getShortcodes();
         if (!empty($shortcodes)) {
             foreach ($shortcodes as $key => $obj) {
                 add_shortcode( $key, array( $this, 'doShortcode' ) );                     
@@ -228,7 +228,7 @@ class Fac extends Agp_Module {
     }
     
     public function doPreview ($atts, $content, $tag) {
-        $shortcodes = $this->settings->getSortcodes();
+        $shortcodes = $this->settings->getShortcodes();
         $customShortcodes = $this->customElements;
         $sliderShortcodes = $this->sliderElements;
         
@@ -249,7 +249,7 @@ class Fac extends Agp_Module {
     }        
     
     public function doShortcode ($atts, $content, $tag) {
-        $shortcodes = $this->settings->getSortcodes();
+        $shortcodes = $this->settings->getShortcodes();
         $customShortcodes = $this->customElements;
         $sliderShortcodes = $this->sliderElements;
         
@@ -287,7 +287,6 @@ class Fac extends Agp_Module {
         );
 
         $query = new WP_Query($args);
-        
         
         if ($wpautop) {
             remove_filter ('the_content', 'wpautop');    

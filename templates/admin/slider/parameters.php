@@ -6,7 +6,7 @@ if (!empty($params['post'])) :
     $sliderTypes = !empty($params['sliderTypes']) ?  $params['sliderTypes'] : array();
     $nonce = wp_create_nonce( basename(Fac()->getBaseDir()) );
 ?>
-<input type="hidden" name="fac_shortcodes_noncename" id="fac_shortcodes_noncename" value="<?php echo $nonce; ?>" />
+<input type="hidden" name="fac_slider_noncename" id="fac_slider_noncename" value="<?php echo $nonce; ?>" />
 <table class="widefat" width="100%" cellspacing="0" cellpadding="0" border="0">
     <tbody>
         <tr>

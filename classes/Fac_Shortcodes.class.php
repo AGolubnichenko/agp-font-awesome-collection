@@ -55,19 +55,20 @@ class Fac_Shortcodes {
             || !current_user_can( 'edit_post', $post->ID ) ) {
             return $post->ID;
         }
-
-        $shortcodes_meta['_name'] = $_POST['_name'];
-
+        
+        $shortcodes_meta['_name'] = !empty($_POST['_name']) ?  $_POST['_name'] : 'fac_shortcode_' . $post->ID;
+        
         foreach ($shortcodes_meta as $key => $value) {
             if( $post->post_type == 'revision' ) return;
-            
+                        
             $value = implode(',', (array) $value);            
             if ( !$value ) {
                 delete_post_meta($post->ID, $key); 
             } else {
                 update_post_meta($post->ID, $key, $value);
             }
-        }        
+            
+        }   
     }
     
     public function viewNameMetabox() {
@@ -76,6 +77,7 @@ class Fac_Shortcodes {
         echo '<input type="hidden" name="fac_shortcodes_noncename" id="fac_shortcodes_noncename" value="' . wp_create_nonce( basename(Fac()->getBaseDir()) ) . '" />';
         // Get the location data if its already been entered
         $name = get_post_meta($post->ID, '_name', true);
+        $name = !empty($name) ?  $name : 'fac_shortcode_' . $post->ID;
         // Echo out the field
         echo '<input type="text" name="_name" value="' . $name  . '" class="widefat" />';
     }
