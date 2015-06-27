@@ -186,12 +186,18 @@
 	padding: 10px 0 0;
 }
 
+
+
 .widget_fac_promotion .fac-promotion-main-section i.fa {
 	font-size: 5em;
 }
 
 .widget_fac_promotion .fac-promotion-preview, .fac-promotion-content {
 	padding: 35px 25px;
+}
+
+.widget_fac_promotion .fac-promotion-preview.fac-noicon h3.fac-headline {
+	padding: 0;
 }
 
 .widget_fac_promotion .fac-promotion-content h3.fac-headline {
@@ -285,6 +291,10 @@
 
 .fac-slider-default .fac-promotion-preview, .fac-promotion-content {
 	padding: 35px 25px;
+}
+
+.fac-slider-default .fac-promotion-preview.fac-noicon h3.fac-headline {
+	padding: 0;
 }
 
 .fac-slider-default .fac-promotion-content h3.fac-headline {

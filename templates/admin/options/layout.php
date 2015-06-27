@@ -12,17 +12,19 @@
 <div style="width: 100%; padding: 20px 0 0;">
     <table>
         <tr style="vertical-align: middle;">
-            <td style="padding: 0 20px 0 0;">
+            <td style="padding: 0 20px 0 0;">                                                                                               
                 <img src="<?php echo Fac()->getAssetUrl( 'images/icon-128x128.png' )?>" width="100" height="100" />    
             </td>
             <td>
-            <h1><?php echo $title;?></h1>
-            How to use this features you can find on the <a href="https://wordpress.org/plugins/agp-font-awesome-collection/" target="_blank">plugin page</a> in the FAQ and Screenshots sections    
+                <h1 style="margin: 0px; padding: 0 0 10px;"><?php echo $title;?></h1>
+                <p style="margin: 0px; padding: 0 0 5px;">How to use those features you can find on the <a href="https://wordpress.org/plugins/agp-font-awesome-collection/" target="_blank"><strong>Plugin Page</strong></a> in the <a href="https://wordpress.org/plugins/agp-font-awesome-collection/faq/" target="_blank"><strong>FAQ</strong></a> and <a href="https://wordpress.org/plugins/agp-font-awesome-collection/screenshots/" target="_blank"><strong>Screenshots</strong></a> sections.</p> 
+                <p style="margin: 0px; padding: 0;">Also You can find <a href="http://demo.agp.besaba.com/" target="_blank"><strong>Live Demo</strong></a> on plugin site.</p>   
             </td>
         </tr>
     </table>
 </div>
 <?php endif;?>
+
 <div class="wrap">
     <?php 
         screen_icon();

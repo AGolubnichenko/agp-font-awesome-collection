@@ -23,7 +23,7 @@
     <?php endif;?>
     
     <?php if (!empty($icon) || !empty($headline)): ?>
-    <div class="fac-promotion-preview">
+    <div class="fac-promotion-preview<?php echo empty($icon) ? ' fac-noicon' : '';?>">
         <div class="fpp-inner">
             <?php if (!empty($icon)): ?>
                 <i class="fa fa-<?php echo $icon; ?>"></i>
