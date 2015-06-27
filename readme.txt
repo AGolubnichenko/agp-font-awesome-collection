@@ -236,25 +236,22 @@ where:
 
 == Screenshots ==
 
-1. Icons and buttons samples
-2. Visual Constructor :: Button
-3. Visual Constructor :: Simple Icon
-4. Visual Constructor :: Shaper Icon with Text
-5. Visual Constructor :: Flat Button
-6. Visual Constructor :: Social Network Profile Link with Text
-7. Visual Constructor :: Social Network Profile Link
-8. Visual Constructor :: Social Network Profile Link - Round
-9. Visual Constructor :: Social Network Profile Link - Square
-10. Shortcodes List
-11. Custom Shortcode
-12. Visual Constructor :: Custom Shortcodes List
-13. Visual Constructor :: Selected Custom Shortcode
-14. Added Custom Shortcode
-15. Custom Shortcode Result
-16. Font Awesome dropdown (developers only)
-17. Curent Font Avesome Version
-18. Font Awesome Promotion widget
-19. Slider configuration
+1. Examples of Usage: various icons, buttons, promo banners & sliders
+2. TinyMCE Visual Constructor Button
+3. Visual Constructor
+4. Shortcodes List
+5. Custom Shortcode
+6. Custom Shortcodes in the TinyMCE
+7. Custom Shortcode Result
+8. Promo Banner for sidebar (results you can find on screenshote 1 - left & right sidebars)
+9. Sliders List
+10. Custom Slider
+11. Custom Slider for sidebar
+11. Custom Slider in the TinyMCE
+13. Custom Slider Result
+14. Active Plugin Modules Management
+15. Font Awesome dropdown (developers only)
+16. Curent Font Avesome Version
 
 == Changelog ==
 
