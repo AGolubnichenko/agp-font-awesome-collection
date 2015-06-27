@@ -193,15 +193,11 @@
 }
 
 .widget_fac_promotion .fac-promotion-preview, .fac-promotion-content {
-	padding: 35px 25px;
+	padding: 10% 25px;
 }
 
 .widget_fac_promotion .fac-promotion-preview.fac-noicon h3.fac-headline {
 	padding: 0;
-}
-
-.widget_fac_promotion .fac-promotion-content h3.fac-headline {
-	padding: 0 0 10px;
 }
 
 .widget_fac_promotion .fac-promotion-main-section .fpp-inner {
@@ -290,15 +286,11 @@
 }
 
 .fac-slider-default .fac-promotion-preview, .fac-promotion-content {
-	padding: 35px 25px;
+	padding: 10% 25px;
 }
 
 .fac-slider-default .fac-promotion-preview.fac-noicon h3.fac-headline {
 	padding: 0;
-}
-
-.fac-slider-default .fac-promotion-content h3.fac-headline {
-	padding: 0 0 10px;
 }
 
 .fac-slider-default .fac-promotion-main-section .fpp-inner {
