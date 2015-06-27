@@ -44,18 +44,21 @@ Just create your own shortcode with any elements in the Administrator Panel on t
 You can create and configure own sliders in the Administrator Panel on the "Sliders" page. 
 Each slider is attached to a personal shortcode and can be used via Administrator Panel in TinyMCE editor areas and directly in code.
 Also You can use Your slider in the "AGP Font Awesome Promotion Slider" widget.
+
 **The slider is supported for mobile devices!**
 
 = Promotion Widget =
 
 You can use "AGP Font Awesome Promotion" widget for advertise and promotion.
 You can create and show small animated information block in sidebar, that contains Font Awesome icon, headline, description and link to URL. Also You can setup colors for text and background of the widget content.
+
 **The widget is supported for mobile devices!**
 
 = Promotion Slider Widget =
 
 You can use "AGP Font Awesome Promotion Slider" widget for advertise and promotion.
 You can create and show small animated information block in sidebar, that contains Your personal **slider** with Font Awesome icons, headlines, descriptions and links to URL.
+
 **The widget is supported for mobile devices!**
 
 = Features for Developers =
@@ -68,6 +71,7 @@ You can create and show small animated information block in sidebar, that contai
 = Looking for more info? =
 
 More info you can find on the [screenshots](https://wordpress.org/plugins/agp-font-awesome-collection/screenshots/) and [FAQ](https://wordpress.org/plugins/agp-font-awesome-collection/faq/) tabs.
+Also You can find [Live Demo](http://demo.agp.besaba.com/) on plugin site.</p>
 
 = How to use visual constructor =
 
