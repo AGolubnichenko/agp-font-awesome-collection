@@ -43,7 +43,7 @@ Just create your own shortcode with any elements in the Administrator Panel on t
 **Slider** - is a set of small animated information blocks with Font Awesome icon, headline, description and link to URL.
 You can create and configure own sliders in the Administrator Panel on the "Sliders" page. 
 Each slider is attached to a personal shortcode and can be used via Administrator Panel in TinyMCE editor areas and directly in code.
-Also You can use Your slider in the "AGP Font Awesome Promotion" widget.
+Also You can use Your slider in the "AGP Font Awesome Promotion Slider" widget.
 **The slider is supported for mobile devices!**
 
 = Promotion Widget =
@@ -76,6 +76,14 @@ More info you can find on the [screenshots](https://wordpress.org/plugins/agp-fo
 = How to create own shortcode =
 
 [youtube http://www.youtube.com/watch?v=BT02i79Vmts]
+
+= How to use promotion widget =
+
+[youtube http://www.youtube.com/watch?v=HkK9recE8Ds]
+
+= How to use shortcode container =
+
+[youtube http://www.youtube.com/watch?v=pj5X73Ygna4]
 
 == Installation ==
 
