@@ -15,6 +15,8 @@ The plugin allows to integrate the Font Awesome icons to Your WordPress website.
 With this plugin you can use various types of the Font Awesome based icons, buttons etc. using simple shortcodes with flexible parameters or the Visual Constructor for a lazy.
 WordPress Developers also can find with this plugin some useful features for usage within the code.
 
+You can find [Live Demo](http://demo.agp.besaba.com/) on the plugin site.
+
 = Plugin Features =
 
 * Install and activate the plugin. That's all you need to start using **519 Font Awesome 4.3 icons** on Your site;
@@ -71,7 +73,8 @@ You can create and show small animated information block in sidebar, that contai
 = Looking for more info? =
 
 More info you can find on the [screenshots](https://wordpress.org/plugins/agp-font-awesome-collection/screenshots/) and [FAQ](https://wordpress.org/plugins/agp-font-awesome-collection/faq/) tabs.
-Also You can find [Live Demo](http://demo.agp.besaba.com/) on plugin site.</p>
+
+Also You can find [Live Demo](http://demo.agp.besaba.com/) on the plugin site.
 
 = How to use visual constructor =
 

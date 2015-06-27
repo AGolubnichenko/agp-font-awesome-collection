@@ -18,7 +18,7 @@
             <td>
                 <h1 style="margin: 0px; padding: 0 0 10px;"><?php echo $title;?></h1>
                 <p style="margin: 0px; padding: 0 0 5px;">How to use those features you can find on the <a href="https://wordpress.org/plugins/agp-font-awesome-collection/" target="_blank"><strong>Plugin Page</strong></a> in the <a href="https://wordpress.org/plugins/agp-font-awesome-collection/faq/" target="_blank"><strong>FAQ</strong></a> and <a href="https://wordpress.org/plugins/agp-font-awesome-collection/screenshots/" target="_blank"><strong>Screenshots</strong></a> sections.</p> 
-                <p style="margin: 0px; padding: 0;">Also You can find <a href="http://demo.agp.besaba.com/" target="_blank"><strong>Live Demo</strong></a> on plugin site.</p>   
+                <p style="margin: 0px; padding: 0;">Also You can find <a href="http://demo.agp.besaba.com/" target="_blank"><strong>Live Demo</strong></a> on the plugin site.</p>   
             </td>
         </tr>
     </table>
