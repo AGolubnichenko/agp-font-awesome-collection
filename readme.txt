@@ -249,7 +249,6 @@ where:
 * **$data['icon']** - stored icon;
 * **$data['position']** - stored icon position.
 
-
 == Screenshots ==
 
 1. Examples of Usage: various icons, buttons, promo banners & sliders
@@ -268,8 +267,11 @@ where:
 14. Active Plugin Modules Management
 15. Font Awesome dropdown (developers only)
 16. Curent Font Avesome Version
+17. Font Awesome Icons for menu
+18. Menus with Font Awesome Icons
 
 == Changelog ==
+
 = 2.4.0 =
 * Added: Now You can use the Font Awesome Icons in the WordPress menu
 
