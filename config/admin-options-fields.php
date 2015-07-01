@@ -45,7 +45,14 @@ return array(
                 'class' => '',
                 'note' => 'You can create and configure own sliders in the Administrator Panel on the "Sliders" page. Each slider is attached to a personal shortcode and can be used via Administrator Panel in TinyMCE editor areas and directly in a code',
             ),       
-            
+            'm_menu_icons' => array(
+                'type' => 'checkbox',
+                'label' => 'Menu Icons',
+                'default' => 1,
+                'section' => 'features',
+                'class' => '',
+                'note' => 'You can use the Font Awesome Icons in the WordPress menu',
+            ),                   
             'm_promotion_widget' => array(
                 'type' => 'checkbox',
                 'label' => 'Promotion Widget',

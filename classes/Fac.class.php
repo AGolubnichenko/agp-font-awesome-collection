@@ -69,6 +69,14 @@ class Fac extends Agp_Module {
      */
     private $taxonomyIcons;
     
+    
+    /**
+     * Menu icons
+     * 
+     * @var Fac_MenuIcons
+     */
+    private $menuIcons;
+    
     /**
      * The single instance of the class 
      * 
@@ -131,6 +139,10 @@ class Fac extends Agp_Module {
         if ( $this->isActiveModule('m_tax_icons') ) {
             $this->taxonomyIcons = Fac_TaxonomyIcons::instance();    
         }
+        
+        if ( $this->isActiveModule('m_menu_icons') ) {
+            $this->menuIcons = Fac_MenuIcons::instance();    
+        }        
         
         add_action( 'init', array($this, 'registerShortcodes' ), 998 );                
         add_action( 'init', array($this, 'init' ), 999 );        
@@ -381,6 +393,10 @@ class Fac extends Agp_Module {
 
     public function getTaxonomyIcons() {
         return $this->taxonomyIcons;
+    }
+    
+    public function getMenuIcons() {
+        return $this->menuIcons;
     }
 
 }

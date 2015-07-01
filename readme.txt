@@ -17,6 +17,10 @@ WordPress Developers also can find with this plugin some useful features for usa
 
 You can find [Live Demo](http://demo.agp.besaba.com/) on the plugin site.
 
+= New Features =
+
+Now You can use the Font Awesome Icons in the WordPress menu. At first, You must enable "Menu Icons" module on the plugin settings page in the Admin Panel. Then go to the Appearance > Menus, select necessary menu. For each menu item you can find additional drop-down list with the FA icons.
+
 = Plugin Features =
 
 * Install and activate the plugin. That's all you need to start using **519 Font Awesome 4.3 icons** on Your site;
@@ -24,8 +28,8 @@ You can find [Live Demo](http://demo.agp.besaba.com/) on the plugin site.
 * You can add any of the Font Awesome icons and use it as simple icon, icon with text, icon button, icon button with text and easy customize it for your needs;
 * All shortcodes can be used via Administrator Panel in TinyMCE editor area and directly in code;
 * For buttons can be added URL attribute that can lead to a page, an external site or a social networks profile. You can use this feature for a personal promotion, downloads link, donation etc.;
-* The plugin has some additional features for advertise and promotion on Your website.
-* Minimum required PHP version is **5.3.0**.
+* The plugin has some additional features for advertise and promotion on Your website;
+* Minimum required PHP version is **5.3.0**;
 
 = Visual Constructor =
 
@@ -181,6 +185,11 @@ Shortcode with additional attributes for icon button with text customization:
 * **border_color** – allows to set button border color with HEX color value
 * **border_radius** – allows to set button corner rounding; one positive digital value with "px"  allows to set equal corner rounding for all corners. Also can be used following values (for example): border_radius="10px 0" – corner rounding for left-top and right-bottom corners and vice versa border_radius="0 10px" - corner rounding for right-top and left-bottom corners; border_radius=" 10px 0 0" – corner rounding for left-top corner etc.  For more references check "border-radius" CSS property.
 
+
+= How to use the Font Awesome Icons in the WordPress menu =
+
+At first, You must enable "Menu Icons" module on the plugin settings page in the Admin Panel. Then go to the Appearance > Menus, select necessary menu. For each menu item you can find additional drop-down list with the FA icons.
+
 = (For Developers) How to add "Dropdown list" shortcode =
 
 Following shortcode can be used for adding of dropdown with Font Awesome icons list:
@@ -261,6 +270,8 @@ where:
 16. Curent Font Avesome Version
 
 == Changelog ==
+= 2.4.0 =
+* Added: Now You can use the Font Awesome Icons in the WordPress menu
 
 = 2.3.0 =
 * Added: "Target" attribute for promotion widget and for every single slide of sliders
