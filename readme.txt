@@ -1,6 +1,6 @@
 === AGP Font Awesome Collection ===
 Contributors: agolubnichenko
-Tags: agp, fontawesome, font-awesome, font awesome, Font Awesome, fa, fa-icon, fa icons, icon font, icons, font, button, buttons, developer, developer tools, tools, shortcode, social icons, social links, social buttons, ui, tinymce, visualizer, promotion, ad promotion, slider, content slider, widget slider, responsive slider, responsive, rwd
+Tags: agp, fontawesome, font-awesome, font awesome, Font Awesome, fa, fa-icon, fa icons, icon font, icons, font, button, buttons, developer, developer tools, tools, shortcode, social icons, social links, social buttons, ui, tinymce, visualizer, promotion, ad promotion, slider, content slider, widget slider, responsive slider, responsive, rwd, wp menu, menus, nav menu, navigation, navigation menu, walker, menu icons
 Requires at least: 3.5.0
 Tested up to: 4.2
 License: GPLv2 or later
@@ -19,7 +19,7 @@ You can find [Live Demo](http://demo.agp.besaba.com/) on the plugin site.
 
 = New Features =
 
-Now You can use the Font Awesome Icons in the WordPress menu. At first, You must enable "Menu Icons" module on the plugin settings page in the Admin Panel. Then go to the Appearance > Menus, select necessary menu. For each menu item you can find additional drop-down list with the FA icons.
+Now You can use the Font Awesome Icons in the WordPress menu. At first, You must enable "Menu Icons" module on the plugin settings page in the Admin Panel. Then go to the Appearance > Menus and select necessary menu. For each menu item you can find additional drop-down list with the FA icons.
 
 = Plugin Features =
 
@@ -188,7 +188,7 @@ Shortcode with additional attributes for icon button with text customization:
 
 = How to use the Font Awesome Icons in the WordPress menu =
 
-At first, You must enable "Menu Icons" module on the plugin settings page in the Admin Panel. Then go to the Appearance > Menus, select necessary menu. For each menu item you can find additional drop-down list with the FA icons.
+At first, You must enable "Menu Icons" module on the plugin settings page in the Admin Panel. Then go to the Appearance > Menus and select necessary menu. For each menu item you can find additional drop-down list with the FA icons.
 
 = (For Developers) How to add "Dropdown list" shortcode =
 
