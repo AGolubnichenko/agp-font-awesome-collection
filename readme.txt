@@ -19,7 +19,8 @@ You can find [Live Demo](http://demo.agp.besaba.com/) on the plugin site.
 
 = New Features =
 
-Now You can use the Font Awesome Icons in the WordPress menu. At first, You must enable "Menu Icons" module on the plugin settings page in the Admin Panel. Then go to the Appearance > Menus and select necessary menu. For each menu item you can find additional drop-down list with the FA icons.
+* You can change the color of the icons, text and background on mouse hover with help of the additional parameters of visual constructor
+* You can use the Font Awesome Icons in the WordPress menu. At first, You must enable "Menu Icons" module on the plugin settings page in the Admin Panel. Then go to the Appearance > Menus and select necessary menu. For each menu item you can find additional drop-down list with the FA icons.
 
 = Plugin Features =
 
@@ -271,6 +272,10 @@ where:
 18. Menus with Font Awesome Icons
 
 == Changelog ==
+
+= 2.4.1 =
+* Added: Now You can change the color of the icons, text and background on mouse hover with help of the additional parameters of visual constructor
+* Minor changes of default elements styling
 
 = 2.4.0 =
 * Added: Now You can use the Font Awesome Icons in the WordPress menu
