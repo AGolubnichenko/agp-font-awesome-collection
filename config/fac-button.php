@@ -58,6 +58,13 @@ return array(
             'class' => 'fac-element',
             'note' => 'Allows to set text and icon color with HEX color value',            
         ),        
+        'color_hover' =>  array(
+            'label' => 'Text and Icon Color on Mouse Hover',            
+            'type' => 'colorpicker',                        
+            'default' => '',
+            'class' => 'fac-element',
+            'note' => 'Allows to set text and icon color with HEX color value on mouse hover',            
+        ),                
         'background' => array(
             'label' => 'Button Background Color',            
             'type' => 'colorpicker',                        
@@ -65,6 +72,13 @@ return array(
             'class' => 'fac-element',
             'note' => 'Allows to set button background color with HEX color value',            
         ),        
+        'background_hover' => array(
+            'label' => 'Button Background Color on Mouse Hover',            
+            'type' => 'colorpicker',                        
+            'default' => '',
+            'class' => 'fac-element',
+            'note' => 'Allows to set button background color with HEX color value on mouse hover',            
+        ),                
         'border_width' => array(
             'label' => 'Border Width',            
             'type' => 'text',                        

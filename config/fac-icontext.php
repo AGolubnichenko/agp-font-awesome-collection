@@ -33,6 +33,13 @@ return array(
             'class' => 'fac-element',
             'note' => 'Allows to set shape background color with HEX color value',
         ),
+        'shape_bg_hover' =>  array(
+            'label' => 'Shape background color on Mouse Hover',            
+            'type' => 'colorpicker',                        
+            'default' => '',
+            'class' => 'fac-element',
+            'note' => 'Allows to set shape background color with HEX color value on mouse hover',
+        ),        
         'icon_color' =>  array(
             'label' => 'Icon Color',            
             'type' => 'colorpicker',                        
@@ -40,6 +47,13 @@ return array(
             'class' => 'fac-element',
             'note' => 'Allows to set icon color with HEX color value',
         ),
+        'icon_color_hover' =>  array(
+            'label' => 'Icon Color on Mouse Hover',            
+            'type' => 'colorpicker',                        
+            'default' => '',       
+            'class' => 'fac-element',
+            'note' => 'Allows to set icon color with HEX color value on mouse hover',
+        ),        
         'text_color' =>  array(
             'label' => 'Text Color',            
             'type' => 'colorpicker',                        
@@ -47,5 +61,12 @@ return array(
             'class' => 'fac-element',
             'note' => 'Allows to set text color with HEX color value',
         ),
+        'text_color_hover' =>  array(
+            'label' => 'Text Color on Mouse Hover',            
+            'type' => 'colorpicker',                        
+            'default' => '',         
+            'class' => 'fac-element',
+            'note' => 'Allows to set text color with HEX color value on mouse hover',
+        ),        
     ),
 );

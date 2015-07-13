@@ -18,6 +18,13 @@ return array(
             'class' => 'fac-element',
             'note' => 'Allow to set icon color with HEX color value',
         ), 
+        'color_hover' => array(
+            'label' => 'Color on Mouse Hover',            
+            'type' => 'colorpicker',                        
+            'default' => '',
+            'class' => 'fac-element',
+            'note' => 'Allow to set icon color with HEX color value on mouse hover',
+        ),         
         'font_size' => array(
             'label' => 'Font Size',            
             'type' => 'text',                        
