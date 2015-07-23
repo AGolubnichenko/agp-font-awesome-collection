@@ -27,7 +27,8 @@
     ],
     "require" : {
         "agpfontawesome/components": "*",             
-        "agpfontawesome/icons": "*"
+        "agpfontawesome/icons": "*",
+        "oyejorge/less.php": "~1.5"
     },
     "scripts": {
         "post-update-cmd": ["echo [WARNING] Delete all .git dirs", "rm -rf vendor/**/**/.git"],

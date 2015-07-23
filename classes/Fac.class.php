@@ -77,6 +77,14 @@ class Fac extends Agp_Module {
      */
     private $menuIcons;
     
+
+    /**
+     * LESS Parser
+     * 
+     * @var Less_Parser
+     */
+    private $lessParser;    
+    
     /**
      * The single instance of the class 
      * 
@@ -111,6 +119,9 @@ class Fac extends Agp_Module {
     public function __construct() {
         parent::__construct(dirname(dirname(__FILE__)));
 
+        include_once ( $this->getBaseDir() . '/vendor/autoload.php' );             
+        
+        $this->lessParser = new Less_Parser();        
         $this->iconRepository = new Fac_IconRepository();
         $this->settings = Fac_Settings::instance( $this );        
         
@@ -397,6 +408,10 @@ class Fac extends Agp_Module {
     
     public function getMenuIcons() {
         return $this->menuIcons;
+    }
+
+    public function getLessParser() {
+        return $this->lessParser;
     }
 
 }
