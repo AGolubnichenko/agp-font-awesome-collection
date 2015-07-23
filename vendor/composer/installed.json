@@ -1,17 +1,5 @@
 [
     {
-        "name": "agpfontawesome/components",
-        "version": "1.0",
-        "version_normalized": "1.0.0.0",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/components/font-awesome",
-            "reference": "master"
-        },
-        "type": "library",
-        "installation-source": "source"
-    },
-    {
         "name": "agpfontawesome/icons",
         "version": "1.0",
         "version_normalized": "1.0.0.0",
@@ -84,5 +72,93 @@
             "php",
             "stylesheet"
         ]
+    },
+    {
+        "name": "mustangostang/spyc",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/mustangostang/spyc.git",
+            "reference": "eeb9f7c47e1457770d64c7fb1f3d4aabff52de4b"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/mustangostang/spyc/zipball/eeb9f7c47e1457770d64c7fb1f3d4aabff52de4b",
+            "reference": "eeb9f7c47e1457770d64c7fb1f3d4aabff52de4b",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.3.1"
+        },
+        "time": "2014-08-21 09:14:01",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "0.5.x-dev"
+            }
+        },
+        "installation-source": "source",
+        "autoload": {
+            "files": [
+                "Spyc.php"
+            ]
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "mustangostang",
+                "email": "vlad.andersen@gmail.com"
+            }
+        ],
+        "description": "A simple YAML loader/dumper class for PHP",
+        "homepage": "https://github.com/mustangostang/spyc/",
+        "keywords": [
+            "spyc",
+            "yaml",
+            "yml"
+        ]
+    },
+    {
+        "name": "components/font-awesome",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/components/font-awesome.git",
+            "reference": "0be8786345ee36998c0d7ad52cc035d5aa2ecafe"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/components/font-awesome/zipball/0be8786345ee36998c0d7ad52cc035d5aa2ecafe",
+            "reference": "0be8786345ee36998c0d7ad52cc035d5aa2ecafe",
+            "shasum": ""
+        },
+        "time": "2015-02-08 09:25:29",
+        "type": "component",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "4.3.x-dev"
+            },
+            "component": {
+                "styles": [
+                    "css/font-awesome.css"
+                ],
+                "files": [
+                    "css/font-awesome.min.css",
+                    "fonts/*"
+                ]
+            }
+        },
+        "installation-source": "source",
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT",
+            "OFL-1.1"
+        ],
+        "description": "The iconic font designed for use with Twitter Bootstrap."
     }
 ]

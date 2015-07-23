@@ -11,24 +11,13 @@
                     "reference": "master"
                 }
             }            
-        },
-        {
-            "type": "package",
-            "package": {
-                "name": "agpfontawesome/components",
-                "version": "1.0",
-                "source": {
-                    "url": "https://github.com/components/font-awesome",
-                    "type": "git",
-                    "reference": "master"
-                }                
-            }            
-        }        
+        }
     ],
     "require" : {
-        "agpfontawesome/components": "*",             
-        "agpfontawesome/icons": "*",
-        "oyejorge/less.php": "~1.5"
+        "components/font-awesome": "dev-master",             
+        "mustangostang/spyc": "dev-master",
+        "oyejorge/less.php": "~1.5",
+        "agpfontawesome/icons": "*"
     },
     "scripts": {
         "post-update-cmd": ["echo [WARNING] Delete all .git dirs", "rm -rf vendor/**/**/.git"],
