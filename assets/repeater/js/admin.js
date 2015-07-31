@@ -53,16 +53,16 @@
             });             
         });
         
-                //make table rows sortable
-        $('#fac_sliders tbody').sortable({
-            helper: function (e, ui) {
-                ui.children().each(function () {
-                    $(this).width($(this).width());
-                });
-                return ui;
-            },
-            scroll: true,
-        });
+//        //make table rows sortable
+//        $('#fac_sliders tbody').sortable({
+//            helper: function (e, ui) {
+//                ui.children().each(function () {
+//                    $(this).width($(this).width());
+//                });
+//                return ui;
+//            },
+//            scroll: true,
+//        });
 
     });
 })(jQuery);
