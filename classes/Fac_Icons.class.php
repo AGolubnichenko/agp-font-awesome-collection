@@ -3,6 +3,7 @@ class Fac_Icons {
     
     public function getData () {    
         $result = Spyc::YAMLLoad(Fac()->getBaseDir() . '/vendor/agpfontawesome/icons/icons.yml');
+        
         $data = array();
         $icons = $result['icons'];
         
