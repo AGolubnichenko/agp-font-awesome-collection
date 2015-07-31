@@ -161,7 +161,7 @@ class Fac extends Agp_Module {
         add_action( 'admin_enqueue_scripts', array($this, 'enqueueAdminScripts' ));                
         add_action( 'widgets_init', array($this, 'initWidgets' ) );
         add_action( 'admin_init', array($this, 'facTinyMCEButtons' ) );
-        add_action( 'wp_footer', array($this, 'facFooter' ) );
+        add_action( 'wp_print_scripts', array($this, 'facFooter' ) );
         //add_filter( 'widget_text', 'do_shortcode' );
     }
     
