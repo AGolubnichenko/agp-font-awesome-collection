@@ -272,7 +272,7 @@ where:
 18. Menus with Font Awesome Icons
 
 == Changelog ==
-= 2.5.1 = 
+= 2.5.1 =
 * Changed: Connection of the Font Awesome Icons moved to the footer of the page for more stability and resolving many conflicts with other styles in head section
 
 = 2.5.0 =
