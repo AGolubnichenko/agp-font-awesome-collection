@@ -3,7 +3,7 @@
  * Plugin Name: AGP Font Awesome Collection
  * Plugin URI: https://wordpress.org/plugins/agp-font-awesome-collection/
  * Description: The latest Font Awesome icons with HTML and shortcodes usage, dynamic visualizer for TinyMCE, promotion widget and other features in the one plugin
- * Version: 2.5.1
+ * Version: 2.5.2
  * Author: Alexey Golubnichenko
  * Author URI: http://www.profosbox.com/
  * License: GPL2
@@ -46,6 +46,7 @@ add_action( 'plugins_loaded', 'fac_activate_plugin' );
 function fac_activate_plugin() {
     if (class_exists('Agp\FontAwesomeCollection\Core\Agp_Autoloader') && !function_exists('Fac')) {
         $autoloader = Agp_Autoloader::instance();
+        $autoloader->setBaseDir(__DIR__);
         $autoloader->setClassMap(array(
             __DIR__ => array('classes'),
             'namespaces' => array(
@@ -53,7 +54,9 @@ function fac_activate_plugin() {
                     __DIR__ => array('agp-core'),
                 ),
             ),
+            'classmap' => __DIR__ . '/classmap.json',
         ));
+        //$autoloader->generateClassMap(__DIR__);
 
         function Fac() {
             return Fac::instance();
