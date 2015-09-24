@@ -59,7 +59,7 @@ function fac_activate_plugin() {
                 __DIR__ => 'classmap.json',
             ),            
         ));
-        $autoloader->generateClassMap(__DIR__);
+        //$autoloader->generateClassMap(__DIR__);
 
         function Fac() {
             return Fac::instance();
