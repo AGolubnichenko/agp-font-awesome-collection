@@ -46,17 +46,20 @@ add_action( 'plugins_loaded', 'fac_activate_plugin' );
 function fac_activate_plugin() {
     if (class_exists('Agp\FontAwesomeCollection\Core\Agp_Autoloader') && !function_exists('Fac')) {
         $autoloader = Agp_Autoloader::instance();
-        $autoloader->setBaseDir(__DIR__);
         $autoloader->setClassMap(array(
-            __DIR__ => array('classes'),
+            'paths' => array(
+                __DIR__ => array('classes'),
+            ),
             'namespaces' => array(
                 'Agp\FontAwesomeCollection\Core' => array(
                     __DIR__ => array('agp-core'),
                 ),
             ),
-            'classmap' => __DIR__ . '/classmap.json',
+            'classmaps' => array (
+                __DIR__ => 'classmap.json',
+            ),            
         ));
-        //$autoloader->generateClassMap(__DIR__);
+        $autoloader->generateClassMap(__DIR__);
 
         function Fac() {
             return Fac::instance();
