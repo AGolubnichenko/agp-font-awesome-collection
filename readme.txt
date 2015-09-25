@@ -272,11 +272,8 @@ where:
 18. Menus with Font Awesome Icons
 
 == Changelog ==
-
 = 2.5.3 =
 * Changed: Minor loading speed optimization
-(TODO) : 
-* added: Optional ability to enqueue scripts and styles only for the pages with contact form
 
 = 2.5.2 =
 * Changed: Minor loading speed optimization
