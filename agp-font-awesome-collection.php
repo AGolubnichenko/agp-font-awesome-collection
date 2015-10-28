@@ -3,7 +3,7 @@
  * Plugin Name: AGP Font Awesome Collection
  * Plugin URI: https://wordpress.org/plugins/agp-font-awesome-collection/
  * Description: The latest Font Awesome icons with HTML and shortcodes usage, dynamic visualizer for TinyMCE, promotion widget and other features in the one plugin
- * Version: 2.5.3
+ * Version: 2.6.0
  * Author: Alexey Golubnichenko
  * Author URI: http://www.profosbox.com/
  * License: GPL2
@@ -27,46 +27,34 @@
     along with this program; if not, write to the Free Software
     Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 */
-use Agp\FontAwesomeCollection\Core\Agp_Autoloader;
 
-if (!defined('ABSPATH')) {
-    exit;
+include_once (dirname(__FILE__) . '/agp-core/agp-core-functions.php' );    
+
+/**
+ * Check for minimum required PHP version
+ */
+if ( Agp_GetCurrentPHPVersionId() < AGP_PHP_VERSION) {
+    if ( is_admin()) {
+        add_action( 'admin_notices', 'Fac_PHPVersion_AdminNotice' , 0 );
+    }    
+/**
+ * Initialize
+ */    
+} else {
+    include_once (dirname(__FILE__) . '/agp-font-awesome-collection-init.php' );    
 }
 
-add_action('init', 'fac_output_buffer');
-function fac_output_buffer() {
-    ob_start();
+function Fac_PHPVersion_AdminNotice() {
+    $name = get_file_data( __FILE__, array ( 'Plugin Name' ), 'plugin' );
+    $currentPHPVersion = Agp_GetPHPVersionById( Agp_GetCurrentPHPVersionId() );
+    $requiredtPHPVersion = Agp_GetPHPVersionById( AGP_PHP_VERSION );
+
+    printf(
+        '<div class="error">
+            <p><strong>%s</strong> plugin can\'t work properly. Your current PHP version is <strong>%s</strong>. Minimum required PHP version is <strong>%s</strong>.</p>
+        </div>',
+        $name[0],
+        $currentPHPVersion,
+        $requiredtPHPVersion
+    );
 }
-
-if (file_exists(dirname(__FILE__) . '/agp-core/agp-core.php' )) {
-    include_once (dirname(__FILE__) . '/agp-core/agp-core.php' );
-} 
-
-add_action( 'plugins_loaded', 'fac_activate_plugin' );
-function fac_activate_plugin() {
-    if (class_exists('Agp\FontAwesomeCollection\Core\Agp_Autoloader') && !function_exists('Fac')) {
-        $autoloader = Agp_Autoloader::instance();
-        $autoloader->setClassMap(array(
-            'paths' => array(
-                __DIR__ => array('classes'),
-            ),
-            'namespaces' => array(
-                'Agp\FontAwesomeCollection\Core' => array(
-                    __DIR__ => array('agp-core'),
-                ),
-            ),
-            'classmaps' => array (
-                __DIR__ => 'classmap.json',
-            ),            
-        ));
-        //$autoloader->generateClassMap(__DIR__);
-
-        function Fac() {
-            return Fac::instance();
-        }    
-
-        Fac();                
-    }
-}
-
-fac_activate_plugin();
