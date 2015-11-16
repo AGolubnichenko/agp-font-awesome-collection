@@ -3,7 +3,7 @@
  * Plugin Name: AGP Font Awesome Collection
  * Plugin URI: https://wordpress.org/plugins/agp-font-awesome-collection/
  * Description: The latest Font Awesome icons with HTML and shortcodes usage, dynamic visualizer for TinyMCE, promotion widget and other features in the one plugin
- * Version: 2.6.0
+ * Version: 2.6.1
  * Author: Alexey Golubnichenko
  * Author URI: http://www.profosbox.com/
  * License: GPL2
@@ -28,15 +28,23 @@
     Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 */
 
-include_once (dirname(__FILE__) . '/agp-core/agp-core-functions.php' );    
+if ( !defined( 'FAC_MIN_PHP_VERSION' ) ) {
+    define( 'FAC_MIN_PHP_VERSION', '5.3.0');    
+}
+
+if ( !defined( 'FAC_CUR_PHP_VERSION' ) ) {
+    if ( function_exists( 'phpversion' ) ) {
+        define( 'FAC_CUR_PHP_VERSION', phpversion() );        
+    } else {
+        define( 'FAC_CUR_PHP_VERSION', FAC_MIN_PHP_VERSION );        
+    }
+}
 
 /**
  * Check for minimum required PHP version
  */
-if ( Agp_GetCurrentPHPVersionId() < AGP_PHP_VERSION) {
-    if ( is_admin()) {
-        add_action( 'admin_notices', 'Fac_PHPVersion_AdminNotice' , 0 );
-    }    
+if ( function_exists( 'version_compare' ) && version_compare( FAC_CUR_PHP_VERSION , FAC_MIN_PHP_VERSION) == -1 ) {
+    add_action( 'admin_notices', 'Fac_PHPVersion_AdminNotice' , 0 );
 /**
  * Initialize
  */    
@@ -46,15 +54,13 @@ if ( Agp_GetCurrentPHPVersionId() < AGP_PHP_VERSION) {
 
 function Fac_PHPVersion_AdminNotice() {
     $name = get_file_data( __FILE__, array ( 'Plugin Name' ), 'plugin' );
-    $currentPHPVersion = Agp_GetPHPVersionById( Agp_GetCurrentPHPVersionId() );
-    $requiredtPHPVersion = Agp_GetPHPVersionById( AGP_PHP_VERSION );
 
     printf(
         '<div class="error">
             <p><strong>%s</strong> plugin can\'t work properly. Your current PHP version is <strong>%s</strong>. Minimum required PHP version is <strong>%s</strong>.</p>
         </div>',
         $name[0],
-        $currentPHPVersion,
-        $requiredtPHPVersion
+        FAC_CUR_PHP_VERSION,
+        FAC_MIN_PHP_VERSION
     );
 }
