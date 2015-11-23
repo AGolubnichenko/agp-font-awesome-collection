@@ -27,7 +27,6 @@
     along with this program; if not, write to the Free Software
     Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 */
-
 if ( !defined( 'FAC_MIN_PHP_VERSION' ) ) {
     define( 'FAC_MIN_PHP_VERSION', '5.3.0');    
 }

@@ -272,7 +272,7 @@ where:
 18. Menus with Font Awesome Icons
 
 == Changelog ==
-= 2.6.2 =
+= 2.6.2 = 
 * Fixed: Issue "Shortcode Editor and Divi Page Builder - z-index"
 * Fixed: Issue "HTTPS insecure element"
 * Changed: Typo "Simpe Icon" to "Simple Icon"
