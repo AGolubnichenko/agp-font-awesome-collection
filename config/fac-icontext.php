@@ -1,7 +1,7 @@
 <?php
 return array(
     'template' =>'icontext',
-    'displayName' => 'Simpe Icon with text and shape',
+    'displayName' => 'Simple Icon with text and shape',
     'note' => 'The element can be used for adding of a simple icon with additional text and shape',
     'fields' => array(
         'icon' => array(

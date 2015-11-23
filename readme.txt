@@ -121,7 +121,7 @@ Path to the styles inside the active theme:
 
 [ActiveTheme]/templates/agp-font-awesome-collection/assets/css/style.css
 
-= How to use "Simpe Icon" shortcode =
+= How to use "Simple Icon" shortcode =
 
 Following shortcode can be used for adding of a simple icon:
 
@@ -136,7 +136,7 @@ Shortcode with additional attributes:
 * **font_size** – allow to set icon size, positive digital value with "px"
 * **color** – allow to set icon color with HEX color value
 
-= How to use "Simpe Icon with text and shape" shortcode =
+= How to use "Simple Icon with text and shape" shortcode =
 
 Following shortcode can be used for adding of a simple icon with additional text and shape:
 
@@ -272,11 +272,17 @@ where:
 18. Menus with Font Awesome Icons
 
 == Changelog ==
+= 2.6.2 =
+* Fixed: Issue "Shortcode Editor and Divi Page Builder - z-index"
+* Fixed: Issue "HTTPS insecure element"
+* Changed: Typo "Simpe Icon" to "Simple Icon"
+* Other minor changes
+
 = 2.6.1 =
-* Changed : Check for the minimum required PHP version on a server
+* Changed: Check for the minimum required PHP version on a server
 
 = 2.6.0 =
-* Added : Check for the minimum required PHP version on a server
+* Added: Check for the minimum required PHP version on a server
 * Changed: Minor changes of the plugin core
 
 = 2.5.3 =
