@@ -6,5 +6,5 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
-    $vendorDir . '/mustangostang/spyc/Spyc.php',
+    'd4d5153e8139181dded8a43947eccd9a' => $vendorDir . '/mustangostang/spyc/Spyc.php',
 );
