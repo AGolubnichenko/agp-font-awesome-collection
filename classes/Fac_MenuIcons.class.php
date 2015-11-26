@@ -84,7 +84,10 @@ class Fac_MenuIcons {
      * @return string
      */
     public function editWalker( $walker, $menu_id ) {
-        return 'Fac_WalkerNavMenuEdit';
+        if ( class_exists( 'Fac_WalkerNavMenuEdit' ) ) {
+            $walker = 'Fac_WalkerNavMenuEdit';
+        }
+        return $walker;
     }    
     
     /**
