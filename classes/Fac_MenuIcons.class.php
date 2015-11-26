@@ -70,7 +70,7 @@ class Fac_MenuIcons {
      */
     public function updateCustomNavFields( $menu_id, $menu_item_db_id, $args ) {
         // Check if element is properly sent
-        if ( is_array( $_REQUEST['menu-item-menuIcon']) ) {
+        if ( isset($_REQUEST['menu-item-menuIcon']) && is_array( $_REQUEST['menu-item-menuIcon']) ) {
             $value = $_REQUEST['menu-item-menuIcon'][$menu_item_db_id];
             update_post_meta( $menu_item_db_id, '_menu_item_menuIcon', $value );
         }
