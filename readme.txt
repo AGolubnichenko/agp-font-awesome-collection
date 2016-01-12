@@ -272,6 +272,10 @@ where:
 18. Menus with Font Awesome Icons
 
 == Changelog ==
+= 2.7.2 = 
+* Fixed: Problem with overlapping of a "style.css" file in the theme folder
+* Changed: Increased z-index value of visual constructor window for more compatibility with SiteOrigin PageBuilder
+
 = 2.7.1 = 
 * Minor changes for compatibility with WordPress 4.4
 
