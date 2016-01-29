@@ -15,7 +15,7 @@ The plugin allows to integrate the Font Awesome icons to Your WordPress website.
 With this plugin you can use various types of the Font Awesome based icons, buttons etc. using simple shortcodes with flexible parameters or the Visual Constructor for a lazy.
 WordPress Developers also can find with this plugin some useful features for usage within the code.
 
-You can find [Live Demo](http://www.profosbox.com/) on the plugin site.
+You can find [Live Demo](http://www.profosbox.com/) and [Documentation](http://www.profosbox.com/documentation/) on the plugin site.
 
 = New Features =
 
@@ -79,7 +79,7 @@ You can create and show small animated information block in sidebar, that contai
 
 More info you can find on the [screenshots](https://wordpress.org/plugins/agp-font-awesome-collection/screenshots/) and [FAQ](https://wordpress.org/plugins/agp-font-awesome-collection/faq/) tabs.
 
-Also You can find [Live Demo](http://www.profosbox.com/) on the plugin site.
+Also You can find [Live Demo](http://www.profosbox.com/) and [Documentation](http://www.profosbox.com/documentation/) on the plugin site.
 
 = How to use visual constructor =
 
@@ -308,7 +308,7 @@ where:
 * Added: Support of the Font Awesome v4.4.0
 
 = 2.4.2 =
-* Changed: Link to the [Live Demo](http://www.profosbox.com/) site
+* Changed: Link to the [Live Demo](http://www.profosbox.com/) and [Documentation](http://www.profosbox.com/documentation/) site.
 
 = 2.4.1 =
 * Added: Now You can change the color of the icons, text and background on mouse hover with help of the additional parameters of visual constructor
