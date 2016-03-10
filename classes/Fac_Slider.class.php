@@ -71,7 +71,7 @@ class Fac_Slider extends Agp_RepeaterAbstract {
             if ( !$value ) {
                 delete_post_meta($post->ID, $key); 
             } else {
-                update_post_meta($post->ID, $key, $value);
+                update_post_meta($post->ID, $key, esc_attr( $value ));
             }
         }    
     }  
@@ -100,7 +100,20 @@ class Fac_Slider extends Agp_RepeaterAbstract {
         if (isset($data[0])) {
             unset($data[0]);
         }
-        //$meta[$this->getId() . '_data'] = serialize($data);
+        
+        if (!empty($data) && is_array($data)) {
+            foreach ($data as &$v) {
+                if (!empty($v) && is_array($v)) {
+                    foreach ($v as &$vc) {
+                        $vc = esc_attr( $vc );    
+                    }
+                } else {
+                    $v = esc_attr( $v );    
+                }
+                
+            }
+        }
+
         $meta[$this->getId() . '_data'] = $data;
         
         foreach ($meta as $key => $value) {

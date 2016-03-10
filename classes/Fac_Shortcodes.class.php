@@ -65,7 +65,7 @@ class Fac_Shortcodes {
             if ( !$value ) {
                 delete_post_meta($post->ID, $key); 
             } else {
-                update_post_meta($post->ID, $key, $value);
+                update_post_meta($post->ID, $key, esc_attr( $value ));
             }
             
         }   

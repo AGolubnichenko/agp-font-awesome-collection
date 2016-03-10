@@ -272,6 +272,9 @@ where:
 18. Menus with Font Awesome Icons
 
 == Changelog ==
+= 2.7.3 = 
+* Fixed: Issue "Xss Cross Site Scripting vulnerability" in admin panel
+
 = 2.7.2 = 
 * Fixed: Problem with overlapping of a "style.css" file in the theme folder
 * Changed: Increased z-index value of visual constructor window for more compatibility with SiteOrigin PageBuilder
