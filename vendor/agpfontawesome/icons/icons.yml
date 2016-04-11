@@ -158,6 +158,7 @@ icons:
       - accept
       - confirm
       - tick
+      - ok
     categories:
       - Web Application Icons
 
@@ -716,6 +717,7 @@ icons:
       - agree
       - accept
       - confirm
+      - ok
     categories:
       - Web Application Icons
       - Form Control Icons
@@ -907,6 +909,7 @@ icons:
       - agree
       - accept
       - confirm
+      - ok
     categories:
       - Web Application Icons
 
@@ -964,6 +967,7 @@ icons:
       - agree
       - accept
       - confirm
+      - ok
     categories:
       - Web Application Icons
 
@@ -1197,6 +1201,7 @@ icons:
       - date
       - time
       - when
+      - event
     categories:
       - Web Application Icons
 
@@ -1222,6 +1227,9 @@ icons:
       - chat
       - bubble
       - feedback
+      - message
+      - texting
+      - sms
     categories:
       - Web Application Icons
 
@@ -1376,6 +1384,9 @@ icons:
       - conversation
       - notification
       - notes
+      - message
+      - texting
+      - sms
     categories:
       - Web Application Icons
 
@@ -2245,8 +2256,15 @@ icons:
     unicode:    f0e5
     created:    2.0
     filter:
+      - speech
       - notification
       - note
+      - chat
+      - bubble
+      - feedback
+      - message
+      - texting
+      - sms
     categories:
       - Web Application Icons
 
@@ -2258,6 +2276,9 @@ icons:
       - conversation
       - notification
       - notes
+      - message
+      - texting
+      - sms
     categories:
       - Web Application Icons
 
@@ -2319,6 +2340,7 @@ icons:
     filter:
       - transfer
       - arrows
+      - arrow
     categories:
       - Web Application Icons
       - Directional Icons
@@ -3012,6 +3034,7 @@ icons:
       - date
       - time
       - when
+      - event
     categories:
       - Web Application Icons
 
@@ -3113,6 +3136,7 @@ icons:
       - protect
       - admin
       - password
+      - lock
     categories:
       - Web Application Icons
 
@@ -3233,6 +3257,7 @@ icons:
       - agree
       - accept
       - confirm
+      - ok
     categories:
       - Web Application Icons
       - Form Control Icons
@@ -4931,6 +4956,7 @@ icons:
       - whisper
       - spy
       - incognito
+      - privacy
     categories:
       - Web Application Icons
 
@@ -5577,6 +5603,8 @@ icons:
     id:         calendar-check-o
     unicode:    f274
     created:    4.4
+    filter:
+      - ok
     categories:
       - Web Application Icons
 
@@ -5584,6 +5612,8 @@ icons:
     id:         industry
     unicode:    f275
     created:    4.4
+    filter:
+      - factory
     categories:
       - Web Application Icons
 
@@ -5619,6 +5649,8 @@ icons:
     id:         commenting
     unicode:    f27a
     created:    4.4
+    filter:
+      - message
     categories:
       - Web Application Icons
 
@@ -5626,6 +5658,8 @@ icons:
     id:         commenting-o
     unicode:    f27b
     created:    4.4
+    filter:
+      - message
     categories:
       - Web Application Icons
 
@@ -5682,10 +5716,16 @@ icons:
     unicode:    f283
     created:    4.5
     filter:
+      - money
+      - buy
+      - debit
+      - checkout
+      - purchase
+      - payment
       - credit card
     categories:
-      - Brand Icons
       - Payment Icons
+      - Web Application Icons
 
   - name:       Codie Pie
     id:         codiepie

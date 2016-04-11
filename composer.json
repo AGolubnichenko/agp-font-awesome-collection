@@ -17,7 +17,7 @@
         "components/font-awesome": "*",             
         "agpfontawesome/icons": "4.5.0",
         "mustangostang/spyc": "dev-master",
-        "oyejorge/less.php": "~1.5"
+        "oyejorge/less.php": "~1.7.0.9"
     },
     "scripts": {
         "post-update-cmd": ["echo [WARNING] Delete all .git dirs", "rm -rf vendor/**/**/.git"],
