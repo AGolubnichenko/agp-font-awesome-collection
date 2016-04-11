@@ -19,6 +19,7 @@
                         e.preventDefault();
                         $(this).closest('.fac-promotion-main-section').find('.fac-promotion-content').show();
                         $(this).closest('.fac-promotion-main-section').find('.fac-promotion-preview').hide();                
+                        resize();
                         return false;                        
                     } else {
                         e.preventDefault();                                    
@@ -39,6 +40,7 @@
                         if ($(this).closest('.fac-promotion-main-section').find('.fac-promotion-preview').length > 0 ) {
                             $(this).closest('.fac-promotion-main-section').find('.fac-promotion-content').hide();
                             $(this).closest('.fac-promotion-main-section').find('.fac-promotion-preview').show();                                        
+                            resize();
                         }
                     }
                     return false;                
@@ -48,7 +50,8 @@
                 $(this).mouseout(function(e){
                     if ( $(this).find('.fac-promotion-preview').length > 0 ) {
                         $(this).find('.fac-promotion-content').hide();
-                        $(this).find('.fac-promotion-preview').show();            
+                        $(this).find('.fac-promotion-preview').show();   
+                        resize();
                     }
                     return true;
                 });                            
@@ -60,10 +63,12 @@
                         function() {
                             $(this).find('.fac-promotion-content').show();
                             $(this).find('.fac-promotion-preview').hide();
+                            resize();
                         },
                         function() {
                             $(this).find('.fac-promotion-content').hide();
                             $(this).find('.fac-promotion-preview').show();
+                            resize();
                         }                
                     );                                                                
                 }   

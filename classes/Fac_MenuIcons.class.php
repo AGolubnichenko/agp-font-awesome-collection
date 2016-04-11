@@ -84,9 +84,18 @@ class Fac_MenuIcons {
      * @return string
      */
     public function editWalker( $walker, $menu_id ) {
-        if ( class_exists( 'Fac_WalkerNavMenuEdit' ) ) {
-            $walker = 'Fac_WalkerNavMenuEdit';
+        global $wp_version;
+            
+        if ( version_compare( $wp_version, '4.4.9999' , '>' ) ) {
+            if ( class_exists( 'Fac_WalkerNavMenuEdit_45' ) ) {
+                $walker = 'Fac_WalkerNavMenuEdit_45';
+            }
+        } else {
+            if ( class_exists( 'Fac_WalkerNavMenuEdit' ) ) {
+                $walker = 'Fac_WalkerNavMenuEdit';
+            }            
         }
+
         return $walker;
     }    
     
