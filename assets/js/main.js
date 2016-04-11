@@ -100,13 +100,15 @@
             $(content).css("height", "auto");
             $(preview).css("height", "auto");
             $(inner).css("height", "auto");                
-            $(inner).width($(this).outerWidth());            
+            $(inner).width(Math.round($(this).outerWidth()));            
             
             if ($(content).height() > $(preview).height() ) {
                 height = $(content).height();
             } else {
                 height = $(preview).height();
             }
+            
+            height = Math.round( height );
             
             $(this).find('.fpp-inner').height(height);     
             $(this).find('.fac-promotion-content').height(height);
@@ -115,7 +117,7 @@
         
         $('.fac-slider-default').each(function() {
             var o_height = 0;
-            var o_width = $(this).width();            
+            var o_width = Math.round( $(this).width() );            
             
             $(this).find('.fac-promotion-main-section').each(function () {
                 var height;                            
@@ -138,6 +140,8 @@
                     o_height = height;
                 }
             });
+            
+            o_height = Math.round( o_height );
             
             $(this).find('.fpp-inner').height(o_height);     
             $(this).find('.fac-promotion-content').height(o_height);
