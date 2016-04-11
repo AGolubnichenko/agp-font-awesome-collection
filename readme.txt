@@ -275,7 +275,7 @@ where:
 = 2.7.4 = 
 * Minor changes for compatibility with WordPress 4.5
 * Fixed issue with determining of the sliders height for the some WordPress themes
-* Third-party libraries have been updated
+* Third-party libraries has been updated
 
 = 2.7.3 = 
 * Fixed: Issue "Xss Cross Site Scripting vulnerability" in admin panel
