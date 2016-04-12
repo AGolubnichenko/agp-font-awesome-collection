@@ -1,18 +1,5 @@
 [
     {
-        "name": "agpfontawesome/icons",
-        "version": "4.5.0",
-        "version_normalized": "4.5.0.0",
-        "dist": {
-            "type": "file",
-            "url": "https://github.com/FortAwesome/Font-Awesome/raw/master/src/icons.yml",
-            "reference": "master",
-            "shasum": null
-        },
-        "type": "library",
-        "installation-source": "dist"
-    },
-    {
         "name": "mustangostang/spyc",
         "version": "dev-master",
         "version_normalized": "9999999-dev",
@@ -63,42 +50,6 @@
             "yaml",
             "yml"
         ]
-    },
-    {
-        "name": "components/font-awesome",
-        "version": "4.5.0",
-        "version_normalized": "4.5.0.0",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/components/font-awesome.git",
-            "reference": "069663a8419f9db90f9bec71e71ed4bb9d28d6ee"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/components/font-awesome/zipball/069663a8419f9db90f9bec71e71ed4bb9d28d6ee",
-            "reference": "069663a8419f9db90f9bec71e71ed4bb9d28d6ee",
-            "shasum": ""
-        },
-        "time": "2015-11-24 10:33:56",
-        "type": "component",
-        "extra": {
-            "component": {
-                "styles": [
-                    "css/font-awesome.css"
-                ],
-                "files": [
-                    "css/font-awesome.min.css",
-                    "fonts/*"
-                ]
-            }
-        },
-        "installation-source": "dist",
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "MIT",
-            "OFL-1.1"
-        ],
-        "description": "The iconic font designed for use with Twitter Bootstrap."
     },
     {
         "name": "oyejorge/less.php",
@@ -163,5 +114,17 @@
             "php",
             "stylesheet"
         ]
+    },
+    {
+        "name": "agpfontawesome/src",
+        "version": "4.6.0",
+        "version_normalized": "4.6.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/FortAwesome/Font-Awesome",
+            "reference": "master"
+        },
+        "type": "library",
+        "installation-source": "source"
     }
 ]

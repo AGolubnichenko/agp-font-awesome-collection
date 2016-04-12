@@ -3,24 +3,36 @@
         {
             "type": "package",
             "package": {
-                "name": "agpfontawesome/icons",
-                "version": "4.5.0",
-                "dist": {
-                    "url": "https://github.com/FortAwesome/Font-Awesome/raw/master/src/icons.yml",
-                    "type": "file",
+                "name": "agpfontawesome/src",
+                "version": "4.6.0",
+                "source": {
+                    "url": "https://github.com/FortAwesome/Font-Awesome",
+                    "type": "git",
                     "reference": "master"
                 }
-            }            
+            }                        
         }
     ],
     "require" : {
-        "components/font-awesome": "*",             
-        "agpfontawesome/icons": "4.5.0",
+        "agpfontawesome/src": "*",
         "mustangostang/spyc": "dev-master",
         "oyejorge/less.php": "~1.7.0.9"
     },
     "scripts": {
-        "post-update-cmd": ["echo [WARNING] Delete all .git dirs", "rm -rf vendor/**/**/.git"],
-        "post-install-cmd": ["echo [WARNING] Delete all .git dirs", "rm -rf vendor/**/**/.git"]
+        "post-update-cmd": [
+            "rm -rf vendor/**/**/.git", 
+            "mv vendor/agpfontawesome/src/css vendor/agpfontawesome/css",
+            "mv vendor/agpfontawesome/src/fonts vendor/agpfontawesome/fonts",
+            "mv vendor/agpfontawesome/src/src/icons.yml vendor/agpfontawesome/icons.yml",
+            "mv vendor/agpfontawesome/src/component.json vendor/agpfontawesome/component.json",
+            "rm -r vendor/agpfontawesome/src"
+        ],
+        "post-install-cmd": [
+            "rm -rf vendor/**/**/.git", 
+            "mv vendor/agpfontawesome/src/css vendor/agpfontawesome/css",
+            "mv vendor/agpfontawesome/src/fonts vendor/agpfontawesome/fonts",
+            "mv vendor/agpfontawesome/src/src/icons.yml vendor/agpfontawesome/icons.yml",
+            "rm -r vendor/agpfontawesome/src"
+        ]
     }
 }

@@ -225,7 +225,7 @@ class Fac extends Agp_Module {
         wp_enqueue_script( 'fac-slider', $this->getAssetUrl('libs/responsiveslides.js'), array('jquery') );
         wp_enqueue_script( 'fac', $this->getAssetUrl('js/main.js'), array('jquery', 'fac-mobile', 'fac-slider') );                                                         
         wp_enqueue_style( 'fac-css', $this->getAssetUrl('css/style.css') );  
-        wp_register_style( 'fac-fa', $this->getBaseUrl() .'/vendor/components/font-awesome/css/font-awesome.min.css' );
+        wp_register_style( 'fac-fa', $this->getBaseUrl() .'/vendor/agpfontawesome/css/font-awesome.min.css' );
     }        
     
     public function enqueueAdminScripts () {
@@ -243,7 +243,7 @@ class Fac extends Agp_Module {
             'ajax_url' => admin_url( 'admin-ajax.php' ), 
             'ajax_nonce' => wp_create_nonce('ajax_atf_nonce'),        
         ));    
-        wp_register_style( 'fac-fa', $this->getBaseUrl() .'/vendor/components/font-awesome/css/font-awesome.min.css' );
+        wp_register_style( 'fac-fa', $this->getBaseUrl() .'/vendor/agpfontawesome/css/font-awesome.min.css' );
     }            
 
     public function getIconRepository() {

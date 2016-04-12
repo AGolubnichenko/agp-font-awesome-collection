@@ -2,7 +2,7 @@
 class Fac_Icons {
     
     public function getData () {    
-        $result = Spyc::YAMLLoad(Fac()->getBaseDir() . '/vendor/agpfontawesome/icons/icons.yml');
+        $result = Spyc::YAMLLoad(Fac()->getBaseDir() . '/vendor/agpfontawesome/icons.yml');
         
         $data = array();
         $icons = $result['icons'];
@@ -20,7 +20,7 @@ class Fac_Icons {
     
     public function getVersion() {
         ob_start();
-        include_once(Fac()->getBaseDir() . '/vendor/components/font-awesome/component.json');
+        include_once(Fac()->getBaseDir() . '/vendor/agpfontawesome/component.json');
         $components = ob_get_clean();
         $components = json_decode($components);
         return $components->version;
