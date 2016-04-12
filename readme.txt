@@ -272,7 +272,7 @@ where:
 18. Menus with Font Awesome Icons
 
 == Changelog ==
-= 2.8.0 = 
+= 2.8.0 =
 * Added: Support of the Font Awesome v4.6.0
 
 = 2.7.4 = 
