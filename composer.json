@@ -21,6 +21,8 @@
     "scripts": {
         "post-update-cmd": [
             "rm -rf vendor/**/**/.git", 
+            "if test -d 'vendor/agpfontawesome/css'; then rm -rf vendor/agpfontawesome/css; fi",            
+            "if test -d 'vendor/agpfontawesome/fonts'; then rm -rf vendor/agpfontawesome/fonts; fi",            
             "mv vendor/agpfontawesome/src/css vendor/agpfontawesome/css",
             "mv vendor/agpfontawesome/src/fonts vendor/agpfontawesome/fonts",
             "mv vendor/agpfontawesome/src/src/icons.yml vendor/agpfontawesome/icons.yml",
@@ -29,9 +31,12 @@
         ],
         "post-install-cmd": [
             "rm -rf vendor/**/**/.git", 
+            "if test -d 'vendor/agpfontawesome/css'; then rm -rf vendor/agpfontawesome/css; fi",            
+            "if test -d 'vendor/agpfontawesome/fonts'; then rm -rf vendor/agpfontawesome/fonts; fi",            
             "mv vendor/agpfontawesome/src/css vendor/agpfontawesome/css",
             "mv vendor/agpfontawesome/src/fonts vendor/agpfontawesome/fonts",
             "mv vendor/agpfontawesome/src/src/icons.yml vendor/agpfontawesome/icons.yml",
+            "mv vendor/agpfontawesome/src/component.json vendor/agpfontawesome/component.json",
             "rm -r vendor/agpfontawesome/src"
         ]
     }
