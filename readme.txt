@@ -273,10 +273,10 @@ where:
 
 == Changelog ==
 = 2.8.1 =
-* Added: Support of the Font Awesome v4.6.1
+* Added: Support for the Font Awesome v4.6.1
 
 = 2.8.0 =
-* Added: Support of the Font Awesome v4.6.0
+* Added: Support for the Font Awesome v4.6.0
 
 = 2.7.4 = 
 * Minor changes for compatibility with WordPress 4.5
@@ -294,7 +294,7 @@ where:
 * Minor changes for compatibility with WordPress 4.4
 
 = 2.7.0 = 
-* Added: Support of the Font Awesome v4.5.0
+* Added: Support for the Font Awesome v4.5.0
 
 = 2.6.2 = 
 * Fixed: Issue "Shortcode Editor and Divi Page Builder - z-index"
@@ -319,7 +319,7 @@ where:
 * Changed: Connection of the Font Awesome Icons moved to the footer of the page for more stability and resolving many conflicts with other styles in head section
 
 = 2.5.0 =
-* Added: Support of the Font Awesome v4.4.0
+* Added: Support for the Font Awesome v4.4.0
 
 = 2.4.2 =
 * Changed: Link to the [Live Demo](http://www.profosbox.com/) and [Documentation](http://www.profosbox.com/documentation/) site.
