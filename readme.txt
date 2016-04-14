@@ -24,7 +24,7 @@ You can find [Live Demo](http://www.profosbox.com/) and [Documentation](http://w
 
 = Plugin Features =
 
-* Install and activate the plugin. That's all you need to start using **628 Font Awesome 4.6.0 icons** on Your website;
+* Install and activate the plugin. That's all you need to start using **628 Font Awesome 4.6.1 icons** on Your website;
 * Font Awesome icons can be used as simple [HTML code](http://fortawesome.github.io/Font-Awesome/examples/) or [shortcodes](https://wordpress.org/plugins/agp-font-awesome-collection/faq/);
 * You can add any of the Font Awesome icons and use it as simple icon, icon with text, icon button, icon button with text and easy customize it for your needs;
 * All shortcodes can be used via Administrator Panel in TinyMCE editor area and directly in code;
@@ -272,6 +272,9 @@ where:
 18. Menus with Font Awesome Icons
 
 == Changelog ==
+= 2.8.1 =
+* Added: Support of the Font Awesome v4.6.1
+
 = 2.8.0 =
 * Added: Support of the Font Awesome v4.6.0
 
