@@ -1,69 +1,5 @@
 [
     {
-        "name": "agpfontawesome/src",
-        "version": "4.6.1",
-        "version_normalized": "4.6.1.0",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/FortAwesome/Font-Awesome",
-            "reference": "master"
-        },
-        "type": "library",
-        "installation-source": "source"
-    },
-    {
-        "name": "mustangostang/spyc",
-        "version": "dev-master",
-        "version_normalized": "9999999-dev",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/mustangostang/spyc.git",
-            "reference": "699184c170688363ab82f97afb8085e39d7a1769"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/mustangostang/spyc/zipball/699184c170688363ab82f97afb8085e39d7a1769",
-            "reference": "699184c170688363ab82f97afb8085e39d7a1769",
-            "shasum": ""
-        },
-        "require": {
-            "php": ">=5.3.1"
-        },
-        "require-dev": {
-            "phpunit/phpunit": "4.3.*@dev"
-        },
-        "time": "2015-08-13 21:51:08",
-        "type": "library",
-        "extra": {
-            "branch-alias": {
-                "dev-master": "0.5.x-dev"
-            }
-        },
-        "installation-source": "source",
-        "autoload": {
-            "files": [
-                "Spyc.php"
-            ]
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "MIT"
-        ],
-        "authors": [
-            {
-                "name": "mustangostang",
-                "email": "vlad.andersen@gmail.com"
-            }
-        ],
-        "description": "A simple YAML loader/dumper class for PHP",
-        "homepage": "https://github.com/mustangostang/spyc/",
-        "keywords": [
-            "spyc",
-            "yaml",
-            "yml"
-        ]
-    },
-    {
         "name": "oyejorge/less.php",
         "version": "v1.7.0.10",
         "version_normalized": "1.7.0.10",
@@ -125,6 +61,114 @@
             "lesscss",
             "php",
             "stylesheet"
+        ]
+    },
+    {
+        "name": "agp/agp-core",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/AGolubnichenko/agp-core/",
+            "reference": "f508ef36a1d4542a2b85636424b837381d1280c5"
+        },
+        "require": {
+            "oyejorge/less.php": "1.7.0.10",
+            "php": ">=5.3.0"
+        },
+        "time": "2016-06-03 10:18:19",
+        "type": "library",
+        "installation-source": "source",
+        "autoload": {
+            "psr-4": {
+                "Fac\\Core\\": "src/classes/"
+            },
+            "files": [
+                "src/classes/Agp.php"
+            ]
+        },
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Alexey Golubnichenko",
+                "email": "profosbox@gmail.com"
+            }
+        ],
+        "description": "Collection of a base classes for custom WordPress plugins",
+        "homepage": "https://github.com/AGolubnichenko/agp-core/",
+        "keywords": [
+            "agp",
+            "class",
+            "core",
+            "plugin",
+            "theme",
+            "wordpress"
+        ]
+    },
+    {
+        "name": "agpfontawesome/src",
+        "version": "4.6.1",
+        "version_normalized": "4.6.1.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/FortAwesome/Font-Awesome",
+            "reference": "master"
+        },
+        "type": "library",
+        "installation-source": "source"
+    },
+    {
+        "name": "mustangostang/spyc",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/mustangostang/spyc.git",
+            "reference": "dfd9aadc1f5224065d55b42b712c7e99a50a3f4d"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/mustangostang/spyc/zipball/dfd9aadc1f5224065d55b42b712c7e99a50a3f4d",
+            "reference": "dfd9aadc1f5224065d55b42b712c7e99a50a3f4d",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.3.1"
+        },
+        "require-dev": {
+            "phpunit/phpunit": "4.3.*@dev"
+        },
+        "time": "2016-05-14 08:33:02",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "0.5.x-dev"
+            }
+        },
+        "installation-source": "source",
+        "autoload": {
+            "files": [
+                "Spyc.php"
+            ]
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "mustangostang",
+                "email": "vlad.andersen@gmail.com"
+            }
+        ],
+        "description": "A simple YAML loader/dumper class for PHP",
+        "homepage": "https://github.com/mustangostang/spyc/",
+        "keywords": [
+            "spyc",
+            "yaml",
+            "yml"
         ]
     }
 ]

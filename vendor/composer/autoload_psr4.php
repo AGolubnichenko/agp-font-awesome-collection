@@ -6,4 +6,6 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'Agp\\Plugin\\Fac\\' => array($baseDir . '/classes'),
+    'Fac\\Core\\' => array($vendorDir . '/agp/agp-core/src/classes'),
 );
