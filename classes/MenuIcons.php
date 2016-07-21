@@ -6,7 +6,7 @@ class MenuIcons {
     /**
      * The single instance of the class 
      * 
-     * @var Fac_MenuIcons
+     * @var MenuIcons
      */
     protected static $_instance = null;    
 
@@ -89,12 +89,12 @@ class MenuIcons {
         global $wp_version;
             
         if ( version_compare( $wp_version, '4.4.9999' , '>' ) ) {
-            if ( class_exists( 'Fac_WalkerNavMenuEdit_45' ) ) {
-                $walker = 'Fac_WalkerNavMenuEdit_45';
+            if ( class_exists( 'Agp\Plugin\Fac\WalkerNavMenuEdit_45' ) ) {
+                $walker = 'Agp\Plugin\Fac\WalkerNavMenuEdit_45';
             }
         } else {
-            if ( class_exists( 'Fac_WalkerNavMenuEdit' ) ) {
-                $walker = 'Fac_WalkerNavMenuEdit';
+            if ( class_exists( 'Agp\Plugin\Fac\WalkerNavMenuEdit' ) ) {
+                $walker = 'Agp\Plugin\Fac\WalkerNavMenuEdit';
             }            
         }
 

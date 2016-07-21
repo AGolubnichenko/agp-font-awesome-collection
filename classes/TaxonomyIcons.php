@@ -12,7 +12,7 @@ class TaxonomyIcons {
     /**
      * The single instance of the class 
      * 
-     * @var Fac_Slider 
+     * @var Slider 
      */
     protected static $_instance = null;    
 

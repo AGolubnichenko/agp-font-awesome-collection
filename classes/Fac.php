@@ -9,28 +9,28 @@ class Fac extends ModuleAbstract {
     /**
      * Ajax
      * 
-     * @var Fac_Ajax
+     * @var Ajax
      */
     private $ajax;
     
     /**
      * Settings
      * 
-     * @var Fac_Settings
+     * @var Settings
      */
     private $settings;
     
     /**
      * Shortcode Conctructor
      * 
-     * @var Fac_Constructor
+     * @var Constructor
      */
     private $constructor;
     
     /**
      * Icon Repository
      * 
-     * @var Fac_IconRepository
+     * @var IconRepository
      */
     private $iconRepository;        
     
@@ -38,14 +38,14 @@ class Fac extends ModuleAbstract {
     /**
      * Shortcodes
      * 
-     * @var Fac_Shortcodes
+     * @var Shortcodes
      */
     private $shortcodes;
     
     /**
      * Slider
      * 
-     * @var Fac_Slider 
+     * @var Slider 
      */
     private $slider;
     
@@ -67,7 +67,7 @@ class Fac extends ModuleAbstract {
     /**
      * Taxonomy icons
      * 
-     * @var Fac_TaxonomyIcons
+     * @var TaxonomyIcons
      */
     private $taxonomyIcons;
     
@@ -75,7 +75,7 @@ class Fac extends ModuleAbstract {
     /**
      * Menu icons
      * 
-     * @var Fac_MenuIcons
+     * @var MenuIcons
      */
     private $menuIcons;
     
@@ -124,8 +124,8 @@ class Fac extends ModuleAbstract {
         include_once ( $this->getBaseDir() . '/vendor/autoload.php' );             
         
         $this->lessParser = new Less_Parser();        
-        $this->iconRepository = new Fac_IconRepository();
-        $this->settings = Fac_Settings::instance( $this );        
+        $this->iconRepository = new IconRepository();
+        $this->settings = Settings::instance( $this );        
         
         if ( $this->isActiveModule('m_shortcodes') ) {
             include_once ( $this->getBaseDir() . '/types/shortcodes-post-type.php' );                    
@@ -136,25 +136,25 @@ class Fac extends ModuleAbstract {
         }
         
         if ( $this->isActiveModule('m_visual_constructor') ) {
-            $this->constructor = Fac_Constructor::instance();    
+            $this->constructor = Constructor::instance();    
         }
         
         if ( $this->isActiveModule('m_shortcodes') ) {
-            $this->shortcodes = Fac_Shortcodes::instance();    
+            $this->shortcodes = Shortcodes::instance();    
         }
         
-        $this->ajax = Fac_Ajax::instance();
+        $this->ajax = Ajax::instance();
         
         if ( $this->isActiveModule('m_sliders') ) {
-            $this->slider = Fac_Slider::instance();    
+            $this->slider = Slider::instance();    
         }
         
         if ( $this->isActiveModule('m_tax_icons') ) {
-            $this->taxonomyIcons = Fac_TaxonomyIcons::instance();    
+            $this->taxonomyIcons = TaxonomyIcons::instance();    
         }
         
         if ( $this->isActiveModule('m_menu_icons') ) {
-            $this->menuIcons = Fac_MenuIcons::instance();    
+            $this->menuIcons = MenuIcons::instance();    
         }        
         
         add_action( 'init', array($this, 'registerShortcodes' ), 998 );                
@@ -252,7 +252,7 @@ class Fac extends ModuleAbstract {
         return $this->iconRepository;
     }
 
-    public function setIconRepository(Fac_IconRepository $iconRepository) {
+    public function setIconRepository(IconRepository $iconRepository) {
         $this->iconRepository = $iconRepository;
         return $this;
     }
@@ -367,11 +367,11 @@ class Fac extends ModuleAbstract {
     
     public function initWidgets() {
         if ( $this->isActiveModule('m_promotion_widget') ) {
-            register_widget('Fac_Promotion');    
+            register_widget('Agp\Plugin\Fac\Promotion');    
         }
         
         if ( $this->isActiveModule('m_promotion_slider_widget') ) {
-            register_widget('Fac_PromotionSlider');    
+            register_widget('Agp\Plugin\Fac\PromotionSlider');    
         }
         
     }    

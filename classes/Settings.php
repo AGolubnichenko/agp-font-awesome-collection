@@ -3,7 +3,7 @@ namespace Agp\Plugin\Fac;
 
 use Fac\Core\Config\SettingsAbstract;
 
-class Fac_Settings extends SettingsAbstract {
+class Settings extends SettingsAbstract {
     
     /**
      * The single instance of the class 

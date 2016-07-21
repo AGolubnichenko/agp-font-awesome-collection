@@ -14,7 +14,7 @@ return array(
                 'page_title' => 'Settings', 
                 'menu_title' => 'Settings', 
                 'capability' => 'manage_options',
-                'function' => array('Fac_Settings', 'renderSettingsPage'),                         
+                'function' => array('Agp\Plugin\Fac\Settings', 'renderSettingsPage'),                         
             ),
         ),       
     ),

@@ -19,6 +19,6 @@ return array(
         'left' => 'Left',        
         'right' => 'Right',        
     ),
-    'shortcodes' => array( 'Fac_Settings', 'getCustomShortcodesFieldSet' ),
+    'shortcodes' => array( 'Agp\Plugin\Fac\Settings', 'getCustomShortcodesFieldSet' ),
     
 );

@@ -7,13 +7,13 @@ class IconRepository extends RepositoryAbstract {
     
     private $version;
     
-    public $entityClass ='Fac_IconEntity';
+    public $entityClass ='Agp\Plugin\Fac\IconEntity';
 
     public function init() {
     }    
     
     public function refreshRepository() {
-        $icons = new Fac_Icons();      
+        $icons = new Icons();      
         
         $this->version = $icons->getVersion();
 
