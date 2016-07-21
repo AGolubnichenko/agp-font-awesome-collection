@@ -1,5 +1,5 @@
 <?php
-namespace Agp\Plugin\Fac;
+namespace Agp\Plugin\Fac\Persistence;
 
 use Fac\Core\Persistence\RepositoryAbstract;
 

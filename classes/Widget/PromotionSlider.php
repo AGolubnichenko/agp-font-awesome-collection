@@ -1,5 +1,5 @@
 <?php
-namespace Agp\Plugin\Fac;
+namespace Agp\Plugin\Fac\Widget;
 
 class PromotionSlider extends \WP_Widget {
     

@@ -123,8 +123,8 @@ class Fac extends ModuleAbstract {
 
         include_once ( $this->getBaseDir() . '/vendor/autoload.php' );             
         
-        $this->lessParser = new Less_Parser();        
-        $this->iconRepository = new IconRepository();
+        $this->lessParser = new \Less_Parser();        
+        $this->iconRepository = new Persistence\IconRepository();
         $this->settings = Settings::instance( $this );        
         
         if ( $this->isActiveModule('m_shortcodes') ) {

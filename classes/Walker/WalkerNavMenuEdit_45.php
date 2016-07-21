@@ -1,10 +1,10 @@
 <?php
-namespace Agp\Plugin\Fac;
+namespace Agp\Plugin\Fac\Walker;
 
 /**
  * Create HTML list of nav menu input items.
  */
-class WalkerNavMenuEdit extends \Walker_Nav_Menu_Edit {
+class WalkerNavMenuEdit_45 extends \Walker_Nav_Menu_Edit {
     
 	/**
 	 * Start the element output.
@@ -41,9 +41,11 @@ class WalkerNavMenuEdit extends \Walker_Nav_Menu_Edit {
 		} elseif ( 'post_type' == $item->type ) {
 			$original_object = get_post( $item->object_id );
 			$original_title = get_the_title( $original_object->ID );
-        } elseif ( 'post_type_archive' == $item->type ) {
+		} elseif ( 'post_type_archive' == $item->type ) {
 			$original_object = get_post_type_object( $item->object );
-			$original_title = $original_object->labels->archives;            
+			if ( $original_object ) {
+				$original_title = $original_object->labels->archives;
+			}
 		}
 
 		$classes = array(
@@ -72,8 +74,8 @@ class WalkerNavMenuEdit extends \Walker_Nav_Menu_Edit {
 
 		?>
 		<li id="menu-item-<?php echo $item_id; ?>" class="<?php echo implode(' ', $classes ); ?>">
-			<dl class="menu-item-bar">
-				<dt class="menu-item-handle">
+			<div class="menu-item-bar">
+				<div class="menu-item-handle">
 					<span class="item-title"><span class="menu-item-title"><?php echo esc_html( $title ); ?></span> <span class="is-submenu" <?php echo $submenu_text; ?>><?php _e( 'sub item' ); ?></span></span>
 					<span class="item-controls">
 						<span class="item-type"><?php echo esc_html( $item->type_label ); ?></span>
@@ -89,7 +91,7 @@ class WalkerNavMenuEdit extends \Walker_Nav_Menu_Edit {
 									),
 									'move-menu_item'
 								);
-							?>" class="item-move-up"><abbr title="<?php esc_attr_e('Move up'); ?>">&#8593;</abbr></a>
+							?>" class="item-move-up" aria-label="<?php esc_attr_e( 'Move up' ) ?>">&#8593;</a>
 							|
 							<a href="<?php
 								echo wp_nonce_url(
@@ -102,17 +104,17 @@ class WalkerNavMenuEdit extends \Walker_Nav_Menu_Edit {
 									),
 									'move-menu_item'
 								);
-							?>" class="item-move-down"><abbr title="<?php esc_attr_e('Move down'); ?>">&#8595;</abbr></a>
+							?>" class="item-move-down" aria-label="<?php esc_attr_e( 'Move down' ) ?>">&#8595;</a>
 						</span>
-						<a class="item-edit" id="edit-<?php echo $item_id; ?>" title="<?php esc_attr_e('Edit Menu Item'); ?>" href="<?php
+						<a class="item-edit" id="edit-<?php echo $item_id; ?>" href="<?php
 							echo ( isset( $_GET['edit-menu-item'] ) && $item_id == $_GET['edit-menu-item'] ) ? admin_url( 'nav-menus.php' ) : add_query_arg( 'edit-menu-item', $item_id, remove_query_arg( $removed_args, admin_url( 'nav-menus.php#menu-item-settings-' . $item_id ) ) );
-						?>"><?php _e( 'Edit Menu Item' ); ?></a>
+						?>" aria-label="<?php esc_attr_e( 'Edit menu item' ); ?>"><?php _e( 'Edit' ); ?></a>
 					</span>
-				</dt>
-			</dl>
+				</div>
+			</div>
 
-			<div class="menu-item-settings" id="menu-item-settings-<?php echo $item_id; ?>">
-				<?php if( 'custom' == $item->type ) : ?>
+			<div class="menu-item-settings wp-clearfix" id="menu-item-settings-<?php echo $item_id; ?>">
+				<?php if ( 'custom' == $item->type ) : ?>
 					<p class="field-url description description-wide">
 						<label for="edit-menu-item-url-<?php echo $item_id; ?>">
 							<?php _e( 'URL' ); ?><br />
@@ -120,13 +122,13 @@ class WalkerNavMenuEdit extends \Walker_Nav_Menu_Edit {
 						</label>
 					</p>
 				<?php endif; ?>
-				<p class="description description-thin">
+				<p class="description description-wide">
 					<label for="edit-menu-item-title-<?php echo $item_id; ?>">
 						<?php _e( 'Navigation Label' ); ?><br />
 						<input type="text" id="edit-menu-item-title-<?php echo $item_id; ?>" class="widefat edit-menu-item-title" name="menu-item-title[<?php echo $item_id; ?>]" value="<?php echo esc_attr( $item->title ); ?>" />
 					</label>
 				</p>
-				<p class="description description-thin">
+				<p class="field-title-attribute field-attr-title description description-wide">
 					<label for="edit-menu-item-attr-title-<?php echo $item_id; ?>">
 						<?php _e( 'Title Attribute' ); ?><br />
 						<input type="text" id="edit-menu-item-attr-title-<?php echo $item_id; ?>" class="widefat edit-menu-item-attr-title" name="menu-item-attr-title[<?php echo $item_id; ?>]" value="<?php echo esc_attr( $item->post_excerpt ); ?>" />
@@ -157,7 +159,7 @@ class WalkerNavMenuEdit extends \Walker_Nav_Menu_Edit {
 						<span class="description"><?php _e('The description will be displayed in the menu if the current theme supports it.'); ?></span>
 					</label>
 				</p>
-                
+
                 <?php echo Fac()->getMenuIcons()->renderCustomNavFields($item_id, $item); ?>
                 
 				<p class="field-move hide-if-no-js description description-wide">
@@ -172,7 +174,7 @@ class WalkerNavMenuEdit extends \Walker_Nav_Menu_Edit {
 				</p>
 
 				<div class="menu-item-actions description-wide submitbox">
-					<?php if( 'custom' != $item->type && $original_title !== false ) : ?>
+					<?php if ( 'custom' != $item->type && $original_title !== false ) : ?>
 						<p class="link-to-original">
 							<?php printf( __('Original: %s'), '<a href="' . esc_attr( $item->url ) . '">' . esc_html( $original_title ) . '</a>' ); ?>
 						</p>
