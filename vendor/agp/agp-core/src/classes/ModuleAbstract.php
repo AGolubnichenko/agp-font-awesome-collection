@@ -101,11 +101,19 @@ abstract class ModuleAbstract {
     private $settings;        
     
     /**
+     * Module helper
+     * 
+     * @var ModuleHelper
+     */
+    private $helper;
+    
+    /**
      * Constructor
      */
     public function __construct($baseDir = NULL) {
 
         $this->lessParser = new LessParser();
+        $this->helper = new ModuleHelper();
         
         $this->baseCoreDir = dirname(dirname(__FILE__));
         $this->defaultTemplateCoreDir = $this->baseCoreDir . '/templates';
@@ -449,6 +457,15 @@ abstract class ModuleAbstract {
 
     public function setVersion($version) {
         $this->version = $version;
+        return $this;
+    }
+
+    public function getHelper() {
+        return $this->helper;
+    }
+
+    public function setHelper(ModuleHelper $helper) {
+        $this->helper = $helper;
         return $this;
     }
 
