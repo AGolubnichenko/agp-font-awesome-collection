@@ -89,12 +89,12 @@ class MenuIcons {
         global $wp_version;
             
         if ( version_compare( $wp_version, '4.4.9999' , '>' ) ) {
-            if ( class_exists( 'Agp\Plugin\Fac\WalkerNavMenuEdit_45' ) ) {
-                $walker = 'Agp\Plugin\Fac\WalkerNavMenuEdit_45';
+            if ( class_exists( 'Agp\Plugin\Fac\Walker\WalkerNavMenuEdit_45' ) ) {
+                $walker = 'Agp\Plugin\Fac\Walker\WalkerNavMenuEdit_45';
             }
         } else {
-            if ( class_exists( 'Agp\Plugin\Fac\WalkerNavMenuEdit' ) ) {
-                $walker = 'Agp\Plugin\Fac\WalkerNavMenuEdit';
+            if ( class_exists( 'Agp\Plugin\Fac\Walker\WalkerNavMenuEdit' ) ) {
+                $walker = 'Agp\Plugin\Fac\Walker\WalkerNavMenuEdit';
             }            
         }
 
