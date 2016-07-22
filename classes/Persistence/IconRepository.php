@@ -2,18 +2,19 @@
 namespace Agp\Plugin\Fac\Persistence;
 
 use Fac\Core\Persistence\RepositoryAbstract;
+use Agp\Plugin\Fac\Icons;
 
 class IconRepository extends RepositoryAbstract {
     
     private $version;
     
-    public $entityClass ='Agp\Plugin\Fac\IconEntity';
+    public $entityClass ='Agp\Plugin\Fac\Persistence\IconEntity';
 
     public function init() {
     }    
     
     public function refreshRepository() {
-        $icons = new Icons();      
+        $icons = new Icons ();      
         
         $this->version = $icons->getVersion();
 

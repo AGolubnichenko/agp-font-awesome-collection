@@ -316,7 +316,7 @@ class Fac extends ModuleAbstract {
             ),            
         );
 
-        $query = new WP_Query($args);
+        $query = new \WP_Query($args);
         
         if ($wpautop) {
             remove_filter ('the_content', 'wpautop');    
@@ -351,7 +351,7 @@ class Fac extends ModuleAbstract {
             ),            
         );
 
-        $query = new WP_Query($args);
+        $query = new \WP_Query($args);
         
         while ( $query->have_posts() ) : $query->the_post();
             $post_id = get_the_ID();
@@ -367,11 +367,11 @@ class Fac extends ModuleAbstract {
     
     public function initWidgets() {
         if ( $this->isActiveModule('m_promotion_widget') ) {
-            register_widget('Agp\Plugin\Fac\Promotion');    
+            register_widget('Agp\Plugin\Fac\Widget\Promotion');    
         }
         
         if ( $this->isActiveModule('m_promotion_slider_widget') ) {
-            register_widget('Agp\Plugin\Fac\PromotionSlider');    
+            register_widget('Agp\Plugin\Fac\Widget\PromotionSlider');    
         }
         
     }    

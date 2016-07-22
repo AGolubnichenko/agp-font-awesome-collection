@@ -4,7 +4,7 @@ namespace Agp\Plugin\Fac;
 class Icons {
     
     public function getData () {    
-        $result = Spyc::YAMLLoad(Fac()->getBaseDir() . '/vendor/agpfontawesome/icons.yml');
+        $result = \Spyc::YAMLLoad(Fac()->getBaseDir() . '/vendor/agpfontawesome/icons.yml');
         
         $data = array();
         $icons = $result['icons'];

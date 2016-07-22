@@ -1,9 +1,9 @@
 <?php
 namespace Fac\Core\Fields;
 
-use Fac\Core\Module;
+use Fac\Core\ModuleAbstract;
 
-abstract class RepeaterAbstract extends Module {
+abstract class RepeaterAbstract extends ModuleAbstract {
     
     private $id;
     

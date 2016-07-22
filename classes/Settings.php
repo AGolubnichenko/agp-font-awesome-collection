@@ -134,7 +134,7 @@ class Settings extends SettingsAbstract {
             'posts_per_page' => -1,
         );
                 
-        $query = new WP_Query($args);
+        $query = new \WP_Query($args);
         
         while ( $query->have_posts() ) : $query->the_post();
             $key = get_post_meta( get_the_ID(), '_name', true );
@@ -164,7 +164,7 @@ class Settings extends SettingsAbstract {
             'posts_per_page' => -1,
         );
                 
-        $query = new WP_Query($args);
+        $query = new \WP_Query($args);
         
         while ( $query->have_posts() ) : $query->the_post();
             $key = get_post_meta( get_the_ID(), '_name', true );
