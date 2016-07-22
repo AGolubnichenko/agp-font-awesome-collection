@@ -158,7 +158,6 @@ class Fac extends ModuleAbstract {
         }        
         
         add_action( 'init', array($this, 'registerShortcodes' ), 998 );                
-        add_action( 'init', array($this, 'init' ), 999 );        
         add_action( 'wp_enqueue_scripts', array($this, 'enqueueScripts' ));                
         add_action( 'admin_enqueue_scripts', array($this, 'enqueueAdminScripts' ));                
         add_action( 'widgets_init', array($this, 'initWidgets' ) );
@@ -201,6 +200,7 @@ class Fac extends ModuleAbstract {
     
     public function init () {
         $this->iconRepository->refreshRepository();
+        parent::init();        
     }
     
     public function facTinyMCEButtons () {

@@ -29,7 +29,7 @@ abstract class RepeaterAbstract extends ModuleAbstract {
         
     }
     
-    public function init( $id, $title, $screen, $context ) {
+    public function initRepeater( $id, $title, $screen, $context ) {
         $this->id = $id;
         $this->title = $title;
         $this->screen = $screen;

@@ -48,7 +48,7 @@ class Slider extends RepeaterAbstract {
         
         add_action( 'add_meta_boxes', array( $this, 'addSliderMetaboxes' ) );        
         add_action( 'save_post', array( $this, 'saveSliderMetaboxes' ), 1, 2); 
-        $this->init('fac_sliders', 'Slider Content', 'fac-sliders', 'normal');
+        $this->initRepeater('fac_sliders', 'Slider Content', 'fac-sliders', 'normal');
         $this->setLayoutOrientation($this->layoutOrientation);
     }
     
