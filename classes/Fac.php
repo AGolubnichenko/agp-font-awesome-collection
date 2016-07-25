@@ -407,8 +407,4 @@ class Fac extends ModuleAbstract {
         return $this->menuIcons;
     }
 
-    public function getLessParser() {
-        return $this->lessParser;
-    }
-
 }
