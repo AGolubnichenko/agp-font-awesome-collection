@@ -232,7 +232,7 @@ For example, if you need to get and show icon display name (e.g. "adn"), you nee
 `<?php echo Fac()->getIconRepository()->findById('adn')->getName(); ?>`
 
 As result, will be displayed: "App.net"
-For more references you can check realization for "Agp\Plugin\Fac\IconRepository" and  "Agp\Plugin\Fac\IconEntity" classes in plugin code.
+For more references you can check realization for "Agp\Plugin\Fac\Persistence\IconRepository" and  "Agp\Plugin\Fac\Persistence\IconEntity" classes in plugin code.
 Also you can send any questions in plugin [support](https://wordpress.org/support/plugin/agp-font-awesome-collection) tab.
 
 = (For Developers) How to use taxonomy icons in the PHP code? =
