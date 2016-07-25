@@ -14,13 +14,6 @@ class Fac extends ModuleAbstract {
     private $ajax;
     
     /**
-     * Settings
-     * 
-     * @var Settings
-     */
-    private $settings;
-    
-    /**
      * Shortcode Conctructor
      * 
      * @var Constructor
@@ -121,12 +114,12 @@ class Fac extends ModuleAbstract {
     public function __construct() {
         $this->setKey('fac');
         parent::__construct(dirname(dirname(__FILE__)));
-
-        include_once ( $this->getBaseDir() . '/vendor/autoload.php' );             
         
         $this->lessParser = new \Less_Parser();        
         $this->iconRepository = new Persistence\IconRepository();
-        $this->settings = Settings::instance( $this );        
+        $this->setSettings( Settings::instance( $this ) );        
+        $this->setVersion( $this->getSettings()->getVersion() );        
+        
         
         if ( $this->isActiveModule('m_shortcodes') ) {
             include_once ( $this->getBaseDir() . '/types/shortcodes-post-type.php' );                    
@@ -172,7 +165,7 @@ class Fac extends ModuleAbstract {
     }
     
     public function registerShortcodes() {
-        $shortcodes = $this->settings->getShortcodes();
+        $shortcodes = $this->getSettings()->getShortcodes();
         if (!empty($shortcodes)) {
             foreach ($shortcodes as $key => $obj) {
                 add_shortcode( $key, array( $this, 'doShortcode' ) );                     
@@ -180,7 +173,7 @@ class Fac extends ModuleAbstract {
         }
         
         if ( $this->isActiveModule('m_shortcodes') ) {
-            $this->customElements = $this->settings->getCustomElementList();        
+            $this->customElements = $this->getSettings()->getCustomElementList();        
             if (!empty($this->customElements)) {
                 foreach ($this->customElements as $key => $title) {
                     add_shortcode( $key, array( $this, 'doShortcode' ) );                     
@@ -189,7 +182,7 @@ class Fac extends ModuleAbstract {
         }
 
         if ( $this->isActiveModule('m_sliders') ) {
-            $this->sliderElements = $this->settings->getSliderElementList();        
+            $this->sliderElements = $this->getSettings()->getSliderElementList();        
             if (!empty($this->sliderElements)) {
                 foreach ($this->sliderElements as $key => $title) {
                     add_shortcode( $key, array( $this, 'doShortcode' ) );                     
@@ -259,13 +252,13 @@ class Fac extends ModuleAbstract {
     }
     
     public function doPreview ($atts, $content, $tag) {
-        $shortcodes = $this->settings->getShortcodes();
+        $shortcodes = $this->getSettings()->getShortcodes();
         $customShortcodes = $this->customElements;
         $sliderShortcodes = $this->sliderElements;
         
         if (!empty($shortcodes[$tag])) {
             $obj = $shortcodes[$tag];
-            $default = $this->settings->getShortcodeDefaults($tag);            
+            $default = $this->getSettings()->getShortcodeDefaults($tag);            
             if (empty($atts) || !is_array($atts)) {
                 $atts = array();
             }
@@ -280,13 +273,13 @@ class Fac extends ModuleAbstract {
     }        
     
     public function doShortcode ($atts, $content, $tag) {
-        $shortcodes = $this->settings->getShortcodes();
+        $shortcodes = $this->getSettings()->getShortcodes();
         $customShortcodes = $this->customElements;
         $sliderShortcodes = $this->sliderElements;
         
         if (!empty($shortcodes[$tag])) {
             $obj = $shortcodes[$tag];
-            $default = $this->settings->getShortcodeDefaults($tag);            
+            $default = $this->getSettings()->getShortcodeDefaults($tag);            
             if (empty($atts) || !is_array($atts)) {
                 $atts = array();
             }
@@ -378,14 +371,10 @@ class Fac extends ModuleAbstract {
     }    
     
     public function isActiveModule ( $module ) {
-        $settings = $this->settings->getGlobalSettings();
+        $settings = $this->getSettings()->getGlobalSettings();
         return !empty($settings[$module]);
     }
-    
-    public function getSettings() {
-        return $this->settings;
-    }
- 
+
     public function getConstructor() {
         return $this->constructor;
     }
