@@ -119,6 +119,7 @@ class Fac extends ModuleAbstract {
     }        
     
     public function __construct() {
+        $this->setKey('fac');
         parent::__construct(dirname(dirname(__FILE__)));
 
         include_once ( $this->getBaseDir() . '/vendor/autoload.php' );             
