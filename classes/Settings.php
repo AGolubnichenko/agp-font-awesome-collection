@@ -50,8 +50,9 @@ class Settings extends SettingsAbstract {
      * @param Agp_Module $parentModule
      */
     public function __construct() {
-        $config = include ($this->getParentModule()->getBaseDir() . '/config/config.php');        
-        parent::__construct($config);
+        $config = include ($this->getParentModule()->getBaseDir() . '/config/config.php');    
+        $key = $this->getParentModule()->getKey();
+        parent::__construct($config, $key);
     }
     
     public static function getParentModule() {
