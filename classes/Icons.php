@@ -4,7 +4,7 @@ namespace Agp\Plugin\Fac;
 class Icons {
     
     public function getData () {    
-        $result = \Spyc::YAMLLoad(Fac()->getBaseDir() . '/vendor/agpfontawesome/icons.yml');
+        $result = \Spyc::YAMLLoad(Fac()->getBaseDir() . '/vendor/agp/agp-fontawesome/icons.yml');
         
         $data = array();
         $icons = $result['icons'];
@@ -22,7 +22,7 @@ class Icons {
     
     public function getVersion() {
         ob_start();
-        include_once(Fac()->getBaseDir() . '/vendor/agpfontawesome/component.json');
+        include_once(Fac()->getBaseDir() . '/vendor/agp/agp-fontawesome/component.json');
         $components = ob_get_clean();
         $components = json_decode($components);
         return $components->version;

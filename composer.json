@@ -7,7 +7,7 @@
         {
             "type": "package",
             "package": {
-                "name": "agpfontawesome/src",
+                "name": "agp/agp-fontawesome/src",
                 "version": "4.6.3",
                 "source": {
                     "url": "https://github.com/FortAwesome/Font-Awesome",
@@ -20,7 +20,7 @@
     "minimum-stability": "dev",
     "require" : {
         "agp/agp-core": "master",
-        "agpfontawesome/src": "*",
+        "agp/agp-fontawesome/src": "*",
         "mustangostang/spyc": "dev-master"
     },
     "autoload": {
@@ -40,13 +40,13 @@
             "grep -rl 'Agp' ./vendor/ | xargs sed -i 's/Agp\\\\\\\\Core/Fac\\\\\\\\Core/g'"
         ],
         "post-autoload-dump": [
-            "if test -d 'vendor/agpfontawesome/css'; then rm -rf vendor/agpfontawesome/css; fi",            
-            "if test -d 'vendor/agpfontawesome/fonts'; then rm -rf vendor/agpfontawesome/fonts; fi",            
-            "mv vendor/agpfontawesome/src/css vendor/agpfontawesome/css",
-            "mv vendor/agpfontawesome/src/fonts vendor/agpfontawesome/fonts",
-            "mv vendor/agpfontawesome/src/src/icons.yml vendor/agpfontawesome/icons.yml",
-            "mv vendor/agpfontawesome/src/component.json vendor/agpfontawesome/component.json",
-            "rm -r vendor/agpfontawesome/src"
+            "if test -d 'vendor/agp/agp-fontawesome/css'; then rm -rf vendor/agp/agp-fontawesome/css; fi",            
+            "if test -d 'vendor/agp/agp-fontawesome/fonts'; then rm -rf vendor/agp/agp-fontawesome/fonts; fi",            
+            "mv vendor/agp/agp-fontawesome/src/css vendor/agp/agp-fontawesome/css",
+            "mv vendor/agp/agp-fontawesome/src/fonts vendor/agp/agp-fontawesome/fonts",
+            "mv vendor/agp/agp-fontawesome/src/src/icons.yml vendor/agp/agp-fontawesome/icons.yml",
+            "mv vendor/agp/agp-fontawesome/src/component.json vendor/agp/agp-fontawesome/component.json",
+            "rm -r vendor/agp/agp-fontawesome/src"
         ]        
     }
 }
