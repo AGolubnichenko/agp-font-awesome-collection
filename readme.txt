@@ -272,6 +272,10 @@ where:
 18. Menus with Font Awesome Icons
 
 == Changelog ==
+= 3.0.1 (TODO) =
+* Changed: Vendors refactoring
+* TODO : ....
+
 = 3.0.0 =
 * Added: Support for the Font Awesome v4.6.3
 * Changed: Styling of the plugin settings page
