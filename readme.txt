@@ -2,7 +2,7 @@
 Contributors: agolubnichenko
 Tags: agp, fontawesome, font-awesome, font awesome, Font Awesome, fa, fa-icon, fa icons, icon font, icons, font, button, buttons, developer, developer tools, tools, shortcode, social icons, social links, social buttons, ui, tinymce, visualizer, promotion, ad promotion, slider, content slider, widget slider, responsive slider, responsive, rwd, wp menu, menus, nav menu, navigation, navigation menu, walker, menu icons, social, media, profiles, widget
 Requires at least: 3.5.0
-Tested up to: 4.5
+Tested up to: 4.6
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Stable tag: trunk
@@ -272,9 +272,10 @@ where:
 18. Menus with Font Awesome Icons
 
 == Changelog ==
-= 3.0.1 (TODO) =
+= 3.1.0 =
 * Changed: Vendors refactoring
-* TODO : ....
+* Added: Support for the Font Awesome v4.7.0
+* Compatibility up to WP 4.6
 
 = 3.0.0 =
 * Added: Support for the Font Awesome v4.6.3
