@@ -9,13 +9,13 @@ return array(
         'title' => 'Useful Links',
         'list' => array(
             array(
-                'url' => 'http://www.profosbox.com/documentation/',
+                'url' => 'http://www.profosbox.com/agp-font-awesome-collection/documentation/',
                 'target' => '_blank',
                 'title' => 'Documentation',
                 'icon' => 'dashicons-book',
             ),
             array(
-                'url' => 'http://www.profosbox.com/ask-a-question-to-developer/',
+                'url' => 'http://www.profosbox.com/agp-font-awesome-collection/#contact',
                 'target' => '_blank',
                 'title' => 'Support Form',
                 'icon' => 'dashicons-sos',

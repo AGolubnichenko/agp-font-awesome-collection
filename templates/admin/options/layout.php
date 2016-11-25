@@ -27,8 +27,8 @@
                 </td>
                 <td class="agp-plugin-headline-info">
                     <h1 style="margin: 0px; padding: 0 0 10px;"><?php echo $title;?></h1>
-                    <p style="margin: 0px; padding: 0 0 5px;">How to use those features you can find on the <a href="http://www.profosbox.com/" target="_blank"><strong>Plugin Site</strong></a> in the <a href="http://www.profosbox.com/documentation/" target="_blank"><strong>Documentation</strong></a> section.</p> 
-                    <p style="margin: 0px; padding: 0;">Also You can find <a href="http://www.profosbox.com/" target="_blank"><strong>Live Demo</strong></a> on the plugin site.</p>   
+                    <p style="margin: 0px; padding: 0 0 5px;">How to use those features you can find on the <a href="http://www.profosbox.com/agp-font-awesome-collection/" target="_blank"><strong>Plugin Site</strong></a> in the <a href="http://www.profosbox.com/agp-font-awesome-collection/documentation/" target="_blank"><strong>Documentation</strong></a> section.</p> 
+                    <p style="margin: 0px; padding: 0;">Also You can find <a href="http://www.profosbox.com/agp-font-awesome-collection/documentation/examples-of-usage/" target="_blank"><strong>Live Demo</strong></a> on the plugin site.</p>   
                 </td>
                 
                 <?php if (!empty($links['list'])):?>
