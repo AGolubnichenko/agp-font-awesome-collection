@@ -251,6 +251,21 @@ class Fac extends ModuleAbstract {
         return $this;
     }
     
+    public function doDynamicCss ($fileName, $atts = array()) {
+        if ( is_admin() ) {
+            $this->getLessParser()->getLessParser()->Reset();
+            $this->getLessParser()->getLessParser()->parseFile( $fileName );
+            $this->getLessParser()->getLessParser()->ModifyVars( $atts );
+            $css = Fac()->getLessParser()->getLessParser()->getCss();            
+            if ( !empty($css) ) {
+                echo '<style type="text/css" >' . $css . '</style>';                    
+            }
+        } else {
+            $this->getLessParser()->getLessParser()->Reset();
+            $this->getLessParser()->registerLessCss( $fileName, $atts );            
+        }
+    }
+    
     public function doPreview ($atts, $content, $tag) {
         $shortcodes = $this->getSettings()->getShortcodes();
         $customShortcodes = $this->customElements;

@@ -5,16 +5,14 @@ if (!empty($params) && !empty($params['icon'])) :
     $color = !empty($params['color']) ? $params['color'] : '';
     $color_hover = !empty($params['color_hover']) ? $params['color_hover'] : '';
     $font_size = $params['font_size'];
+
+    Fac()->doDynamicCss( Fac()->getAssetPath('less/icon.less'), array(
+        'id' => $id,
+        'color' => $color,
+        'font_size' => $font_size,
+        'color_hover' => $color_hover,
+    ));
 ?>
-<style>
-    #<?php echo $id;?> {
-        <?php if (!empty($color)): echo "color: $color!important;"; endif;?>
-        <?php if (!empty($font_size)): echo "font-size: $font_size!important;"; endif;?>
-    }
-    #<?php echo $id;?>:hover {
-        <?php if (!empty($color_hover)): echo "color: $color_hover!important;"; endif;?>
-    }
-</style>
 <i id="<?php echo $id;?>" class="fa fa-<?php echo $icon?>"></i>
 <?php
 endif;
