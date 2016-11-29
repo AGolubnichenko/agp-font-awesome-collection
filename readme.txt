@@ -272,7 +272,7 @@ where:
 18. Menus with Font Awesome Icons
 
 == Changelog ==
-= 3.2.1 =
+= 3.2.2 =
 * Minor templates optimization
 
 = 3.2.0 =
