@@ -1,5 +1,5 @@
 <?php
-    $id = !empty($params['id']) ? $params['id'] : '';
+    $id = !empty($params['id']) ? $params['id'] : 'fac_' . uniqid();
     $headline = !empty($params['headline']) ? $params['headline'] : '';
     $description = !empty($params['description']) ? $params['description'] : '';
     $icon = !empty($params['icon']) ? $params['icon'] : '';

@@ -276,6 +276,7 @@ where:
 * Added LESS CSS support in the plugin
 * Dynamic styles removed from shortcode templates and moved to footer ( for "icon", "icontext", "button" and "container" shortcodes )
 * Changed functionality of rendering templates
+* Minor cleanup templates
 
 = 3.1.1 =
 * Changed URL links to the new site
