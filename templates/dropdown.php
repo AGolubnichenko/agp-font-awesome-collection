@@ -6,7 +6,7 @@ if (!empty($params) ) :
     if (!empty($name)) :
         $categories = Fac()->getIconRepository()->getAllCategories();
 ?>
-<div class="fac fac-dropdown-template">
+<span class="fac fac-dropdown-template">
     <select name="<?php echo $name; ?>" id="<?php echo $name; ?>">
         <option value=""></option>                
         <?php 
@@ -28,7 +28,7 @@ if (!empty($params) ) :
             endforeach; 
         ?>
     </select>
-</div>
+</span>
 <?php
     endif;
 endif;

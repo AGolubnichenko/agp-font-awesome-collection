@@ -26,7 +26,7 @@ if (!empty($params) && !empty($params['icon'])) :
         'color_hover' => $color_hover,
     ));            
 ?>
-<div id="<?php echo $id;?>" class="fac fac-button-template">
+<span id="<?php echo $id;?>" class="fac fac-button-template">
     <a href="<?php echo (!empty($link)) ? $link : '#';?>" 
         class="fac-button<?php echo (!empty($text)) ? ' fac-text' : '';?>" 
         <?php echo (!empty($name)) ? ' id="' . $name . '"'  : '';?>       
@@ -36,6 +36,6 @@ if (!empty($params) && !empty($params['icon'])) :
              <i class="fa fa-<?php echo $icon;?>"></i>
              <?php echo (!empty($text)) ? '<span>' . $text . '</span>' : '';?>
     </a>    
-</div>
+</span>
 <?php
 endif;

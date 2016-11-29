@@ -1,7 +1,7 @@
 <?php
 return array(
     'fac' => array(
-        'version' => '3.2.0',           
+        'version' => '3.2.1',           
         'admin' => array(
             'menu' => include (__DIR__ . '/admin-menu.php'),
             'options' => include (__DIR__ . '/admin-options.php'),

@@ -21,11 +21,11 @@ if (!empty($params) && !empty($params['icon'])) :
         'text_color_hover' => $text_color_hover,
     ));
 ?>
-<div id="<?php echo $id;?>" class="fac fac-icontext-template">
+<span id="<?php echo $id;?>" class="fac fac-icontext-template">
     <span <?php echo !empty($shape_type) ? ' class="fac-shape fac-' . $shape_type . '"' : '';?>>
         <i class="fa fa-<?php echo $icon?>"></i>
     </span>
     <?php echo (!empty($text)) ? '<span class="fac-text">' . $text . '</span>' : '';?>
-</div>
+</span>
 <?php
 endif;
