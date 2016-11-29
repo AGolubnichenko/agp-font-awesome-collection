@@ -311,7 +311,6 @@ class Fac extends ModuleAbstract {
     public function doCustomShortcode ($atts, $content, $tag) {
         global $post;
         $content = '';
-        $wpautop = has_filter( 'the_content', 'wpautop');
         
         $args = array(
             'post_type' => 'fac-shortcodes',
@@ -327,17 +326,9 @@ class Fac extends ModuleAbstract {
 
         $query = new \WP_Query($args);
         
-        if ($wpautop) {
-            remove_filter ('the_content', 'wpautop');    
-        }
-        
         while ( $query->have_posts() ) : $query->the_post();
-            $content .= apply_filters('the_content', get_the_content());
+            $content .= do_shortcode( get_post_field('post_content', $post->ID) );
         endwhile;        
-        
-        if ($wpautop) {
-            add_filter('the_content', 'wpautop');
-        }
         
         wp_reset_query();
         

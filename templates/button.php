@@ -14,20 +14,18 @@ if (!empty($params) && !empty($params['icon'])) :
     $border_color = !empty($params['border_color']) ? $params['border_color'] : '';
     $color = !empty($params['color']) ? $params['color'] : '';
     $color_hover = !empty($params['color_hover']) ? $params['color_hover'] : '';
+    
+    Fac()->doDynamicCss( Fac()->getAssetPath('less/button.less'), array(
+        'id' => $id,
+        'background' => $background,
+        'border_radius' => $border_radius,
+        'border_width' => $border_width,
+        'border_color' => $border_color,
+        'color' => $color,
+        'background_hover' => $background_hover,
+        'color_hover' => $color_hover,
+    ));            
 ?>
-<style>
-    #<?php echo $id;?> a {
-        <?php if (!empty($background)): echo "background: $background!important;"; endif;?> 
-        <?php if (!empty($border_radius)): echo "border-radius: $border_radius!important;"; endif;?>
-        <?php if (!empty($border_width)): echo "border-width: $border_width!important;"; endif;?>
-        <?php if (!empty($border_color)): echo "border-color: $border_color!important;"; endif;?>
-        <?php if (!empty($color)): echo "color: $color!important;"; endif;?>
-    }
-    #<?php echo $id;?> a:hover {
-        <?php if (!empty($background_hover)): echo "opacity: 1!important; background: $background_hover!important;"; endif;?>         
-        <?php if (!empty($color_hover)): echo "color: $color_hover!important;"; endif;?>
-    }
-</style>
 <div id="<?php echo $id;?>" class="fac fac-button-template">
     <a href="<?php echo (!empty($link)) ? $link : '#';?>" 
         class="fac-button<?php echo (!empty($text)) ? ' fac-text' : '';?>" 

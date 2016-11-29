@@ -86,7 +86,7 @@ class Shortcodes {
     
     public function viewPreviewMetabox() {
         global $post;        
-        echo apply_filters('the_content', get_post_field('post_content', $post->ID));
+        echo do_shortcode( get_post_field('post_content', $post->ID) );
     }    
 }
 

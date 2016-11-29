@@ -44,7 +44,7 @@ class Ajax extends AjaxAbstract {
             $preview = Fac()->doPreview(array(), '', $data['key']);
             $result['content'] = Fac()->getTemplate('admin/constructor/constructor', array('key' => $data['key']));    
             if (!empty($preview)) {
-                $result['preview'] = '<p>' . $preview . '</p>';    
+                $result['preview'] = $preview;    
             }
         }
         return $result;                    
@@ -56,7 +56,7 @@ class Ajax extends AjaxAbstract {
             $atts = !empty($data['params']) ? $data['params'] : array();
             $preview = Fac()->doPreview($atts, '', $data['key']);
             if (!empty($preview)) {
-                $result['preview'] = '<p>' . $preview . '</p>';    
+                $result['preview'] = $preview;    
             }
         }
         return $result;                    

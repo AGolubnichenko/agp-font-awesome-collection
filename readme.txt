@@ -272,6 +272,11 @@ where:
 18. Menus with Font Awesome Icons
 
 == Changelog ==
+= 3.2.0 =
+* Added LESS CSS support in the plugin
+* Dynamic styles removed from shortcode templates and moved to footer ( for "icon", "icontext", "button" and "container" shortcodes )
+* Changed functionality of rendering templates
+
 = 3.1.1 =
 * Changed URL links to the new site
 
