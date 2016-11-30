@@ -272,6 +272,9 @@ where:
 18. Menus with Font Awesome Icons
 
 == Changelog ==
+= 3.2.3 =
+* Minified CSS and JS scripts of the plugin
+
 = 3.2.2 =
 * Minor templates optimization
 

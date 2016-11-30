@@ -79,6 +79,13 @@ class Fac extends ModuleAbstract {
      * @var Less_Parser
      */
     private $lessParser;    
+
+    /**
+     * Environment
+     * 
+     * @var string 
+     */
+    private $environment;
     
     /**
      * The single instance of the class 
@@ -119,7 +126,7 @@ class Fac extends ModuleAbstract {
         $this->iconRepository = new Persistence\IconRepository();
         $this->setSettings( Settings::instance( $this ) );        
         $this->setVersion( $this->getSettings()->getVersion() );        
-        
+        $this->environment = $this->getSettings()->getEnvironment();
         
         if ( $this->isActiveModule('m_shortcodes') ) {
             include_once ( $this->getBaseDir() . '/types/shortcodes-post-type.php' );                    
@@ -157,7 +164,6 @@ class Fac extends ModuleAbstract {
         add_action( 'widgets_init', array($this, 'initWidgets' ) );
         add_action( 'admin_init', array($this, 'facTinyMCEButtons' ) );
         add_action( 'wp_print_scripts', array($this, 'facFooter' ) );
-        //add_filter( 'widget_text', 'do_shortcode' );
     }
     
     public function facFooter () {
@@ -212,16 +218,16 @@ class Fac extends ModuleAbstract {
     }    
     
     public function facTinyMCEAddPlugin( $plugin_array ) {
-        $plugin_array['agp_fac_icon'] = $this->getAssetUrl('js/fac-icon.js');
+        $plugin_array['agp_fac_icon'] = $this->getAssetUrl("js/fac-icon{$this->getPrefix()}.js");
         return $plugin_array;        
     }        
     
     public function enqueueScripts () {
         wp_enqueue_script( 'fac-mobile', $this->getAssetUrl('libs/jquery.mobile.min.js'), array('jquery') );
-        wp_enqueue_script( 'fac-slider', $this->getAssetUrl('libs/responsiveslides.js'), array('jquery') );
-        wp_enqueue_script( 'fac', $this->getAssetUrl('js/main.js'), array('jquery', 'fac-mobile', 'fac-slider') );                                                         
-        wp_enqueue_style( 'fac-css', $this->getAssetUrl('css/style.css') );  
-        wp_register_style( 'fac-fa', $this->getBaseUrl() .'/vendor/agp/agp-fontawesome/css/font-awesome.min.css' );
+        wp_enqueue_script( 'fac-slider', $this->getAssetUrl("libs/responsiveslides{$this->getPrefix()}.js"), array('jquery') );
+        wp_enqueue_script( 'fac', $this->getAssetUrl("js/main{$this->getPrefix()}.js"), array('jquery', 'fac-mobile', 'fac-slider') );                                                         
+        wp_enqueue_style( 'fac-css', $this->getAssetUrl("css/style{$this->getPrefix()}.css") );  
+        wp_register_style( 'fac-fa', $this->getBaseUrl() ."/vendor/agp/agp-fontawesome/css/font-awesome{$this->getPrefix()}.css" );
     }        
     
     public function enqueueAdminScripts () {
@@ -230,16 +236,16 @@ class Fac extends ModuleAbstract {
         wp_enqueue_script( 'jquery-ui-sortable' );            
         wp_enqueue_script('colorbox-js', $this->getAssetUrl('libs/colorbox/jquery.colorbox-min.js'), array('jquery'));
         wp_enqueue_style('colorbox-css', $this->getAssetUrl('libs/colorbox/colorbox.css'));        
-        wp_enqueue_script( 'fac', $this->getAssetUrl('js/admin.js'), array('jquery', 'wp-color-picker') );                                                         
-        wp_enqueue_style( 'fac-css', $this->getAssetUrl('css/admin.css') );  
-        wp_enqueue_style( 'fac-css-front', $this->getAssetUrl('css/style.css') );          
+        wp_enqueue_script( 'fac', $this->getAssetUrl("js/admin{$this->getPrefix()}.js"), array('jquery', 'wp-color-picker') );                                                         
+        wp_enqueue_style( 'fac-css', $this->getAssetUrl("css/admin{$this->getPrefix()}.css") );  
+        wp_enqueue_style( 'fac-css-front', $this->getAssetUrl("css/style{$this->getPrefix()}.css") );          
 
         wp_localize_script( 'fac', 'ajax_fac', array( 
             'base_url' => site_url(),         
             'ajax_url' => admin_url( 'admin-ajax.php' ), 
             'ajax_nonce' => wp_create_nonce('ajax_atf_nonce'),        
         ));    
-        wp_register_style( 'fac-fa', $this->getBaseUrl() .'/vendor/agp/agp-fontawesome/css/font-awesome.min.css' );
+        wp_register_style( 'fac-fa', $this->getBaseUrl() ."/vendor/agp/agp-fontawesome/css/font-awesome{$this->getPrefix()}.css" );
     }            
 
     public function getIconRepository() {
@@ -411,6 +417,14 @@ class Fac extends ModuleAbstract {
     
     public function getMenuIcons() {
         return $this->menuIcons;
+    }
+
+    public function getEnvironment() {
+        return $this->environment;
+    }
+    
+    public function getPrefix() {
+        return ($this->environment == 'production') ? '.min' : '';
     }
 
 }

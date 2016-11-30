@@ -119,6 +119,11 @@ class Settings extends SettingsAbstract {
         return $result;
     }
     
+    public function getEnvironment () {
+        return !empty($this->getConfig()->environment) ? $this->getConfig()->environment : 'production';
+    }
+
+
     public function getCustomElementList () {
         global $pagenow;
         $result = array();
