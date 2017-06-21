@@ -2,7 +2,7 @@
 Contributors: agolubnichenko
 Tags: agp, fontawesome, font-awesome, font awesome, Font Awesome, fa, fa-icon, fa icons, icon font, icons, font, button, buttons, developer, developer tools, tools, shortcode, social icons, social links, social buttons, ui, tinymce, visualizer, promotion, ad promotion, slider, content slider, widget slider, responsive slider, responsive, rwd, wp menu, menus, nav menu, navigation, navigation menu, walker, menu icons, social, media, profiles, widget
 Requires at least: 3.5.0
-Tested up to: 4.7
+Tested up to: 4.8
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Stable tag: trunk
