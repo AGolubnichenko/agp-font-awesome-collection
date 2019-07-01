@@ -53,7 +53,7 @@
 
     <div class="wrap agp-form-wrap">
         <?php 
-            screen_icon();
+//            screen_icon();
             settings_errors();
 
             echo $args->settings->getParentModule()->getTemplate('admin/options/render-tabs', $args);

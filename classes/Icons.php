@@ -24,8 +24,8 @@ class Icons {
         ob_start();
         include_once(Fac()->getBaseDir() . '/vendor/agp/agp-fontawesome/component.json');
         $components = ob_get_clean();
-        $components = json_decode($components);
-        return $components->version;
+        $components = json_decode($components, true);
+        return $components['version'];
         
     }
 }

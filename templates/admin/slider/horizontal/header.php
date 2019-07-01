@@ -1,3 +1,5 @@
+<?php
+?>
     <th>Headline</th>
     <th>Description</th>
     <th>Icon</th>    

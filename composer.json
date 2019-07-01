@@ -12,7 +12,7 @@
                 "source": {
                     "url": "https://github.com/FortAwesome/Font-Awesome",
                     "type": "git",
-                    "reference": "master"
+                    "reference": "a8386aa"
                 }
             }                        
         }
@@ -20,7 +20,7 @@
     "minimum-stability": "dev",
     "require" : {
         "agp/agp-core": "master",
-        "agp/agp-fontawesome/src": "*",
+        "agp/agp-fontawesome/src": "4.7.0",
         "mustangostang/spyc": "dev-master"
     },
     "autoload": {
@@ -47,6 +47,6 @@
             "mv vendor/agp/agp-fontawesome/src/src/icons.yml vendor/agp/agp-fontawesome/icons.yml",
             "mv vendor/agp/agp-fontawesome/src/component.json vendor/agp/agp-fontawesome/component.json",
             "rm -r vendor/agp/agp-fontawesome/src"
-        ]        
+        ]
     }
 }
